@@ -1,21 +1,21 @@
-# ·½·¨1£ºÊ¹ÓÃforÑ­»·
+# ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¹ï¿½ï¿½forÑ­ï¿½ï¿½
 total_sum = 0
 for i in range(1, 101):
     total_sum += i
 
-print("×ÜºÍÎª:", total_sum)
+print("ï¿½Üºï¿½Îª:", total_sum)
 
 
-# ·½·¨2£ºÊ¹ÓÃwhileÑ­»·
+# ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½Ê¹ï¿½ï¿½whileÑ­ï¿½ï¿½
 total_sum = 0
 i = 1
 while i <= 100:
     total_sum += i
     i += 1
 
-print("×ÜºÍÎª:", total_sum)
+print("ï¿½Üºï¿½Îª:", total_sum)
 
-# ArcPyº¯Êý£º¶ÔÒªËØÀà½øÐÐ²ÃÇÐ
+# ArcPyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½
 import arcpy
 import os
 arcpy.env.workspace = "D:/CSU"
@@ -29,16 +29,22 @@ for fc in arcpy.ListFeatureClasses():
     print result
 
 
-# ArcPyÀà£ºÏÔÊ¾µØÍ¼Í¶Ó°ÐÅÏ¢
+# ArcPyï¿½à£ºï¿½ï¿½Ê¾ï¿½ï¿½Í¼Í¶Ó°ï¿½ï¿½Ï¢
 import arcpy
 prjFile = "D:/CSU/3857.prj"
 spatialRef = arcpy.SpatialReference(prjFile)
 print(spatialRef.name)
 print(spatialRef.type)
 
-# ArcPyÀà£ºµã
+# ArcPyï¿½à£ºï¿½ï¿½
 import arcpy 
 pointA = arcpy.Point(2.0, 4.5)
 print pointA
 pointB = arcpy.Point(3.0, 7.0)
 print pointB
+
+# ArcPyï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½
+arcpy.env.workspace = "D:/CSU"
+result = arcpy.Buffer_analysis("road.shp", "roadBuf", "500 METERS")
+print result
+
