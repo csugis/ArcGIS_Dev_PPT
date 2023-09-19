@@ -27,6 +27,61 @@ class ButtonFull(object):
         df.extent = lyr.getExtent();
         pass
 
+class ButtonNewFeature(object):
+    """Implementation for PyAddins_addin.button_2 (Button)"""
+    def __init__(self):
+        self.enabled = True
+        self.checked = False
+    def onClick(self):
+        f_cls = "d:/CSU/points.shp";
+        if arcpy.Exists(f_cls):
+            arcpy.Delete_management(f_cls);
+        arcpy.CreateFeatureclass_management("d:/CSU","points.shp","POINT");
+        arcpy.AddField_management(f_cls,"name","TEXT",20);
+        pass
+
+class ToolDrawPts(object):
+    """Implementation for PyAddins_addin.tool_4 (Tool)"""
+    def __init__(self):
+        self.enabled = True
+        self.cursor = 3
+        self.checked = False
+        self.drawing = True
+        self.shape = "None" # Can set to "Line", "Circle" or "Rectangle" for interactive shape drawing and to activate the onLine/Polygon/Circle event sinks.
+    def onMouseDown(self, x, y, button, shift):
+        pass
+    def onMouseDownMap(self, x, y, button, shift):
+        if self.drawing == True:
+            f_cls = "d:/CSU/points.shp";
+            with arcpy.da.InsertCursor(f_cls,['SHAPE@XY']) as dc:
+                dc.insertRow([(x,y)]);
+                print "One point ({0},{1}) has been added.".format(x,y);
+            del dc;
+            arcpy.RefreshActiveView();
+        pass
+    def onMouseUp(self, x, y, button, shift):
+        pass
+    def onMouseUpMap(self, x, y, button, shift):
+        pass
+    def onMouseMove(self, x, y, button, shift):
+        pass
+    def onMouseMoveMap(self, x, y, button, shift):
+        pass
+    def onDblClick(self):
+        pass
+    def onKeyDown(self, keycode, shift):
+        pass
+    def onKeyUp(self, keycode, shift):
+        pass
+    def deactivate(self):
+        pass
+    def onCircle(self, circle_geometry):
+        pass
+    def onLine(self, line_geometry):
+        pass
+    def onRectangle(self, rectangle_geometry):
+        pass
+
 class ToolCreatePts(object):
     """Implementation for PyAddins_addin.tool_1 (Tool)"""
     def __init__(self):
@@ -64,6 +119,94 @@ class ToolCreatePts(object):
             arcpy.Delete_management( "points" );
         arcpy.CreateRandomPoints_management( "d:/CSU","points.shp" , "" ,ext,200);
         arcpy.RefreshTOC();
+        pass
+
+class ToolDrawPts(object):
+    """Implementation for PyAddins_addin.tool_4 (Tool)"""
+    def __init__(self):
+        self.enabled = True
+        self.cursor = 3
+        self.checked = False
+        self.drawing = True
+        self.shape = "None" # Can set to "Line", "Circle" or "Rectangle" for interactive shape drawing and to activate the onLine/Polygon/Circle event sinks.
+    def onMouseDown(self, x, y, button, shift):
+        pass
+    def onMouseDownMap(self, x, y, button, shift):
+        if self.drawing == True:
+            f_cls = "d:/CSU/points.shp";
+            with arcpy.da.InsertCursor(f_cls,['SHAPE@XY']) as dc:
+                dc.insertRow([(x,y)]);
+                print "One point ({0},{1}) has been added.".format(x,y);
+            del dc;
+            arcpy.RefreshActiveView();
+        pass
+    def onMouseUp(self, x, y, button, shift):
+        pass
+    def onMouseUpMap(self, x, y, button, shift):
+        pass
+    def onMouseMove(self, x, y, button, shift):
+        pass
+    def onMouseMoveMap(self, x, y, button, shift):
+        pass
+    def onDblClick(self):
+        pass
+    def onKeyDown(self, keycode, shift):
+        pass
+    def onKeyUp(self, keycode, shift):
+        pass
+    def deactivate(self):
+        pass
+    def onCircle(self, circle_geometry):
+        pass
+    def onLine(self, line_geometry):
+        pass
+    def onRectangle(self, rectangle_geometry):
+        pass
+
+class ToolIdentifyPts(object):
+    """Implementation for PyAddins_addin.tool_5 (Tool)"""
+    def __init__(self):
+        self.enabled = True
+        self.cursor = 3
+        self.shape = "None" # Can set to "Line", "Circle" or "Rectangle" for interactive shape drawing and to activate the onLine/Polygon/Circle event sinks.
+    def onMouseDown(self, x, y, button, shift):
+        pass
+    def onMouseDownMap(self, x, y, button, shift):
+        mxd = arcpy.mapping.MapDocument("current");
+        df = mxd.activeDataFrame;
+        lyr = arcpy.mapping.ListLayers("points","*",df)[0];
+        pt = arcpy.Point(x,y);
+        geom = arcpy.PointGeometry(pt)    
+        arcpy.SelectLayerByLocation_management( "points","WITHIN_A_DISTANCE" ,geom,2.5);
+        matchcount = arcpy.GetCount_management("points").getOutput(0);
+        print "The matched points count: "+matchcount;
+        with arcpy.da.SearchCursor(lyr,["OID@","SHAPE@WKT"]) as cursor:
+            for row in cursor:
+                if str(row[0]) in arcpy.Describe("points").FIDSet:
+                    print u"FID:{0},SHAPE:{1}".format(row[0],row[1]);
+        del cursor;
+        pass
+    def onMouseUp(self, x, y, button, shift):
+        pass
+    def onMouseUpMap(self, x, y, button, shift):
+        pass
+    def onMouseMove(self, x, y, button, shift):
+        pass
+    def onMouseMoveMap(self, x, y, button, shift):
+        pass
+    def onDblClick(self):
+        pass
+    def onKeyDown(self, keycode, shift):
+        pass
+    def onKeyUp(self, keycode, shift):
+        pass
+    def deactivate(self):
+        pass
+    def onCircle(self, circle_geometry):
+        pass
+    def onLine(self, line_geometry):
+        pass
+    def onRectangle(self, rectangle_geometry):
         pass
 
 class ToolSelect(object):
