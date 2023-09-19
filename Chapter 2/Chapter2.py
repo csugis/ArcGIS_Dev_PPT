@@ -281,3 +281,44 @@ for row in cursor:
     print(u'Name:{0},WKT:{1}'.format(row[0],row[1]));
 del cursor
 
+# 根据属性查询要素
+import arcpy
+arcpy.env.workspace = 'D:/CSU'
+# Select all pois that overlap the CSU polygon
+csu_pois = arcpy.management.SelectLayerByLocation('poi_yuelu', 'INTERSECT', 
+                                                        'csu_scope', 0, 
+                                                        'NEW_SELECTION');
+# Within selected features, further select only those pois with a 
+# "catalog1" = '体育休闲服务'   
+arcpy.management.SelectLayerByAttribute(csu_pois, 'SUBSET_SELECTION', 
+                                        '"catalog1" = \'体育休闲服务\'');
+# Write the selected features to a new feature class
+arcpy.management.CopyFeatures(csu_pois, 'csu_pe_pois');
+
+# 反距离加权插值
+import arcpy
+from arcpy import env  
+from arcpy.sa import *
+env.workspace = "D:/CSU"
+f_class = "d:/csu/points.shp";
+# 添加字段
+arcpy.AddField_management(f_class , "Elevation" , "DOUBLE" ,20);
+# 更新高程字段的值
+with arcpy.da.UpdateCursor(f_class, ["FID", "Elevation"]) as cursor:
+    for row in cursor:
+        elevation = row[0] # 这里假设高程为FID，你可以根据实际情况设置
+        row[1] = elevation
+        cursor.updateRow(row)
+del cursor;
+outIDW = Idw(f_class, "Elevation", 0.1, 2, RadiusVariable(10, 150));
+outIDW.save("D:/CSU/idwout.tif");
+
+
+# 选择要素
+import arcpy 
+arcpy.env.workspace = 'D:/CSU'
+arcpy.analysis.Select("poi_yuelu", "poi_pe_yuelu.shp", '"catalog1" = \'体育休闲服务\'')
+
+# 分割要素
+arcpy.env.workspace = 'D:/CSU/'
+arcpy.analysis.Split("district", "jmd", "name","d:/CSU/")

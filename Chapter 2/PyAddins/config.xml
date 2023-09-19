@@ -5,11 +5,12 @@
         <Tool caption="ToolZoomIn" category="Python Addin" class="ToolZoomIn" id="PyAddins_addin.tool" image="" message="ToolZoomIn" tip="ToolZoomIn"><Help heading="ToolZoomIn">ToolZoomIn</Help></Tool>
         <Tool caption="ToolCreatePts" category="Python Addin" class="ToolCreatePts" id="PyAddins_addin.tool_1" image="" message="ToolCreatePts" tip="ToolCreatePts"><Help heading="ToolCreatePts">ToolCreatePts</Help></Tool>
         <Tool caption="ToolSelect" category="Python Addin" class="ToolSelect" id="PyAddins_addin.tool_2" image="" message="ToolSelect" tip="ToolSelect"><Help heading="ToolSelect">ToolSelect</Help></Tool>
+        <Tool caption="ToolSelectRect" category="Python Addin" class="ToolSelectRect" id="PyAddins_addin.tool_3" image="" message="ToolSelectRect" tip="ToolSelectRect"><Help heading="ToolSelectRect">ToolSelectRect</Help></Tool>
         </Commands>
     <Extensions>
         </Extensions>
     <Toolbars>
-        <Toolbar caption="PyToolbar" category="Python Addin" id="PyAddins_addin.toolbar" showInitially="true"><Items><Button refID="PyAddins_addin.button" /><Button refID="PyAddins_addin.button_1" /><Tool refID="PyAddins_addin.tool" /><Tool refID="PyAddins_addin.tool_1" /><Tool refID="PyAddins_addin.tool_2" /></Items></Toolbar>
+        <Toolbar caption="PyToolbar" category="Python Addin" id="PyAddins_addin.toolbar" showInitially="true"><Items><Button refID="PyAddins_addin.button" /><Button refID="PyAddins_addin.button_1" /><Tool refID="PyAddins_addin.tool" /><Tool refID="PyAddins_addin.tool_1" /><Tool refID="PyAddins_addin.tool_2" /><Tool refID="PyAddins_addin.tool_3" /></Items></Toolbar>
         </Toolbars>
     <Menus>
         </Menus>
