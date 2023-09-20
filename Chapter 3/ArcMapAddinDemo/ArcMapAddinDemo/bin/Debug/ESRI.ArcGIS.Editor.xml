@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.Editor</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.Editor.IAnnotationConstructionWindow">
+      <summary>Provides access to the annotation construction window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationConstructionWindow.Visible">
+      <summary>Indicates whether the annotation construction window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IAnnotationConstructor">
+      <summary>Provides access to members that control the annotation feature edit sketch constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.AddFeedbackPoint(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Adds a point to the display feedback.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.BeforeStoreAnnotation(ESRI.ArcGIS.Carto.IAnnotationFeature,ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Lets the constructor know the annotation is about to be stored.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationConstructor.CanFinish(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Indicates if the annotation feature can be constructed given the number of points in the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.CreateFeedback">
+      <summary>The display feedback for the constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationConstructor.Name">
+      <summary>Name of the annotation constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.OnKeyDown(System.Int32,System.Int32)">
+      <summary>Called when a key is pressed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.OnKeyUp(System.Int32,System.Int32)">
+      <summary>Called when a key is pressed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.Shutdown">
+      <summary>The constructor start event.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationConstructor.SketchGeometryType">
+      <summary>The type of geometry used for the edit sketch constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.StartFeedback(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Starts the display feedback for the annotation constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.Startup(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>The annotation editor extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.StopFeedback">
+      <summary>Stops the display feedback.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAnnotationConstructor.UpdateFeedback">
+      <summary>Updates the display feedback with the current settings.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IAnnotationEditExtension">
+      <summary>Provides access to members that control annotation feature editing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.AnnotationConstructors">
+      <summary>The annotation constructors for creating new annotations.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.ConstructionSymbol">
+      <summary>The symbol to be used for newly created annotation features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.ConstructionSymbolID">
+      <summary>The symbol id of newly created annotation features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.ConstructionText">
+      <summary>The current text that will be used to construct the annotation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.CurrentConstructor">
+      <summary>The currently selected annotation constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.IsAnnotationTarget">
+      <summary>Indicates if an annotation feature class is the current editor target.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAnnotationEditExtension.LinkedFeatureID">
+      <summary>The linked feature id for the newly created annotation feature.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IAttributeTransfer">
+      <summary>Provides access to members that control the behavior of the attribute transfer tools.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAttributeTransfer.DeleteFieldMap(ESRI.ArcGIS.Editor.IFieldMap)">
+      <summary>Delete a field map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransfer.FieldMap">
+      <summary>Adds a field map. This will overwrite any existing field map with the same pair of source and target object classes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAttributeTransfer.FindFieldMap(ESRI.ArcGIS.Geodatabase.IObjectClass,ESRI.ArcGIS.Geodatabase.IObjectClass)">
+      <summary>Finds a stored field mapping. A field map with any source or target can be found by place a null for the argument.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransfer.Name(System.String@)">
+      <summary>Name of the current attribute type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IAttributeTransfer.Transfer(ESRI.ArcGIS.Editor.IFieldMap,ESRI.ArcGIS.Geodatabase.IRow,ESRI.ArcGIS.Geodatabase.IRow,System.Boolean@)">
+      <summary>Transfer attributes between rows based on the field map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IAttributeTransferDefaultSettings">
+      <summary>Provides access to members that control the behavior of the attribute transfer tools.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransferDefaultSettings.SourceName">
+      <summary>Name of the source attribute source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransferDefaultSettings.TargetName">
+      <summary>Name of the target attribute source.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IAttributeTransferType">
+      <summary>Provides access to members that control the behavior of the attribute transfer interfaces.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransferType.AttributeTransfer">
+      <summary>The current attribute type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IAttributeTransferType.AttributeTransferType">
+      <summary>The current attribute type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConflictDisplay">
+      <summary>Provides access to the Conflict display environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictDisplay.FillSymbol(ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Display symbol used to draw polygon features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictDisplay.LineSymbol(ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Display symbol used to draw line features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictDisplay.MarkerSymbol(ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Display symbol used to draw point features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictDisplay.VersionVisible(ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Indicates whether the specified version is visible in the conflicts window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConflictsWindow">
+      <summary>Provides access to Conflicts Display Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.Class(System.Int32)">
+      <summary>Class by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.ClassCount">
+      <summary>The number of classes with conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.CurrentClass">
+      <summary>Class of the selected feature, or 0 if no ConflictClass.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.CurrentRow">
+      <summary>ID of the selected row or feature, or -1 if no current row.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow.FindTable(ESRI.ArcGIS.Geodatabase.IConflictClass,ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Finds a cached table corresponding to the conflict class and version.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow.HasConflicts">
+      <summary>Indicates if conflicts have been detected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.IDs(ESRI.ArcGIS.Geodatabase.IConflictClass)">
+      <summary>Enumerate the feature IDs for a ConflictClass.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow.Reset">
+      <summary>Resets the conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow.Visible">
+      <summary>Indicates if Conflicts Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConflictsWindow2">
+      <summary>Provides access to Conflicts Display Window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow2.RemoveClass(ESRI.ArcGIS.Geodatabase.IConflictClass)">
+      <summary>Removes the conlict class from the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.Class(System.Int32)">
+      <summary>Class by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.ClassCount">
+      <summary>The number of classes with conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.CurrentClass">
+      <summary>Class of the selected feature, or 0 if no ConflictClass.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.CurrentRow">
+      <summary>ID of the selected row or feature, or -1 if no current row.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow2.FindTable(ESRI.ArcGIS.Geodatabase.IConflictClass,ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Finds a cached table corresponding to the conflict class and version.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow2.HasConflicts">
+      <summary>Indicates if conflicts have been detected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.IDs(ESRI.ArcGIS.Geodatabase.IConflictClass)">
+      <summary>Enumerate the feature IDs for a ConflictClass.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow2.Reset">
+      <summary>Resets the conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow2.Visible">
+      <summary>Indicates if Conflicts Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConflictsWindow3">
+      <summary>Provides access to Conflicts Display Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.CurrentVisited">
+      <summary>Indicates whether the visited state of the current selected tree item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.SelectedFieldIndexes">
+      <summary>The indexes of the fields in the row that are currently selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.ShowOnConflictsDetected">
+      <summary>Indicates whether the conficts window is displayed when a conflicts event is fired.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow3.RemoveClass(ESRI.ArcGIS.Geodatabase.IConflictClass)">
+      <summary>Removes the conlict class from the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.Class(System.Int32)">
+      <summary>Class by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.ClassCount">
+      <summary>The number of classes with conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.CurrentClass">
+      <summary>Class of the selected feature, or 0 if no ConflictClass.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.CurrentRow">
+      <summary>ID of the selected row or feature, or -1 if no current row.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow3.FindTable(ESRI.ArcGIS.Geodatabase.IConflictClass,ESRI.ArcGIS.Editor.esriVersion)">
+      <summary>Finds a cached table corresponding to the conflict class and version.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow3.HasConflicts">
+      <summary>Indicates if conflicts have been detected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.IDs(ESRI.ArcGIS.Geodatabase.IConflictClass)">
+      <summary>Enumerate the feature IDs for a ConflictClass.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConflictsWindow3.Reset">
+      <summary>Resets the conflicts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConflictsWindow3.Visible">
+      <summary>Indicates if Conflicts Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConstructionMiniBar">
+      <summary>Provides access to controlling the construction minibar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConstructionMiniBar.Active">
+      <summary>Activate/Deactivate the Construction Minibar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar.Hide">
+      <summary>Hides the construction minibar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConstructionMiniBar.IsVisible">
+      <summary>Indicates whether the construction minibar is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar.ProcessKeyDown(System.Int32,System.Int32)">
+      <summary>Processes keyboard input.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar.Show(System.Int32,System.Int32)">
+      <summary>Shows the construction minibar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar.UpdateTransparency(System.Int32,System.Int32)">
+      <summary>Updates the coordinate display and adjusts the tranparency of the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IConstructionMiniBar2">
+      <summary>Provides access to controlling the construction minibar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar2.ShowEx(System.Int32,System.Int32,ESRI.ArcGIS.Editor.esriConstructionToolbarLocation)">
+      <summary>Shows the construction minibar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConstructionMiniBar2.Active">
+      <summary>Activate/Deactivate the Construction Minibar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar2.Hide">
+      <summary>Hides the construction minibar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IConstructionMiniBar2.IsVisible">
+      <summary>Indicates whether the construction minibar is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar2.ProcessKeyDown(System.Int32,System.Int32)">
+      <summary>Processes keyboard input.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar2.Show(System.Int32,System.Int32)">
+      <summary>Shows the construction minibar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IConstructionMiniBar2.UpdateTransparency(System.Int32,System.Int32)">
+      <summary>Updates the coordinate display and adjusts the tranparency of the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ICourse">
+      <summary>Provides access to members that define a course in a traverse.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ICourse.AddSegment(ESRI.ArcGIS.Geometry.IGeometry,System.Double,System.Double)">
+      <summary>Adds a reference for the course to the input geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ICourse.Clone">
+      <summary>Clones the course and adds the result to *clone.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.CurveDirectionType">
+      <summary>If the course type is esriCTCurve, defines the curve direction type of the third value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.CurveParameter1">
+      <summary>If the course type is esriCTTangentCurve or esriCTCurve, defines the curve parameter of the first value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.CurveParameter2">
+      <summary>If the course type is esriCTTangentCurve or esriCTCurve, defines the curve parameter of the second value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ICourse.GetDescription(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Description of the course.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.Measure1">
+      <summary>The first value that defines the course.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.Measure2">
+      <summary>The second value that defines the course.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.Measure3">
+      <summary>Optionally, the direction of the curve if the course type is esriCTCurve.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.TurnDirection">
+      <summary>Indicates if curve turns to the left or right.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ICourse.Type">
+      <summary>The type of course.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ICreateFeatureTask">
+      <summary>Indicator interface that identifies an edit task for creating features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ICustomSnapping">
+      <summary>Indicator interface that identifies a feature class extension that supports custom snapping.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDigitizerButtons">
+      <summary>Provides access to map digitizer puck buttons to ArcMap commands.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDigitizerButtons.Button(System.Int32)">
+      <summary>Button to map on the digitizer puck.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDigitizerSetup">
+      <summary>Provides access to members that define the transformation used by the digitizer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDigitizerSetup.AddControlPoint(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Adds a control point to the transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDigitizerSetup.ClearControlPoints">
+      <summary>Removes all control points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDigitizerSetup.ControlPointCount">
+      <summary>The number of control points used for digitizing.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDigitizerSetup.GetControlPoint(System.Int32,System.Double@,System.Double@,System.Double@,System.Double@)">
+      <summary>A control point's X,Y coordinates in Digitizer and Map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDigitizerSetup.Transformation">
+      <summary>The transformation used by the digitizer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDimensionConstructor">
+      <summary>Provides access to members that control the dimension feature edit sketch constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.AddFeedbackPoint(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Adds a point to the display feedback.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionConstructor.CanFinish(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Indicates if the dimension feature can be constructed given the number of points in the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.ConstructDimension(ESRI.ArcGIS.Carto.IDimensionFeature,ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Carto.IDimensionStyle)">
+      <summary>Creates the dimension shape for a dimension feature given the geometry constructed in the dimension constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.CreateFeedback">
+      <summary>The display feedback for the constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionConstructor.DimensionType">
+      <summary>The type of dimension created with the dimension constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionConstructor.HasFeedback">
+      <summary>Indicates if the constructor will use a custom feedback.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionConstructor.Name">
+      <summary>Name of the dimension constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.Shutdown">
+      <summary>The constructor start event.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionConstructor.SketchGeometryType">
+      <summary>The type of geometry used for the edit sketch constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.StartFeedback(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Carto.IDimensionStyle)">
+      <summary>Starts the display feedback for the dimension constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.StartFeedbackFromShape(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Carto.IDimensionStyle)">
+      <summary>Starts the display feedback for the dimension constructor from an existing geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.Startup(ESRI.ArcGIS.Editor.IDimensionEditExtension)">
+      <summary>The dimension editor extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionConstructor.StopFeedback">
+      <summary>Stops the display feedback.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDimensionEditExtension">
+      <summary>Provides access to members that control dimension feature editing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionEditExtension.CreateStyleID">
+      <summary>The style id of newly created dimension features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionEditExtension.CurrentConstructor">
+      <summary>The currently selected dimension constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionEditExtension.DimensionConstructors">
+      <summary>The dimension constructors for creating new dimensions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionEditExtension.Editor">
+      <summary>The editor application extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionEditExtension.IsDimensionTarget">
+      <summary>Indicates if a dimension feature class is the current editor target.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDimensionStyleDialog">
+      <summary>Provides access to members that control the dimension styles dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionStyleDialog.DoModal(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Carto.IDimensionStyle,System.Int32)">
+      <summary>Displays the dialog used to define a new dimension style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IDimensionStyleDialog.ReadOnly">
+      <summary>Indicates if the dimension style dialog shouild be opened in read-only mode.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDimensionStyleImportDialog">
+      <summary>Provides access to members that control the dimension style import dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionStyleImportDialog.AddNameCheck(ESRI.ArcGIS.Carto.IDimensionStyles)">
+      <summary>Adds a style collection that will be used to check names against. More than one style collection can be added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionStyleImportDialog.DoModalImport(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Carto.IDimensionStyles,System.Int32)">
+      <summary>Displays the dialog used to import dimension styles.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDimensionStyleImportDialog.DoModalSelect(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.Int32)">
+      <summary>Displays the dialog used to import a single dimension style.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDistanceConverter">
+      <summary>Provides access to methods that allow a distance to be converted from one unit system to another.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDistanceConverter.GetValue(System.String,ESRI.ArcGIS.Geometry.ISpatialReference)">
+      <summary>Converts the string value to a double.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IDistanceConverter2">
+      <summary>Provides access to methods that allow a distance to be converted from one linear unit to another.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDistanceConverter2.GetValueForLinearUnit(System.String,ESRI.ArcGIS.Geometry.ILinearUnit)">
+      <summary>Converts the string value to the given desired linear unit.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IDistanceConverter2.GetValue(System.String,ESRI.ArcGIS.Geometry.ISpatialReference)">
+      <summary>Converts the string value to a double.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditAnnotationProperties">
+      <summary>Provides access to members that control the annotation properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAnnotationProperties.LeaderSymbol">
+      <summary>Symbol used to draw a leader.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAnnotationProperties.MultiWordSelectionSymbol">
+      <summary>Symbol used to draw selected words in multiword annotation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAnnotationProperties.ShowAnnoHandles">
+      <summary>Indicates whether the edit annotation tool will show the resize and rotate handles.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAnnotationProperties.UseFollowLineFeatureMode">
+      <summary>Indicates whether the edit annotation tool will use follow feature mode when moving annotation related to lines.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAnnotationProperties.UseFollowPolygonFeatureMode">
+      <summary>Indicates whether the edit annotation tool will use follow feature mode when moving annotation related to polygons.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditAttributeProperties">
+      <summary>Provides access to members that control the short transaction attribute properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAttributeProperties.AttributeEditAll">
+      <summary>Indicates if the pre-populate attributes dialog is used for all layers or just the selected layers.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAttributeProperties.AttributeEditClasses">
+      <summary>The list of applicable feature classes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditAttributeProperties.NonversionedAttributionEnabled">
+      <summary>Indicates if the attribute query for newly created features is enabled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents">
+      <summary>Provides access to editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents_Event">
+      <summary>Provides access to editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.AfterDrawSketch(ESRI.ArcGIS.Display.IDisplay)">
+      <summary>Called after the edit sketch is drawn.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.AfterDrawSketch">
+      <summary>Called after the edit sketch is drawn.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnChangeFeature(ESRI.ArcGIS.Geodatabase.IObject)">
+      <summary>Called when features are modified.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnChangeFeature">
+      <summary>Called when features are modified.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnConflictsDetected">
+      <summary>Called when editing conflicts are detected during save.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnConflictsDetected">
+      <summary>Called when editing conflicts are detected during save.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnCreateFeature(ESRI.ArcGIS.Geodatabase.IObject)">
+      <summary>Called when new features are created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnCreateFeature">
+      <summary>Called when new features are created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnCurrentLayerChanged">
+      <summary>Called when the current layer changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnCurrentLayerChanged">
+      <summary>Called when the current layer changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnCurrentTaskChanged">
+      <summary>Called when the current task changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnCurrentTaskChanged">
+      <summary>Called when the current task changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnDeleteFeature(ESRI.ArcGIS.Geodatabase.IObject)">
+      <summary>Called when features are deleted.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnDeleteFeature">
+      <summary>Called when features are deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnRedo">
+      <summary>Called when RedoOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnRedo">
+      <summary>Called when RedoOperation is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnSelectionChanged">
+      <summary>Called when the selection changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnSelectionChanged">
+      <summary>Called when the selection changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnSketchFinished">
+      <summary>Called when the edit sketch is finished.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnSketchFinished">
+      <summary>Called when the edit sketch is finished.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnSketchModified">
+      <summary>Called when the edit sketch is modified.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnSketchModified">
+      <summary>Called when the edit sketch is modified.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnStartEditing">
+      <summary>Called when editing begins.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnStartEditing">
+      <summary>Called when editing begins.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnStopEditing(System.Boolean)">
+      <summary>Called when editing ends.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnStopEditing">
+      <summary>Called when editing ends.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents.OnUndo">
+      <summary>Called when UndoOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents_Event.OnUndo">
+      <summary>Called when UndoOperation is called.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents2">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents2_Event">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.BeforeStopEditing(System.Boolean)">
+      <summary>Fired before StopEditing happens.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.BeforeStopEditing">
+      <summary>Fired before StopEditing happens.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.BeforeStopOperation">
+      <summary>Called before StopOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.BeforeStopOperation">
+      <summary>Called before StopOperation is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnAbort">
+      <summary>Called when AbortOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnAbort">
+      <summary>Called when AbortOperation is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnCurrentZChanged">
+      <summary>Called when the CurrentZ changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnCurrentZChanged">
+      <summary>Called when the CurrentZ changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnSaveEdits">
+      <summary>Called when edits are saved.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnSaveEdits">
+      <summary>Called when edits are saved.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnStartOperation">
+      <summary>Called when StartOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnStartOperation">
+      <summary>Called when StartOperation is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnStopOperation">
+      <summary>Called when StopOperation is called.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnStopOperation">
+      <summary>Called when StopOperation is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnVertexAdded(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called after a point/vertex is added to the sketch.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnVertexAdded">
+      <summary>Called after a point/vertex is added to the sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnVertexDeleted(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called after a point is deleted from the sketch.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnVertexDeleted">
+      <summary>Called after a point is deleted from the sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents2.OnVertexMoved(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called after a vertex/point has been moved in the sketch.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents2_Event.OnVertexMoved">
+      <summary>Called after a vertex/point has been moved in the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents3">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents3_Event">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents3.BeforeDrawSketch(ESRI.ArcGIS.Display.IDisplay)">
+      <summary>Called before the edit sketch is drawn.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents3_Event.BeforeDrawSketch">
+      <summary>Called before the edit sketch is drawn.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents4">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents4_Event">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents4.OnAngularCorrectionOffsetChanged(System.Double)">
+      <summary>Called when Angular Correction Offset is changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents4_Event.OnAngularCorrectionOffsetChanged">
+      <summary>Called when Angular Correction Offset is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents4.OnDistanceCorrectionFactorChanged(System.Double)">
+      <summary>Called when Distance Correction Factor is changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents4_Event.OnDistanceCorrectionFactorChanged">
+      <summary>Called when Distance Correction Factor is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents4.OnUseGroundToGridChanged(System.Boolean)">
+      <summary>Called when Ground to Grid use changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents4_Event.OnUseGroundToGridChanged">
+      <summary>Called when Ground to Grid use changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents5">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditEvents5_Event">
+      <summary>Provides access to more editor events.  Implement it to listen for specific events that occur during an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnCurrentTemplateChanged(ESRI.ArcGIS.Carto.IEditTemplate)">
+      <summary>Called when the current template changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnCurrentTemplateChanged">
+      <summary>Called when the current template changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnShapeConstructorChanged">
+      <summary>Called when the Shape Constructor changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnShapeConstructorChanged">
+      <summary>Called when the Shape Constructor changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnTemplateModified(ESRI.ArcGIS.Carto.IEditTemplate)">
+      <summary>Called when a template is modified.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnTemplateModified">
+      <summary>Called when a template is modified.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnTemplatesAdded(ESRI.ArcGIS.esriSystem.IArray)">
+      <summary>Called when a templates are added.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnTemplatesAdded">
+      <summary>Called when a templates are added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnTemplatesRemoved(ESRI.ArcGIS.esriSystem.IArray)">
+      <summary>Called when a templates are removed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnTemplatesRemoved">
+      <summary>Called when a templates are removed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditEvents5.OnVertexSelectionChanged">
+      <summary>Called when the sketch's selected vertices changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditEvents5_Event.OnVertexSelectionChanged">
+      <summary>Called when the sketch's selected vertices changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditLayers">
+      <summary>Provides access to members that control information about layers in the edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditLayers.CurrentLayer">
+      <summary>Indicates the editor's target layer which new features are added to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditLayers.CurrentSubtype">
+      <summary>The sub type for new features in the CurrentLayer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditLayers.IsEditable(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Determines if a specific feature layer is editable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditLayers.SetCurrentLayer(ESRI.ArcGIS.Carto.IFeatureLayer,System.Int32)">
+      <summary>The editor's target layer and subtype for new features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditLocation">
+      <summary>Provides access to the Editor's Location property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditLocation.Location">
+      <summary>The last known location of the mouse.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditor">
+      <summary>Provides access to members that control the behavior of the editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.AbortOperation">
+      <summary>Aborts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.CreateSearchShape(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Creates a geometry using the point and the current search tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.CurrentTask">
+      <summary>The current edit task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.Display">
+      <summary>Reference to the current display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.EditSelection">
+      <summary>The selected features which are editable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.EditState">
+      <summary>The editor's current edit state.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.EditWorkspace">
+      <summary>Reference to the workspace being edited.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.EnableUndoRedo(System.Boolean)">
+      <summary>Enable/disable the undo/redo capabilities.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.FindExtension(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds the extension given an id.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.HasEdits">
+      <summary>Indicates whether edits have been made during the session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.InvertAgent(ESRI.ArcGIS.Geometry.IPoint,System.Int32)">
+      <summary>Draws the editor's snapping agent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.Location">
+      <summary>The last known location of the mouse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.Map">
+      <summary>Reference to the map being edited.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.Parent">
+      <summary>Reference to the parent application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.RedoOperation">
+      <summary>Redo an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.ScratchWorkspace">
+      <summary>Reference to the editor's scratch workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.SearchSelection(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Searches the edit selection using the given location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.SelectionAnchor">
+      <summary>The selection anchor point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.SelectionCount">
+      <summary>The number of selected features which are editable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.StartEditing(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Starts an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.StartOperation">
+      <summary>Starts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.StopEditing(System.Boolean)">
+      <summary>Stops an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.StopOperation(System.String)">
+      <summary>Stops an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.Task(System.Int32)">
+      <summary>An edit task by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor.TaskCount">
+      <summary>The number of edit tasks.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor.UndoOperation">
+      <summary>Undo an edit operation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditor2">
+      <summary>Provides access to methods that extend the IEditor interface. The additional members control the behavior of the auxiliary selection anchor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.AuxiliarySelectionAnchor">
+      <summary>The auxiliary selection anchor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.AuxiliarySelectionAnchorEnabled">
+      <summary>Indicates whether the selection anchor is drawn.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.ResetAuxiliarySelectionAnchorLocation">
+      <summary>Places the auxiliary selection anchor near the main anchor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.AbortOperation">
+      <summary>Aborts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.CreateSearchShape(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Creates a geometry using the point and the current search tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.CurrentTask">
+      <summary>The current edit task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.Display">
+      <summary>Reference to the current display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.EditSelection">
+      <summary>The selected features which are editable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.EditState">
+      <summary>The editor's current edit state.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.EditWorkspace">
+      <summary>Reference to the workspace being edited.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.EnableUndoRedo(System.Boolean)">
+      <summary>Enable/disable the undo/redo capabilities.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.FindExtension(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds the extension given an id.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.HasEdits">
+      <summary>Indicates whether edits have been made during the session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.InvertAgent(ESRI.ArcGIS.Geometry.IPoint,System.Int32)">
+      <summary>Draws the editor's snapping agent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.Location">
+      <summary>The last known location of the mouse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.Map">
+      <summary>Reference to the map being edited.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.Parent">
+      <summary>Reference to the parent application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.RedoOperation">
+      <summary>Redo an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.ScratchWorkspace">
+      <summary>Reference to the editor's scratch workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.SearchSelection(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Searches the edit selection using the given location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.SelectionAnchor">
+      <summary>The selection anchor point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.SelectionCount">
+      <summary>The number of selected features which are editable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.StartEditing(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Starts an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.StartOperation">
+      <summary>Starts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.StopEditing(System.Boolean)">
+      <summary>Stops an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.StopOperation(System.String)">
+      <summary>Stops an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.Task(System.Int32)">
+      <summary>An edit task by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor2.TaskCount">
+      <summary>The number of edit tasks.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor2.UndoOperation">
+      <summary>Undo an edit operation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditor3">
+      <summary>Provides access to methods that extend the IEditor interface. The additional members control the behavior of the template construction and snapping.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.AddTemplates(ESRI.ArcGIS.esriSystem.IArray)">
+      <summary>Adds the specified edit template.  The template was created with the EditTemplateFactory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.CurrentTemplate">
+      <summary>The current edit template.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.RemoveAllTemplatesInLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Removes all templates from the specified layer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.RemoveAllTemplatesInMap(ESRI.ArcGIS.Carto.IMap)">
+      <summary>Removes all templates from the specified map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.RemoveTemplate(ESRI.ArcGIS.Carto.IEditTemplate)">
+      <summary>Removes the specified edit template.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Template(System.Int32)">
+      <summary>The edit template for the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.TemplateCount">
+      <summary>The number of edit templates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.TemplateModified(ESRI.ArcGIS.Carto.IEditTemplate)">
+      <summary>Broadcasts the change to the rest of the system.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.AuxiliarySelectionAnchor">
+      <summary>The auxiliary selection anchor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.AuxiliarySelectionAnchorEnabled">
+      <summary>Indicates whether the selection anchor is drawn.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.ResetAuxiliarySelectionAnchorLocation">
+      <summary>Places the auxiliary selection anchor near the main anchor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.AbortOperation">
+      <summary>Aborts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.CreateSearchShape(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Creates a geometry using the point and the current search tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.CurrentTask">
+      <summary>The current edit task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Display">
+      <summary>Reference to the current display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.EditSelection">
+      <summary>The selected features which are editable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.EditState">
+      <summary>The editor's current edit state.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.EditWorkspace">
+      <summary>Reference to the workspace being edited.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.EnableUndoRedo(System.Boolean)">
+      <summary>Enable/disable the undo/redo capabilities.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.FindExtension(ESRI.ArcGIS.esriSystem.IUID)">
+      <summary>Finds the extension given an id.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.HasEdits">
+      <summary>Indicates whether edits have been made during the session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.InvertAgent(ESRI.ArcGIS.Geometry.IPoint,System.Int32)">
+      <summary>Draws the editor's snapping agent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Location">
+      <summary>The last known location of the mouse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Map">
+      <summary>Reference to the map being edited.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Parent">
+      <summary>Reference to the parent application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.RedoOperation">
+      <summary>Redo an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.ScratchWorkspace">
+      <summary>Reference to the editor's scratch workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.SearchSelection(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Searches the edit selection using the given location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.SelectionAnchor">
+      <summary>The selection anchor point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.SelectionCount">
+      <summary>The number of selected features which are editable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.StartEditing(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Starts an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.StartOperation">
+      <summary>Starts an edit operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.StopEditing(System.Boolean)">
+      <summary>Stops an edit session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.StopOperation(System.String)">
+      <summary>Stops an edit operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.Task(System.Int32)">
+      <summary>An edit task by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditor3.TaskCount">
+      <summary>The number of edit tasks.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditor3.UndoOperation">
+      <summary>Undo an edit operation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditorZ">
+      <summary>Provides access to members that access and manipulate the z-environment of the editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditorZ.ApplyZ(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Applies editor's Z-capture logic to point if it isn't already z-aware.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditorZ.DrapeGeometry(ESRI.ArcGIS.Geometry.IGeometry,System.Boolean,ESRI.ArcGIS.Geometry.IGeometry@)">
+      <summary>Drapes a geometry to the current surface.. If addVertices is false, existing vertex Z's will be modified but no new vertices added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.Draping">
+      <summary>Indicates whether sketches are draped onto the surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditorZ.FinalizeZs(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Resolves NaN Zs to definite values.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditorZ.InitializeFeatureConstruction">
+      <summary>Initialize a FeatureConstruction object that will use the Editor's ZEnvironment settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.NotifyZFinalize">
+      <summary>Callback used to notify if ZCapture mode fails.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.Surface">
+      <summary>Surface used for Z capture.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.UseZDrapingTolerance">
+      <summary>Indicates whether the ZDrapingTolerance property is used when adding segments to the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.UseZOffset">
+      <summary>Indicates whether new z-values are modified by the ZOffset property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.ZCaptureType">
+      <summary>Determines method used for z-capture.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.ZDrapingTolerance">
+      <summary>Determines the allowable error from the surface when draping.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.ZOffset">
+      <summary>Determines offset applied to z-value when new vertex is added to edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditorZ.ZSnapSymbol">
+      <summary>Symbol used to indicate when vertex is snapped in Z.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditProperties">
+      <summary>Provides access to members that control the properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.AutoSaveOnVersionRedefined">
+      <summary>Indicates whether the stop editing process should automatically reconcile an edit session and save the version without notification.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.ReportPrecision">
+      <summary>Controls the number of decimal places the editor reports numbers with.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.SelectedVertexSymbol">
+      <summary>Symbol used to draw the active vertex of the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.SketchSymbol">
+      <summary>Symbol used to draw the lines of the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.SketchVertexSymbol">
+      <summary>Symbol used to draw the vertices of the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.SnapSymbol">
+      <summary>Symbol used to draw the snap location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.StreamGroupingCount">
+      <summary>Controls the number of points to group together when streaming.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.StreamTolerance">
+      <summary>Controls the streaming tolerance, measured in map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties.StretchGeometry">
+      <summary>Indicates if the edit sketch is stretched when one of its vertices is moved.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditProperties2">
+      <summary>Provides access to more members that control the properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.AngularCorrectionOffset">
+      <summary>Angular Correction Offset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.AngularUnitPrecision">
+      <summary>Precision used to display angular units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.DirectionType">
+      <summary>Direction Type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.DirectionUnits">
+      <summary>Direction Units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.DistanceCorrectionFactor">
+      <summary>Distance Correction Factor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.SnapTips">
+      <summary>Indicates whether to show the snap tips.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.StickyMoveTolerance">
+      <summary>Controls the sticky move tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties2.UseGroundToGrid">
+      <summary>Indicates whether to use Ground to Grid.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditProperties3">
+      <summary>Provides access to more members that control the properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties3.AutoReconcileConflictsByAttribute">
+      <summary>Indicates whether conflicts will be detected and resolved by attributes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties3.AutoReconcileEditSessionWins">
+      <summary>Indicates whether conflicts are resolved in favor of the edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties3.AutoSaveChecksConflicts">
+      <summary>Indicates whether the editor checks if conflicts were detected during auto reconciliation prior to automatically saving.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties3.MultiuserEditSessionMode">
+      <summary>The multiuser session mode that is used when editing.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditProperties4">
+      <summary>Provides access to more members that control the properties of an edit session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.ActiveSelectedVertexSymbol">
+      <summary>Symbol used to draw the selected active vertex of the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.ActiveSketchVertexSymbol">
+      <summary>Symbol used to draw the selected vertices of the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.ClassicSnapping">
+      <summary>Indicates whether the classic editing snapping will be used.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.ShowConstructionToolbars">
+      <summary>Indicates whether construction toolbars will be displayed while drawing a sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.SnapToSketch">
+      <summary>Indicates whether the sketch will be added to the snapping cache.  It is used when not using classic snapping.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties4.UseWYSIWYGSketchSymbol">
+      <summary>Indicates whether the sketch is drawn with WYSIWYG symbology.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditProperties5">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditProperties5.AutoSaveNonVersionedEdit">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSelectionCache">
+      <summary>Provides access to members that cache the selection for fast hit testing.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache.HitTest(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Tests if the location is over the selection or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache.Initialize(ESRI.ArcGIS.Editor.IEditor,System.Int32)">
+      <summary>Initializes the cache using the editor's selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSelectionCache2">
+      <summary>Provides access to additional members that cache the selection for fast hit testing.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache2.HitTest(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Tests if the location is over the selection or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache2.Initialize(ESRI.ArcGIS.Editor.IEditor,System.Int32,System.Boolean)">
+      <summary>Initializes the cache using the editor's selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSelectionCache3">
+      <summary>Provides access to additional members that cache the selection for fast hit testing.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache3.HitTest(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Tests if the location is over the selection or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSelectionCache3.Initialize(ESRI.ArcGIS.Editor.IEditor,System.Int32,System.Boolean,System.Boolean)">
+      <summary>Initializes the cache using the editor's selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSketch">
+      <summary>Provides access to members that access and manipulate the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch.AddPoint(ESRI.ArcGIS.Geometry.IPoint,System.Boolean)">
+      <summary>Adds a point to the edit sketch. If allowUndo is true, a new operation will be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch.FinishSketch">
+      <summary>Completes the current edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch.FinishSketchPart">
+      <summary>Completes a part for the current edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.Geometry">
+      <summary>Geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.GeometryType">
+      <summary>Type of the geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.LastPoint">
+      <summary>The last point in the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch.ModifySketch">
+      <summary>Call to notify listeners that the sketch has been changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.Part">
+      <summary>The index of the current part of the sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch.RefreshSketch">
+      <summary>Invalidates the portion of the display that is occupied by the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.Segment">
+      <summary>The index of the current segment of the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch.Vertex">
+      <summary>The index of the current vertex of the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSketch2">
+      <summary>Provides access to members that access and manipulate the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.CurrentZ">
+      <summary>Current Z value for the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.EditSketchExtension">
+      <summary>The current edit sketch extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.MAware">
+      <summary>Indicates if the edit sketch geometry will contain Ms.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.PartComplete">
+      <summary>Indicates whether FinishPart has been called on the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.VertexAdded(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.VertexDeleted(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.VertexMoved(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been moved.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.ZAware">
+      <summary>Indicates if the edit sketch geometry will contain Zs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.AddPoint(ESRI.ArcGIS.Geometry.IPoint,System.Boolean)">
+      <summary>Adds a point to the edit sketch. If allowUndo is true, a new operation will be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.FinishSketch">
+      <summary>Completes the current edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.FinishSketchPart">
+      <summary>Completes a part for the current edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.Geometry">
+      <summary>Geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.GeometryType">
+      <summary>Type of the geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.LastPoint">
+      <summary>The last point in the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.ModifySketch">
+      <summary>Call to notify listeners that the sketch has been changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.Part">
+      <summary>The index of the current part of the sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch2.RefreshSketch">
+      <summary>Invalidates the portion of the display that is occupied by the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.Segment">
+      <summary>The index of the current segment of the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch2.Vertex">
+      <summary>The index of the current vertex of the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSketch3">
+      <summary>Provides access to members that access and manipulate the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.ClearSelectedVertices">
+      <summary>Clears selected vertices.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.ClearWYSIWYGSketchSymbol">
+      <summary>Clears the WYSIWYG Sketch symbol and its properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.IsVertexSelected(System.Int32,System.Int32)">
+      <summary>Is a vertex selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.SelectedVertexCount">
+      <summary>The number of selected vertices.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.SelectVertex(System.Int32,System.Int32)">
+      <summary>Selects a vertex.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.SetWYSIWYGSketchSymbol(ESRI.ArcGIS.Display.ISymbol,System.Boolean,System.Boolean)">
+      <summary>The WYSIWYG Sketch symbol and its properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.ShapeConstructor">
+      <summary>The currently activated Shape Constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.SketchSymbolIsWYSIWYG">
+      <summary>Indicates whether the sketch symbol is WYSIWYG.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.SketchSymbolRespectsRefScale">
+      <summary>Indicates whether the sketch symbol should respect the map's reference scale.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.UnselectVertex(System.Int32,System.Int32)">
+      <summary>Unselects a vertex.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.WYSIWYGSketchSymbol">
+      <summary>The WYSIWYG symbol for the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.CurrentZ">
+      <summary>Current Z value for the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.EditSketchExtension">
+      <summary>The current edit sketch extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.MAware">
+      <summary>Indicates if the edit sketch geometry will contain Ms.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.PartComplete">
+      <summary>Indicates whether FinishPart has been called on the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.VertexAdded(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.VertexDeleted(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.VertexMoved(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Call to notify listeners that a sketch vertex has been moved.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.ZAware">
+      <summary>Indicates if the edit sketch geometry will contain Zs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.AddPoint(ESRI.ArcGIS.Geometry.IPoint,System.Boolean)">
+      <summary>Adds a point to the edit sketch. If allowUndo is true, a new operation will be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.FinishSketch">
+      <summary>Completes the current edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.FinishSketchPart">
+      <summary>Completes a part for the current edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.Geometry">
+      <summary>Geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.GeometryType">
+      <summary>Type of the geometry stored in the edit sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.LastPoint">
+      <summary>The last point in the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.ModifySketch">
+      <summary>Call to notify listeners that the sketch has been changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.Part">
+      <summary>The index of the current part of the sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketch3.RefreshSketch">
+      <summary>Invalidates the portion of the display that is occupied by the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.Segment">
+      <summary>The index of the current segment of the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketch3.Vertex">
+      <summary>The index of the current vertex of the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSketchExtension">
+      <summary>Provides access to members that extend the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.Activate(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Called when the sketch extension is about to be used.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.Applies(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Indicates whether this extension applies to the current edit environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.BeforeStoreFeature(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Lets the extension know the feature is about to be stored.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension.CanDeleteVertices">
+      <summary>Indicates whether the sketch allows the deleting of vertices.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension.CanInsertVertices">
+      <summary>Indicates whether the sketch allows the inserting of additional vertices.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension.CanMoveVertices">
+      <summary>Indicates whether the sketch allows the moving of vertices.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.CreateFeedback">
+      <summary>Called when a new feedback is needed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.CreateSketchGeometry(ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>The geometry that will be used in the sketch when modifying a feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.Deactivate">
+      <summary>Called when the sketch extension is no longer needed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension.HasFeedback">
+      <summary>Indicates whether the SketchExtension will use a custom feedback.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension.SketchGeometryType">
+      <summary>The geometry type used for the edit sketch when creating new features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.StartFeedback(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when the feedback needs to be started.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.StartFeedbackFromShape(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Called when the feedback needs to be started using an existing geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension.StopFeedback">
+      <summary>Called when the feedback is no longer necessary.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditSketchExtension2">
+      <summary>Provides access to members that extend the edit sketch.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.Activate(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Called when the sketch extension is about to be used.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.Applies(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Indicates whether this extension applies to the current edit environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.BeforeStoreFeature(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Lets the extension know the feature is about to be stored.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.CanDeleteVertices">
+      <summary>Indicates whether the sketch allows the deleting of vertices.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.CanInsertVertices">
+      <summary>Indicates whether the sketch allows the inserting of additional vertices.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.CanMoveVertices">
+      <summary>Indicates whether the sketch allows the moving of vertices.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.CreateFeedback">
+      <summary>Called when a new feedback is needed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.CreatePreSketchFeedback">
+      <summary>Called when a new feedback is needed before the sketch starts.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.CreateSketchGeometry(ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>The geometry that will be used in the sketch when modifying a feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.Deactivate">
+      <summary>Called when the sketch extension is no longer needed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.HasFeedback">
+      <summary>Indicates whether the SketchExtension will use a custom feedback.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.HasPreSketchFeedback">
+      <summary>Indicates whether the SketchExtension will use a custom feedback before the sketch starts.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.OnKeyDown(System.Int32,System.Int32)">
+      <summary>Called when a key is pressed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.OnKeyUp(System.Int32,System.Int32)">
+      <summary>Called when a key is pressed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditSketchExtension2.SketchGeometryType">
+      <summary>The geometry type used for the edit sketch when creating new features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.StartFeedback(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when the feedback needs to be started.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.StartFeedbackFromShape(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Called when the feedback needs to be started using an existing geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.StartPreSketchFeedback(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when the feedback needs to be started.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.StopFeedback">
+      <summary>Called when the feedback is no longer necessary.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditSketchExtension2.StopPreSketchFeedback">
+      <summary>Called when the feedback needs to be stopped.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditTask">
+      <summary>Provides access to a task that receives notification when the sketch is complete.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditTask.Activate(ESRI.ArcGIS.Editor.IEditor,ESRI.ArcGIS.Editor.IEditTask)">
+      <summary>Called by the editor when the task becomes active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditTask.Deactivate">
+      <summary>Called by the editor when the task becomes inactive.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditTask.Name">
+      <summary>The name of the edit task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditTask.OnDeleteSketch">
+      <summary>Notifies the task that the edit sketch has been deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditTask.OnFinishSketch">
+      <summary>Notifies the task that the edit sketch is complete.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditTaskName">
+      <summary>Provides access to members that identify edit tasks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditTaskName.UniqueName">
+      <summary>The name of the edit task.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditTaskSearch">
+      <summary>Provides access to members that find edit tasks by name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditTaskSearch.TaskByUniqueName(System.String)">
+      <summary>An edit task by unique name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditTool">
+      <summary>Provides access to events triggered by the ArcMap Editor's edit tool.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEditTool.EventSource">
+      <summary>The event source for the edit tool.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditToolEvents">
+      <summary>Provides access to events generated by the edit tool.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEditToolEvents_Event">
+      <summary>Provides access to events generated by the edit tool.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditToolEvents.OnBeginMove(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when the mouse button is first depressed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditToolEvents_Event.OnBeginMove">
+      <summary>Called when the mouse button is first depressed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditToolEvents.OnFinishMove(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when the left mouse button is released.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditToolEvents_Event.OnFinishMove">
+      <summary>Called when the left mouse button is released.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEditToolEvents.OnMove(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Called when mouse moves while left mouse button is depressed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Editor.IEditToolEvents_Event.OnMove">
+      <summary>Called when mouse moves while left mouse button is depressed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumAnnotationConstructor">
+      <summary>Provides access to members that control the annotation constructors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumAnnotationConstructor.Next">
+      <summary>The next constructor in the enumeration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumAnnotationConstructor.Reset">
+      <summary>Resets the enumerator such that a subsequent next returns the first constructor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumDimensionConstructor">
+      <summary>Provides access to members that control the dimension constructors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumDimensionConstructor.Next">
+      <summary>Retrieves the next constructor in the enumeration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumDimensionConstructor.Reset">
+      <summary>Resets the enumerator such that a subsequent next returns the first constructor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumFieldMap">
+      <summary>Provides access to members that return field maps.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumFieldMap.Next(ESRI.ArcGIS.Geodatabase.IField@,ESRI.ArcGIS.Geodatabase.IField@)">
+      <summary>Retrieves the next field mapping in the sequence.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumFieldMap.Reset">
+      <summary>Reset enum to first element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumMapFeature">
+      <summary>Provides access to the layer a selected feature is from.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumMapFeature.Next(ESRI.ArcGIS.Geodatabase.IFeature@,ESRI.ArcGIS.Carto.IFeatureLayer@)">
+      <summary>Retrieves the next feature and its featurelayer in the sequence.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumRow">
+      <summary>Provides access to members that enumerate rows in sequence.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEnumRow.Count">
+      <summary>The number of rows.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow.Next">
+      <summary>Retrieves the next row in the sequence.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow.Reset">
+      <summary>Resets the enumeration sequence to the beginning.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IEnumRow2">
+      <summary>Provides access to source of a selected row.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow2.get_FeatureLayer">
+      <summary>Retrieves the next feature's featurelayer in the sequence.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow2.get_StandaloneTable">
+      <summary>Retrieves the next row's standalonetable in the sequence.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IEnumRow2.Count">
+      <summary>The number of rows.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow2.Next">
+      <summary>Retrieves the next row in the sequence.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IEnumRow2.Reset">
+      <summary>Resets the enumeration sequence to the beginning.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IExtendedObjectInspector">
+      <summary>Provides access to additional members that control a custom feature's property inspector.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IExtendedObjectInspector.DisableEditOperations">
+      <summary>Indicates if the object inspector is under a non-versioned editing model and to not start or stop edit operations as an edit operation is currently in effect.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IFeatureSnapAgent">
+      <summary>Provides access to members that control a feature snap agent's properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent.FeatureCache">
+      <summary>The FeatureCache associated with the feature snap agent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent.FeatureClass">
+      <summary>The featureclass the feature snap agent snaps to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent.HitType">
+      <summary>The part of a geometry the feature snap agent snaps to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent.Name">
+      <summary>The name of the snap agent shown in the UI.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFeatureSnapAgent.Snap(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geometry.IPoint,System.Double)">
+      <summary>Called by the editor to perform the actual snapping logic.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IFeatureSnapAgent2">
+      <summary>Provides access to properties controlling Snapping in Z.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.ZSnappingEnabled">
+      <summary>Indicates whether this Agent will snap in Z.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.FeatureCache">
+      <summary>The FeatureCache associated with the feature snap agent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.FeatureClass">
+      <summary>The featureclass the feature snap agent snaps to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.HitType">
+      <summary>The part of a geometry the feature snap agent snaps to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.Name">
+      <summary>The name of the snap agent shown in the UI.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFeatureSnapAgent2.Snap(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geometry.IPoint,System.Double)">
+      <summary>Called by the editor to perform the actual snapping logic.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IFieldMap">
+      <summary>Provides access to members that control the behavior of the field mapping tools.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFieldMap.DeleteFieldMap(System.Boolean,ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>Delete an individual field map (source or destination).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFieldMap.FieldMap">
+      <summary>Enum of field maps.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFieldMap.GetSourceField(ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>The source field for the provided target field.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFieldMap.GetTargetField(ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>The target field for the provided source field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFieldMap.IsEmpty">
+      <summary>Indicates if any field mappings have been set.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IFieldMap.SetFieldMap(ESRI.ArcGIS.Geodatabase.IField,ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>Establishes a field mapping between the source and target fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFieldMap.SourceClass">
+      <summary>Source class (required) for field mapping.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IFieldMap.TargetClass">
+      <summary>Target class (required) for field mapping.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IModifyTask">
+      <summary>Indicator interface that identifies an edit task for modifying features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.INotifyZFinalize">
+      <summary>Provides access to a callback method the Editor will call if Z Attribution of a geometry fails.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.INotifyZFinalize.Failed(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Callback is called when Z Capture fails, allows client an opportunity to set a custom Z.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IObjectInspector">
+      <summary>Provides access to members that control a custom feature's property inspector.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IObjectInspector.Clear">
+      <summary>Clear the inspector before inspecting another object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IObjectInspector.Copy(ESRI.ArcGIS.Geodatabase.IRow)">
+      <summary>Copies the values from srcRow to the row being edited.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspector.HWND">
+      <summary>The window handle for the inspector.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IObjectInspector.Inspect(ESRI.ArcGIS.Editor.IEnumRow,ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Inspects the properties of the features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IObjectInspectorPanel">
+      <summary>Provides access to members that control the default object property inspector.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspectorPanel.Field(System.Int32)">
+      <summary>Attribute field by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspectorPanel.FieldCount">
+      <summary>The number of attribute fields displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspectorPanel.Rows">
+      <summary>The row or rows being inspected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspectorPanel.SelectedField">
+      <summary>The index of the selected field, or -1.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IObjectInspectorPanel.Table">
+      <summary>The table being edited.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IProtectNameEditor">
+      <summary>Provides access to dummy methods protecting name correctness.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IProtectNameEditor.ProtectOLE_COLOR(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IProtectNameEditor.ProtectOLE_HANDLE(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IRepresentationMarkerEditor">
+      <summary>Provides access to the Representation Marker Editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationMarkerEditor.DoModal(System.Int32,ESRI.ArcGIS.Display.IRepresentationGraphics)">
+      <summary>Displays the representation marker editor dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IRepresentationMarkerEditor.Marker">
+      <summary>Representation marker edited by the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IRepresentationRuleEditor">
+      <summary>Provides access to the Representation Rule Editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationRuleEditor.DoModal(System.Int32,ESRI.ArcGIS.Geometry.esriGeometryType,ESRI.ArcGIS.Display.IRepresentationRule)">
+      <summary>Displays the representation rule editor dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IRepresentationRuleEditor.GeometryType">
+      <summary>Geometry type edited by the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IRepresentationRuleEditor.Rule">
+      <summary>Representation rule edited by the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IRepresentationRuleEditor2">
+      <summary>Provides access to the Representation Rule Editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationRuleEditor2.DoModal(System.Int32,ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Display.IRepresentationRule)">
+      <summary>Displays the representation rule editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IRepresentationWindow">
+      <summary>Provides access to methods for working with the representation properties window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationWindow.Hide">
+      <summary>Hides the window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationWindow.RefreshContents">
+      <summary>Refreshes the contents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IRepresentationWindow.Show">
+      <summary>Shows the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISelectionResolutionChip">
+      <summary>Provides access to the Selection Resolution Chip.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.AllowAnnoFeatures">
+      <summary>Indicates if annotation feature candidates are allowed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.AllowLineFeatures">
+      <summary>Indicates if line feature candidates are allowed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.AllowPointFeatures">
+      <summary>Indicates if point feature candidates are allowed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.AllowPolygonFeatures">
+      <summary>Indicates if polygon feature candidates are allowed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.CombinationMethod">
+      <summary>The combination method used when clicked.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISelectionResolutionChip.DoModal(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Carto.IFeatureLayer@,ESRI.ArcGIS.Geodatabase.IFeature@)">
+      <summary>Shows the selection resolution chip and require a response.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISelectionResolutionChip.Hide">
+      <summary>Hides the selection resolution chip.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.MustBeEditable">
+      <summary>Indicates if the candidate features must be editable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISelectionResolutionChip.MustBeSelectable">
+      <summary>Indicates if the candidate features must be selectable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISelectionResolutionChip.Show(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Editor.ISelectionResolutionImpl)">
+      <summary>Shows the selection resolution chip.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISelectionResolutionImpl">
+      <summary>Provides access to the callback methods for the Selection Resolution Chip.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISelectionResolutionImpl.Select(ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Carto.esriSelectionResultEnum,ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>A new feature has been selected.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IShapeConstructor">
+      <summary>Provides access to a Shape Constructor to be hosted by tools that build sketches.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.Activate">
+      <summary>Prepares a shape constructor to begin receiving events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Active">
+      <summary>Indicates whether the constructor is currently active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.AddPoint(ESRI.ArcGIS.Geometry.IPoint,System.Boolean,System.Boolean)">
+      <summary>Adds a point to the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Anchor">
+      <summary>The anchor of the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.AngleConstraint">
+      <summary>The sketch's angular constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Constraint">
+      <summary>The sketch constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Cursor">
+      <summary>The mouse pointer for this constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.Deactivate">
+      <summary>Resets a shape constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.DistanceConstraint">
+      <summary>The sketch's distance constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Enabled">
+      <summary>Indicates whether the constructor is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.ID">
+      <summary>Name string identifying this shape constructor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.Initialize(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Initializes a newly constructed shape constructor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.IsStreaming">
+      <summary>Indicates whether stream mode digitizing is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IShapeConstructor.Location">
+      <summary>The current location of the mouse.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnContextMenu(System.Int32,System.Int32)">
+      <summary>Context menu event occured at the given xy location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnKeyDown(System.Int32,System.Int32)">
+      <summary>Occurs when a key on the keyboard is pressed when this constructor is active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnKeyUp(System.Int32,System.Int32)">
+      <summary>Occurs when a key on the keyboard is released when this constructor is active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnMouseDown(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Occurs when a mouse button is pressed when this constructor is active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnMouseMove(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Occurs when the mouse is moved when this constructor is active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.OnMouseUp(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Occurs when a mouse button is released when this constructor is active.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.Refresh(System.Int32)">
+      <summary>Occurs when a screen display in the application is refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IShapeConstructor.SketchModified">
+      <summary>Called when Sketch is modified.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IShapeConstructorTool">
+      <summary>Indicator interface for tools that utilize shape constructors.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISketchOperation">
+      <summary>Provides access to members that control undo/redo capabilities for edit sketch modifications.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISketchOperation.Finish(ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Finishes the operation and puts it into the operation stack. Call this after the sketch has been modified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchOperation.MenuString">
+      <summary>The text that appears in the undo menu choice.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISketchOperation.Start(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Starts the operation, caching the existing sketch. Call this before modifying the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISketchOperation2">
+      <summary>Provides access to members that control undo/redo capabilities for edit sketch modifications.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISketchOperation2.Finish(ESRI.ArcGIS.Geometry.IEnvelope,ESRI.ArcGIS.Editor.esriSketchOperationType,System.Object)">
+      <summary>Finishes the operation and puts it into the operation stack. Call this after the sketch has been modified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchOperation2.MenuString">
+      <summary>The text that appears in the undo menu choice.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISketchOperation2.Start(ESRI.ArcGIS.Editor.IEditor)">
+      <summary>Starts the operation, caching the existing sketch. Call this before modifying the sketch.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISketchTool">
+      <summary>Provides access to members that control the main sketch tool.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISketchTool.AddPoint(ESRI.ArcGIS.Geometry.IPoint,System.Boolean,System.Boolean)">
+      <summary>Adds a point to the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.Anchor">
+      <summary>The anchor of the sketch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.AngleConstraint">
+      <summary>The sketch's angular constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.Constraint">
+      <summary>The sketch constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.DistanceConstraint">
+      <summary>The sketch's distance constraint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.IsStreaming">
+      <summary>Indicates whether stream mode digitizing is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISketchTool.Location">
+      <summary>The current location of the mouse.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapAgent">
+      <summary>Provides access to members that snap point locations using a tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapAgent.Name">
+      <summary>The name of the snap agent shown in the UI.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapAgent.Snap(ESRI.ArcGIS.Geometry.IGeometry,ESRI.ArcGIS.Geometry.IPoint,System.Double)">
+      <summary>Called by the editor to perform the actual snapping logic.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapAgentCategory">
+      <summary>Provides access to the categories of SnapAgents.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapAgentCategory.Category">
+      <summary>The Snap Agent category.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapAgentFeedback">
+      <summary>Provides access to feedback in the form of a string to determine what was snapped to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapAgentFeedback.SnapText">
+      <summary>Snap Agent Feedback string.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapEnvironment">
+      <summary>Provides access to members that manage the snap agents used by the editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment.AddSnapAgent(ESRI.ArcGIS.Editor.ISnapAgent)">
+      <summary>Adds a new snap agent to the snap environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment.ClearSnapAgents">
+      <summary>Removes all snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment.RemoveSnapAgent(System.Int32)">
+      <summary>Removes the snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment.SnapAgent(System.Int32)">
+      <summary>A snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment.SnapAgentCount">
+      <summary>The number of active snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment.SnapPoint(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Attempts to snap the point using the current snap environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment.SnapTolerance">
+      <summary>The snap tolerance, measured in pixels or map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment.SnapToleranceUnits">
+      <summary>The units used for the snap tolerance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapEnvironment2">
+      <summary>Provides access to members used to manipulate the snap environment for Zs.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapZTolerance">
+      <summary>The snap tolerance used for z-values, measured in map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.UseSnapZTolerance">
+      <summary>Indicates whether the SnapZTolerance property is used when Z snapping.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment2.AddSnapAgent(ESRI.ArcGIS.Editor.ISnapAgent)">
+      <summary>Adds a new snap agent to the snap environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment2.ClearSnapAgents">
+      <summary>Removes all snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment2.RemoveSnapAgent(System.Int32)">
+      <summary>Removes the snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapAgent(System.Int32)">
+      <summary>A snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapAgentCount">
+      <summary>The number of active snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapPoint(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Attempts to snap the point using the current snap environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapTolerance">
+      <summary>The snap tolerance, measured in pixels or map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment2.SnapToleranceUnits">
+      <summary>The units used for the snap tolerance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnapEnvironment3">
+      <summary>Provides access to members used to manipulate the snap environment for contraints.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.FullPointSnap(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Always attempts to snap the point using the current snap environment.  This should not be used to snap mouse position in a tool.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapToIntersection(ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Attempts to snap the specified point to the given intersection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapZTolerance">
+      <summary>The snap tolerance used for z-values, measured in map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.UseSnapZTolerance">
+      <summary>Indicates whether the SnapZTolerance property is used when Z snapping.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.AddSnapAgent(ESRI.ArcGIS.Editor.ISnapAgent)">
+      <summary>Adds a new snap agent to the snap environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.ClearSnapAgents">
+      <summary>Removes all snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.RemoveSnapAgent(System.Int32)">
+      <summary>Removes the snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapAgent(System.Int32)">
+      <summary>A snap agent at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapAgentCount">
+      <summary>The number of active snap agents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapPoint(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Attempts to snap the point using the current snap environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapTolerance">
+      <summary>The snap tolerance, measured in pixels or map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ISnapEnvironment3.SnapToleranceUnits">
+      <summary>The units used for the snap tolerance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ISnappingWindow">
+      <summary>Provides access to methods for working with the snapping window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnappingWindow.Hide">
+      <summary>Hides the window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnappingWindow.RefreshContents">
+      <summary>Refreshes the contents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ISnappingWindow.Show">
+      <summary>Shows the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ITransmogrifyTask">
+      <summary>Indicator interface that identifies an edit task for reshaping features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ITraverseAdjustment">
+      <summary>Provides access to members that perform adjustment computations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseAdjustment.CalculateAdjustment(ESRI.ArcGIS.Geometry.IPolyline,ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Editor.esriAdjustmentType)">
+      <summary>Performs the specified adjustment computation on the geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseAdjustment.CalculateClosure(ESRI.ArcGIS.Geometry.IPolyline,ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Caculates the closure for the .</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ITraverseClosure">
+      <summary>Provides access to members that report the traverse closure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.CalculatedEndPoint">
+      <summary>The calculated closing point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.CourseCount">
+      <summary>The number of courses in the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.EndPoint">
+      <summary>The closing point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.MisclosureDirection">
+      <summary>The direction of the vector of misclosure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.MisclosureDistance">
+      <summary>The distance of the vector of misclosure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.MisclosureX">
+      <summary>The horizontal difference in closure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.MisclosureY">
+      <summary>The vertical difference in closure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.RelativeErrorRatio">
+      <summary>The relative error ratio of misclosure.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseClosure.TotalLength">
+      <summary>The total length of the traverse.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ITraverseWindow">
+      <summary>Provides access to members that interact with the Traverse Window dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow.Add">
+      <summary>Add the course that is defined by the current course parameters.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.Course(System.Int32)">
+      <summary>A reference to the ith course.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.CourseCount">
+      <summary>The number of courses in the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.CourseType">
+      <summary>The type of the course being added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.CurveDirectionType">
+      <summary>If the course type is esriCTCurve, defines the direction type of the curve.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.CurveParameter(System.Int32)">
+      <summary>If the course type is esriCTCurve or esriCTTangentCurve, describes the type of curve paramater that the ith measure text represents.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.FinishPoint">
+      <summary>The specified end point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.IsAddEnabled">
+      <summary>Indicates if the Add command on the Traverse Window dialog is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.MeasureHWND(System.Int32)">
+      <summary>The handle of the ith measure text control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.MeasureSelected(System.Int32)">
+      <summary>Indicates if the text in the ith measure is selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.MeasureText(System.Int32)">
+      <summary>The ith value that defines the course to add.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow.SetFocusToMeasure(System.Int32)">
+      <summary>Change the focus to the ith measure text control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.StartPoint">
+      <summary>The specified start point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.TurnDirection">
+      <summary>If the course type is esriCTCurve or esriCTTangentCurve, indicates if the curve turns to the left or right.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow.Visible">
+      <summary>Indicates if Traverse Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.ITraverseWindow2">
+      <summary>Provides access to members that interact with the Traverse Window dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow2.Add">
+      <summary>Add the course that is defined by the current course parameters.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.Course(System.Int32)">
+      <summary>A reference to the ith course.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.CourseCount">
+      <summary>The number of courses in the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.CourseType">
+      <summary>The type of the course being added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.CurveDirectionType">
+      <summary>If the course type is esriCTCurve, defines the direction type of the curve.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.CurveParameter(System.Int32)">
+      <summary>If the course type is esriCTCurve or esriCTTangentCurve, describes the type of curve paramater that the ith measure text represents.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow2.Finish">
+      <summary>Finishes the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.FinishPoint">
+      <summary>The specified end point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.IsAddEnabled">
+      <summary>Indicates if the Add command on the Traverse Window dialog is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.IsClosedLoop">
+      <summary>Indicates if the traverse is a closed loop.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.IsFinishEnabled">
+      <summary>Indicates if the Finish command on the Traverse Window dialog is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.MeasureHWND(System.Int32)">
+      <summary>The handle of the ith measure text control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.MeasureSelected(System.Int32)">
+      <summary>Indicates if the text in the ith measure is selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.MeasureText(System.Int32)">
+      <summary>The ith value that defines the course to add.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow2.Remove(System.Int32)">
+      <summary>Removes the ith course from the traverse.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.ITraverseWindow2.SetFocusToMeasure(System.Int32)">
+      <summary>Change the focus to the ith measure text control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.StartPoint">
+      <summary>The specified start point of the traverse.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.TurnDirection">
+      <summary>If the course type is esriCTCurve or esriCTTangentCurve, indicates if the curve turns to the left or right.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.ITraverseWindow2.Visible">
+      <summary>Indicates if Traverse Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.IVersionChangesWindow">
+      <summary>Provides access to Version Changes Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.Class(System.Int32)">
+      <summary>Class by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.ClassCount">
+      <summary>The number of classes with changes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.CurrentChangeType">
+      <summary>Change Type of the selected row or feature.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.CurrentClass">
+      <summary>Class name of the selected row or feature.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.CurrentRow">
+      <summary>ID of the current row or feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IVersionChangesWindow.FindClass(System.String,ESRI.ArcGIS.Editor.esriChangeVersion)">
+      <summary>Finds a cached table corresponding to specified version.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.IDs(System.String,ESRI.ArcGIS.Editor.esriChangeType)">
+      <summary>Enumerate the difference row IDs of the current class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IVersionChangesWindow.Initialize(System.Int32,ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Geodatabase.IVersion,ESRI.ArcGIS.Geodatabase.IVersion,ESRI.ArcGIS.Geometry.IEnvelope,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Initialize Version Changes Window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Editor.IVersionChangesWindow.RefreshChanges(ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Re-Discover changes and re-populate window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.SelectedFieldIndexes">
+      <summary>The indexes of the fields in the row that are currently selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Editor.IVersionChangesWindow.Visible">
+      <summary>Indicates if Version Changes Window is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.AlignedConstructor">
+      <summary>A dimension feature constructor for creating aligned dimension features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.AlignedConstructorClass">
+      <summary>A dimension feature constructor for creating aligned dimension features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriAdjustmentType">
+      <summary>Options for the type of adjustment calculation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriAdjustmentType.esriAdjustmentTypeCompass">
+      <summary>Compass (Bowditch) rule.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriAdjustmentType.esriAdjustmentTypeTransit">
+      <summary>Transit rule.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriAdjustmentType.esriAdjustmentTypeCrandall">
+      <summary>Crandall.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriChangeType">
+      <summary>Esri Change type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeType.esriChangeTypeUndefined">
+      <summary>Undefined.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeType.esriChangeTypeInsert">
+      <summary>Insert.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeType.esriChangeTypeDelete">
+      <summary>Delete.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeType.esriChangeTypeUpdate">
+      <summary>Update.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriChangeVersion">
+      <summary>Esri Change Version.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeVersion.esriChangeSourceVersion">
+      <summary>The Source version.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeVersion.esriChangeTargetVersion">
+      <summary>The Target version.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriChangeVersion.esriChangeCommonAncestorVersion">
+      <summary>The Common Ancestor version.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriConstructionToolbarLocation">
+      <summary>Locations for Construction MiniBar.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriConstructionToolbarLocation.esriCTLLast">
+      <summary>Use Last Location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriConstructionToolbarLocation.esriCTLOnTop">
+      <summary>Immediately next to target location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriConstructionToolbarLocation.esriCTLAbove">
+      <summary>Above the target location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriConstructionToolbarLocation.esriCTLBelow">
+      <summary>Below the target location.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriCourseType">
+      <summary>Types of traverse courses.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCourseType.esriCTDirectionDistance">
+      <summary>Course defined by a direction and a distance.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCourseType.esriCTAngleDistance">
+      <summary>Course defined by an angle and distance.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCourseType.esriCTCurve">
+      <summary>Course defined by a tangent curve.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCourseType.esriCTTangentCurve">
+      <summary>Course defined be a non-tangent curve.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriCurveDirectionType">
+      <summary>Options for the type of direction used to describe a non-tangent curve.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveDirectionType.esriCDTChord">
+      <summary>The direction is along the chord.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveDirectionType.esriCDTRadial">
+      <summary>The direction is radial, toward the center of the curve.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveDirectionType.esriCDTTangent">
+      <summary>The direction is along the tangent of the curve, toward the point of tangency.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriCurveParameter">
+      <summary>Options for the type of parameter used to define a circular arc. A circular arc can be defined by any two of these parameters.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveParameter.esriCPChord">
+      <summary>Parameter describes a chord distance.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveParameter.esriCPAngle">
+      <summary>Parameter describes the central angle of the curve, also known as the delta angle.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveParameter.esriCPArc">
+      <summary>Parameter describes the arc distance along the curve.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriCurveParameter.esriCPRadius">
+      <summary>Parameter describes the radius of the curve.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriEditorError">
+      <summary>Errors that can occur in the ArcGIS Editor.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriEditorError.E_EDITOR_CANTEDITAIWORKSPACE">
+      <summary>This version of the ArcGIS Editor cannot edit Arc/Info workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriEditState">
+      <summary>Indicates whether editing is happening or not.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriEditState.esriStateNotEditing">
+      <summary>Not editing.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriEditState.esriStateEditing">
+      <summary>Editing.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriEditState.esriStateEditingUnfocused">
+      <summary>Editing, but the map is out of focus.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriSketchConstraint">
+      <summary>Constraints that can be applied to the sketch tool.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchConstraint.esriConstraintNone">
+      <summary>No constraint.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchConstraint.esriConstraintAngle">
+      <summary>Angle.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchConstraint.esriConstraintDistance">
+      <summary>Distance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriSketchOperationType">
+      <summary>The type of sketch operation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchOperationType.esriSketchOperationGeneral">
+      <summary>No specific type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchOperationType.esriSketchOperationVertexAdded">
+      <summary>An operation that added a vertex.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchOperationType.esriSketchOperationVertexDeleted">
+      <summary>An operation that deleted a vertex.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSketchOperationType.esriSketchOperationVertexMoved">
+      <summary>An operation that moved a vertex.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriSnapToleranceUnits">
+      <summary>Indicates the snap tolerance units.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSnapToleranceUnits.esriSnapTolerancePixels">
+      <summary>Pixels.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriSnapToleranceUnits.esriSnapToleranceMapUnits">
+      <summary>Map units.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriTurnDirection">
+      <summary>Describes the direction the curve rotates from the 'from' point of the curve.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriTurnDirection.esriTDLeft">
+      <summary>The curve rotates toward the left from the 'from' point.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriTurnDirection.esriTDRight">
+      <summary>The curve rotates toward the left from the 'from' point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriVersion">
+      <summary>Esri Geodatabase version type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriVersion.esriReconcileVersion">
+      <summary>The version the edit session is reconciling against.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriVersion.esriPreReconcileVersion">
+      <summary>The version prior to reconciliation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriVersion.esriStartEditingVersion">
+      <summary>The version prior to start editing.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriVersion.esriCommonAncestorVersion">
+      <summary>The common ancestor version.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriVersion.esriCurrentVersion">
+      <summary>The current version.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Editor.esriZCaptureType">
+      <summary>Method used by the editor to capture Z-values.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriZCaptureType.esriCaptureCurrentZ">
+      <summary>Use Current Z value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriZCaptureType.esriCaptureInterpolateZ">
+      <summary>Interpolate Z value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Editor.esriZCaptureType.esriCaptureSurfaceZ">
+      <summary>Derive Z value from surface.</summary>
+    </member>
+  </members>
+</doc>

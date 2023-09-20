@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\bin\Debug\ArcMapAddinDemo.dll
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\bin\Debug\ArcMapAddinDemo.pdb
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\bin\Debug\ESRI.ArcGIS.Editor.dll
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\bin\Debug\ESRI.ArcGIS.Editor.xml
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\obj\Debug\ArcMapAddinDemo.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\obj\Debug\ArcMapAddinDemo.csproj.CopyComplete
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\obj\Debug\ArcMapAddinDemo.dll
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\obj\Debug\ArcMapAddinDemo.pdb
+D:\Documents\Visual Studio 2019\ArcMapAddinDemo\ArcMapAddinDemo\bin\Debug\ArcMapAddinDemo.esriAddIn
