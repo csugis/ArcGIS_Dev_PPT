@@ -184,7 +184,6 @@ class ToolIdentifyPts(object):
             for row in cursor:
                 if str(row[0]) in arcpy.Describe("points").FIDSet:
                     print u"FID:{0},SHAPE:{1}".format(row[0],row[1]);
-        del cursor;
         pass
     def onMouseUp(self, x, y, button, shift):
         pass

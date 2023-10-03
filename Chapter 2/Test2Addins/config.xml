@@ -1,0 +1,16 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Python Addin</Name><AddInID>{7d3bb730-70fc-438d-98d6-8547b8d8eb34}</AddInID><Description>Test 2 Addin</Description><Version>0.1</Version><Image /><Author>CSUGISZBY</Author><Company>CSU</Company><Date>10/03/2023</Date><Targets><Target name="Desktop" version="10.1" /></Targets><AddIn language="PYTHON" library="Test2Addins_addin.py" namespace="Test2Addins_addin"><ArcMap>
+    <Commands>
+        <Button caption="NewFeatureClass" category="Python Addin" class="BtnNewFeatureClass" id="Test2Addins_addin.button" image="" message="BtnNewFeatureClass" tip="BtnNewFeatureClass"><Help heading="BtnNewFeatureClass">BtnNewFeatureClass</Help></Button>
+        <Tool caption="DrawStation" category="Python Addin" class="ToolDrawStation" id="Test2Addins_addin.tool" image="" message="ToolDrawStation" tip="ToolDrawStation"><Help heading="ToolDrawStation">ToolDrawStation</Help></Tool>
+        <Button caption="Voronoi" category="Python Addin" class="BtnVoronoi" id="Test2Addins_addin.button_1" image="" message="BtnVoronoi" tip="BtnVoronoi"><Help heading="BtnVoronoi">BtnVoronoi</Help></Button>
+        <Button caption="Analyst" category="Python Addin" class="BtnAnalyst" id="Test2Addins_addin.button_2" image="" message="BtnAnalyst" tip="BtnAnalyst"><Help heading="BtnAnalyst">BtnAnalyst</Help></Button>
+        <Button caption="Print" category="Python Addin" class="BtnPrint" id="Test2Addins_addin.button_3" image="" message="BtnPrint" tip="BtnPrint"><Help heading="BtnPrint">BtnPrint</Help></Button>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Test2Toolbar" category="Python Addin" id="Test2Addins_addin.toolbar" showInitially="true"><Items><Button refID="Test2Addins_addin.button" /><Tool refID="Test2Addins_addin.tool" /><Button refID="Test2Addins_addin.button_1" /><Button refID="Test2Addins_addin.button_2" /><Button refID="Test2Addins_addin.button_3" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
