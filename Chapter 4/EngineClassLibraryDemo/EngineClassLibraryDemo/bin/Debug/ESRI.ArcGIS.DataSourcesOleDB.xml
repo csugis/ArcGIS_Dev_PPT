@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.DataSourcesOleDB</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.DataSourcesOleDB.IESRIDataSourceCreate">
+      <summary>Provides access to members that create OLE DB Data Source objects from a workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesOleDB.IESRIDataSourceCreate.CreateDataSource(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Creates an OLEDB-FDO Data Source object and connects to existing Workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesOleDB.IFDOToADOConnection">
+      <summary>Provides access to members that create or connect to an ADO connection from a workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesOleDB.IFDOToADOConnection.Connect(ESRI.ArcGIS.Geodatabase.IWorkspace,System.Object)">
+      <summary>Connects a Workspace object to an ADO connection object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesOleDB.IFDOToADOConnection.CreateADOConnection(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Creates an ADO connection from a Workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesOleDB.IOleDBFDOHelper">
+      <summary>Provides access to members that attach a workspace to an OLE DB Data Source object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesOleDB.IOleDBFDOHelper.AttachWorkspace(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Attaches an existing Workspace to a Data Source object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesOleDB.ExcelWorkspaceFactory">
+      <summary>Excel Workspace Factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesOleDB.ExcelWorkspaceFactoryClass">
+      <summary>Excel Workspace Factory.</summary>
+    </member>
+  </members>
+</doc>

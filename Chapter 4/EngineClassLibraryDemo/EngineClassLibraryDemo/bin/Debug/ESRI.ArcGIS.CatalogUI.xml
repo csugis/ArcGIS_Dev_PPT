@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.CatalogUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSConnectionAdminDialog">
+      <summary>Provides access to members that control the Connection Admin Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSConnectionAdminDialog.DoModalCreateServerConnection(System.Int32,System.Object@)">
+      <summary>Displays the dialog to create a new server connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSConnectionAdminDialog.DoModalUpdateServerConnection(System.Int32,System.Object@,ESRI.ArcGIS.Catalog.IGxAGSConnection@)">
+      <summary>Displays the dialog to update an existing server connection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSObjectAdminDialog">
+      <summary>Provides access to members that control the Server Object Admin Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSObjectAdminDialog.DoModalCreateServerObject(System.Int32,ESRI.ArcGIS.GISClient.IAGSServerConnectionName)">
+      <summary>Displays the dialog to create a new server object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSObjectAdminDialog2">
+      <summary>Provides access to members that control the Server Object Admin Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSObjectAdminDialog2.DoModalCreateService(System.Int32,ESRI.ArcGIS.GISClient.IAGSServerConnectionName,System.String)">
+      <summary>Displays the dialog to create a new service object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSParameterPage">
+      <summary>Provides access to members that control ArcGIS server parameter pages.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.ClosePage">
+      <summary>Close the selected parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.Description">
+      <summary>The parameter page description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.IsWizard">
+      <summary>Initialize the wizard mode the selected parameter page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.QueryPage(System.Boolean)">
+      <summary>Upate this page before go next.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.RefreshPage">
+      <summary>Refresh the read/page status of controls.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.ServerDirectories">
+      <summary>Initialize the server directories the selected parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.ServerObjectConfiguration">
+      <summary>Initialize the server object configuration of the selected parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.ServerObjectName">
+      <summary>Initialize the server object name the selected parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.ServerObjectType">
+      <summary>The Server Object Type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.SOM">
+      <summary>Initialize the SOM of the parameter page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSParameterPage.UpdatePage">
+      <summary>Initialize the selected parameter page.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSPublishToolboxAdminDialog">
+      <summary>Provides access to members that control the Publisher Admin Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IAGSPublishToolboxAdminDialog.DoModalPublish(System.Int32,ESRI.ArcGIS.Geoprocessing.IGPToolbox)">
+      <summary>Displays the dialog to publish a toolbox.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage">
+      <summary>Provides access to members that control ArcGIS server object extension parameter pages.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage.ExtensionProperties">
+      <summary>The extension properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage.ServerObjectExtensionType">
+      <summary>Server object extension type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage.ServerObjectProperties">
+      <summary>The server object properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage.ServerObjectType">
+      <summary>Server object type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2">
+      <summary>Provides access to members that control ArcGIS server object extension parameter pages.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.PageReadOnly">
+      <summary>Read-only state of the SOE parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.QualifiedDefaultName">
+      <summary>Qualified name  of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ServiceName">
+      <summary>Name of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ServiceURL">
+      <summary>URL of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ExtensionProperties">
+      <summary>The extension properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ServerObjectExtensionType">
+      <summary>Server object extension type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ServerObjectProperties">
+      <summary>The server object properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage2.ServerObjectType">
+      <summary>Server object type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3">
+      <summary>Provides access to members that control ArcGIS server object extension parameter pages.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServerDirectories">
+      <summary>The enum of server directories.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.PageReadOnly">
+      <summary>Read-only state of the SOE parameter page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.QualifiedDefaultName">
+      <summary>Qualified name  of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServiceName">
+      <summary>Name of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServiceURL">
+      <summary>URL of the service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ExtensionProperties">
+      <summary>The extension properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServerObjectExtensionType">
+      <summary>Server object extension type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServerObjectProperties">
+      <summary>The server object properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAGSSOEParameterPage3.ServerObjectType">
+      <summary>Server object type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IArcIMSQuery">
+      <summary>Provides access to members that let you modify a query.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IArcIMSQuery.ContentType">
+      <summary>The Content type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IAttributesEditContext">
+      <summary>Provides access to attributes edit context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.AttributeTemplates">
+      <summary>The network attribute templates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.Container">
+      <summary>The network dataset container.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.DENetwork">
+      <summary>The network dataset data element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.EditEvaluatorContext(System.Boolean,System.Int32)">
+      <summary>The edit evaluator context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.EditEvaluatorContextCount(System.Boolean)">
+      <summary>The number of edit evaluator contexts.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IAttributesEditContext.ReadOnly">
+      <summary>Indicates whether the attribute edit context is read only.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ICoordSysDetailsPage">
+      <summary>Provides access to members that control the Coordinate System Details Page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICoordSysDetailsPage.CoordSysContext">
+      <summary>The coordinate system context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICoordSysDetailsPage.SpatialReference">
+      <summary>The related spatial refrence.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICoordSysDetailsPage.VerticalCoordinateSystem">
+      <summary>The vertical coordinate system.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ICreateRasterCatalogWizard">
+      <summary>Provides access to methods that control the raster catalog creation wizard.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ICreateRasterCatalogWizard.DoModal(ESRI.ArcGIS.Geodatabase.IFeatureWorkspace,System.Int32)">
+      <summary>Shows modal Dialog of the wizard.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg">
+      <summary>Provides access to methods that control the dialog for creating a Raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.Bands">
+      <summary>Number of bands of the raster dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.DoModal(System.Int32)">
+      <summary>Shows the raster dataset creation dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.Name">
+      <summary>The name of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.PixelType">
+      <summary>The pixel type of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.RasterDef">
+      <summary>The definition of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.RasterStorageDef">
+      <summary>The definition of the raster dataset storage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ICreateRasterDatasetDlg.SupportEnterprise">
+      <summary>Indicates whether the enterprise Geodatabase is supported.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IDataAdder">
+      <summary>Provides access to members that control the data adder.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDataAdder.AddDatasetToCurrentApplication(ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Adds a dataset to the current running application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDataAdder.AddDataToCurrentApplication(ESRI.ArcGIS.Catalog.IEnumGxObject)">
+      <summary>Adds data to the current running application.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog">
+      <summary>Allows for the selection of a shape that is derived from a data frame.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog.DoModal(System.String,ESRI.ArcGIS.Carto.IMapFrame,ESRI.ArcGIS.Carto.IGraphicsContainer,System.Int32)">
+      <summary>Opens and shows the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog.Geometry">
+      <summary>Provides access to the shape.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog2">
+      <summary>Allows for the selection of a shape that is derived from a data frame.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog2.DoModal2(System.String,ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.IGraphicsContainer,System.Int32)">
+      <summary>Show the dialog using only a map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog2.DoModal(System.String,ESRI.ArcGIS.Carto.IMapFrame,ESRI.ArcGIS.Carto.IGraphicsContainer,System.Int32)">
+      <summary>Opens and shows the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDataFrameShapeDialog2.Geometry">
+      <summary>Provides access to the shape.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IDescriptionWindow">
+      <summary>Provides access to members of Item Descrition Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.DocumentationView">
+      <summary>The documentation view in item description window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.FindViaItemInfo(ESRI.ArcGIS.Geodatabase.IItemInfo)">
+      <summary>Indicates whether the Item Description Window is already being displayed for the selected ItemInfo.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.FindViaObject(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Indicates whether the Item Description Window is already being displayed for the selected GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.FindViaPath(System.String)">
+      <summary>Indicates whether the Item Description Window is already being displayed for the selected path.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.hWnd">
+      <summary>HWND of the Item Description Window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.Refresh">
+      <summary>Refresh the Item Description Window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.Show(System.Boolean)">
+      <summary>Show tem Description Window of select object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.TargetItemInfo">
+      <summary>Pass the target ItemInfo to item description window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.TargetObject">
+      <summary>Pass the editing target object to item description window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDescriptionWindow.TargetPath">
+      <summary>Pass the editing target path to item description window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IDocumentDatasets">
+      <summary>Provides access to members that control the document datasets.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IDocumentDatasets.Datasets">
+      <summary>The datasets in the document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext">
+      <summary>Provides access to the edit evaluator context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext.DirectionType">
+      <summary>The edge direction type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext.ElementType">
+      <summary>The evaluator element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext.IsDefault">
+      <summary>Indicates whether it is the default evaluator context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext.Source">
+      <summary>The evaluator network source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext.Table">
+      <summary>The evaluator network source table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IEditEvaluators">
+      <summary>Provides access to the edit evaluators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.AttributesEditContext">
+      <summary>The network dataset context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.Count">
+      <summary>The total number of evaluators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.EditEvaluator(System.Int32)">
+      <summary>The ith edit evaluator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.EvaluatedAttribute">
+      <summary>The evaluated network attribute.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEditEvaluators.Initialize(ESRI.ArcGIS.CatalogUI.IAttributesEditContext,ESRI.ArcGIS.Geodatabase.IEvaluatedNetworkAttribute,System.Boolean)">
+      <summary>Intitialize the network attribute edit context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.IsDefault">
+      <summary>Indicates if is default evaluators mode.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.IsSelected(System.Int32)">
+      <summary>Indicates if the evaluator is selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.SelectedCount">
+      <summary>The number of selected evaluators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEditEvaluators.SelectedIndex(System.Int32)">
+      <summary>The index of the selPostion selected evaluator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IEnumGxView">
+      <summary>Provides access to members that control the EnumGxView.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEnumGxView.Next">
+      <summary>The next GxView.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEnumGxView.Reset">
+      <summary>Resets the enumerator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor">
+      <summary>Provides access to an evaluator editor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.ContextSupportsEditDescriptors">
+      <summary>Indicates if the editor supports textbox editing of the descriptor value for the current attribute edit context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.ContextSupportsEditProperties">
+      <summary>Indicates if the editor supports a dialog for the current attribute edit context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.Descriptor(System.Int32)">
+      <summary>The ith descriptor value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.EditDescriptors(System.String)">
+      <summary>Change the descriptor for all selected evaluators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.EditEvaluators">
+      <summary>The available set of edit evaluators.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.EditProperties(System.Int32)">
+      <summary>Prompts the user to edit the evaluator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.EvaluatorCLSID">
+      <summary>The evaluator CLSID associated with this editor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.FullDescription(System.Int32)">
+      <summary>The ith full description value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.SetDefaultProperties(System.Int32)">
+      <summary>The default properties for the edit evaluator based on the current context.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.ValueChoice">
+      <summary>The index of the selected value choice.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.ValueChoiceCount">
+      <summary>The number of value choices.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IEvaluatorEditor.ValueChoiceDescriptor(System.Int32)">
+      <summary>The value choice description.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IFeatureDatasetDialog">
+      <summary>Provides access to members that control the dialog that creates a new feature dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFeatureDatasetDialog.DoModalCreate(ESRI.ArcGIS.Geodatabase.IFeatureWorkspace,System.Int32)">
+      <summary>Prompts the user to define a new feature dataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IFileSystemQuery">
+      <summary>Provides access to members that manage the file system XML search engine's properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IFileSystemQuery.IncludeSubFolders">
+      <summary>Indicates if subfolders will be searched.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IFileSystemQuery.Location">
+      <summary>Starting location of a search.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IFindDialog">
+      <summary>Provides access to members that control the operation of the Search dialog box.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.DoSearch(ESRI.ArcGIS.Catalog.IQuery)">
+      <summary>Starts executing the search defined by the query.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.GetNumSearchEngines">
+      <summary>Number of available search engines.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.GetSearchEngine(System.Int32)">
+      <summary>The nth search engine.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.Initialize(ESRI.ArcGIS.Catalog.IQuery)">
+      <summary>Initializes the dialog box based on a query's parameters and then opens it.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IFindDialog.IsVisible">
+      <summary>Indicates if the dialog box is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.Show(System.Boolean)">
+      <summary>Initializes the dialog box and opens it if indicated.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IFindDialog.StopSearch">
+      <summary>Cancels an ongoing search.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IFindDialogSettings">
+      <summary>Provides access to members that control how the query appears in the Search dialog box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IFindDialogSettings.BackgroundMap">
+      <summary>Full name of the dataset to be used as the background map in the Geography tab.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGeographicCoordinateSystemDialog">
+      <summary>Provides access to members that control the Geographic Coordinate System Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGeographicCoordinateSystemDialog.DoModalCreate(System.Int32)">
+      <summary>Prompts the user to define a new geographic coordinate system.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxAddOGCConnectionDialog">
+      <summary>Provides access to members that control the Add OGC Connection Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxAddOGCConnectionDialog.DoModalCreateWCSConnection(System.Int32,System.Object@)">
+      <summary>Displays the dialog to create a new WCS server connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxAddOGCConnectionDialog.DoModalCreateWMSConnection(System.Int32,System.Object@)">
+      <summary>Displays the dialog to create a new WMS server connection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxApplication">
+      <summary>Provides access to members that control the Gx Application object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.AreaOfInterest">
+      <summary>The default area of interest for the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.CanDeleteSelection">
+      <summary>Indicates if the current selection can be deleted.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.CanRenameSelection">
+      <summary>Indicates if the current selection can be renamed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.Catalog">
+      <summary>The current catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplication.DeleteSelection">
+      <summary>Deletes the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplication.ExpandSelection">
+      <summary>Expands the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.Location">
+      <summary>The location to the specified path.  If the path isn't yet part of the catalog, it is added as a folder connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplication.Refresh(System.String)">
+      <summary>Refreshes the catalog tree starting at the specified path.  If startingPath is 0 or the empty string, the entire catalog is refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplication.RenameSelection">
+      <summary>Renames the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.SelectedObject">
+      <summary>The first selected object, or the location if no objects are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.Selection">
+      <summary>The selection of application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplication.ShowContextMenu(System.Int32,System.Int32)">
+      <summary>Displays a context menu for the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.TreeView">
+      <summary>The tree view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.View">
+      <summary>The current view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxApplication.ViewClassID">
+      <summary>The current view's class ID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxApplicationEvents">
+      <summary>Provides access to events fired by the ArcCatalog application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplicationEvents.OnClipboardChanged">
+      <summary>Called when the clipboard contents have changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxApplicationEvents.OnViewChanged">
+      <summary>Called when the view changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxBrowser">
+      <summary>Provides access to members that control the GxBrowser.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxBrowser.hWnd">
+      <summary>The HWND of the Catalog window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxBrowser.InternalCatalog">
+      <summary>The Catalog object used internally by the Catalog window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxBrowser.Refresh">
+      <summary>Refresh the Catalog window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxBrowser.Show(System.Int32,System.Boolean)">
+      <summary>Shows or hides the Catalog window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxBrowser.Terminate">
+      <summary>Instruct the Catalog window to destroy itself.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxBrowser.TreeView">
+      <summary>The Catalog window's tree view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxBrowser.View">
+      <summary>The Catalog window's current view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxBrowser.ViewClassID">
+      <summary>The Catalog window's current view's class ID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxContentsView">
+      <summary>Provides access to members that control the GxContentsView.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsView.AllowMultiSelect">
+      <summary>Indicates if multiple objects can be selected.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxContentsView.BeginRename">
+      <summary>Starts a rename operation on the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsView.DisplayStyle">
+      <summary>The current display style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsView.ObjectFilter">
+      <summary>The object filter used for controlling what objects are displayed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn">
+      <summary>Provides access to members that control the GxContentsViewColumn.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn.Caption">
+      <summary>The caption of the column.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn.Intrinsic">
+      <summary>Indicates if intrinsic.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn.PropertyName">
+      <summary>The property name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn.Visible">
+      <summary>Indicates if visible.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn.Width">
+      <summary>The width of the column.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns">
+      <summary>Provides access to members that control the columns of GxContentsView.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.ColumnByIndex(System.Int32)">
+      <summary>A column by its index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.ColumnByProperty(System.String)">
+      <summary>A column by its property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.ColumnCount">
+      <summary>The total number of columns (include both visible and invisible columns).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.InsertColumn(System.Int32,ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn)">
+      <summary>Inserts a GxContentsViewColumn before the specified index.  If index is -1, the column is inserted at the end.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.RemoveAllColumns">
+      <summary>Removes all columns except Name and Type column (they are always shown).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.RemoveColumn(ESRI.ArcGIS.CatalogUI.IGxContentsViewColumn)">
+      <summary>Removes a GxContentsViewColumn.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxContentsViewColumns.UpdateColumns">
+      <summary>Refresh columns in contents view after insert or remove columns.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxDialog">
+      <summary>Provides access to members that control the GxDialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.AllowMultiSelect">
+      <summary>Indicates if multiple items may be selected.  False, by default.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.ButtonCaption">
+      <summary>The caption to use for the Open or Save button.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDialog.DoModalOpen(System.Int32,ESRI.ArcGIS.Catalog.IEnumGxObject@)">
+      <summary>Opens the dialog to choose data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDialog.DoModalSave(System.Int32)">
+      <summary>Opens the dialog to save data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.FinalLocation">
+      <summary>The dialog's final location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.InternalCatalog">
+      <summary>The catalog object used internally by the GxDialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.Name">
+      <summary>The text in the Name text box (only for DoModalSave).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.ObjectFilter">
+      <summary>The object filter.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.RememberLocation">
+      <summary>Indicates if the dialog should use the final location as the next starting location. True, by default.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.ReplacingObject">
+      <summary>Indicates if an object already exists with the name supplied by the user, and is being replaced.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.StartingLocation">
+      <summary>The dialog's starting location. This can be an IGxObject or a text-string containing the full name of an object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDialog.Title">
+      <summary>The dialog's title.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxDocumentationView">
+      <summary>Provides access to members that edit metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationView.Edit">
+      <summary>Opens the current metadata editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationView.EditProperties">
+      <summary>Opens the Metadata Properties dialog box.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationView.Synchronize">
+      <summary>Writes the current property values to the metadata.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow">
+      <summary>Provides access to members of IGxDocumentationViewWindow interface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.Close">
+      <summary>Close the embeded window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.hWnd">
+      <summary>HWND of the child window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.Invalidate">
+      <summary>Force UI to repaint.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.OnItemInfoChanged(ESRI.ArcGIS.Geodatabase.IItemInfo)">
+      <summary>The selected ItemInfo is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.OnMetadataChanged(ESRI.ArcGIS.Geodatabase.IMetadata)">
+      <summary>The metadata of the selected object is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.OnMetadataChanged2(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>The metadata of the selected object is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.OnObjectChanged(ESRI.ArcGIS.Catalog.IGxObject,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>The selected object is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxDocumentationViewWindow.Print">
+      <summary>Print selected content.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxGeographicView">
+      <summary>Provides access to members that control the GxGeographicView.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView.DisplayedLayer">
+      <summary>The layer object currently being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView.Map">
+      <summary>The map object that is used to draw the layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView.MapDisplay">
+      <summary>The display object that is used to draw the layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxGeographicView2">
+      <summary>Provides access to more members that control the GxGeographicView.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView2.ActiveView">
+      <summary>The active view object(either map or page layout).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView2.DisplayedLayer">
+      <summary>The layer object currently being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView2.Map">
+      <summary>The map object that is used to draw the layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxGeographicView2.MapDisplay">
+      <summary>The display object that is used to draw the layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxItemIndexer">
+      <summary>Provides access to functions of GxIndexer coclass.  Also see the GPItemIndexer coclass.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.Count">
+      <summary>Total indexed items count.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.HasBeenIndexed(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Indicates whether the current object has been indexed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.IndexChildren(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Index the children of the current object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.IndexObject(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Index the current object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.IsAncestorRegistered(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Indicates whether the ancestor of this GxObject has been registered to be indexed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.UpdateIndex(ESRI.ArcGIS.Geodatabase.IItemInfo)">
+      <summary>Update the index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxItemIndexer.UpdateThumbnailInIndex(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Update current object's thumbnail in index.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxItemInfoHelper">
+      <summary>Provides access to helper functions for item info.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxItemInfoHelper.ItemInfo(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Item info of the selected object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxItemInfoHelper.UpdateItemInfo(ESRI.ArcGIS.Catalog.IGxObject,ESRI.ArcGIS.Geodatabase.IItemInfo)">
+      <summary>Update the item info of the specified object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxMSDFile">
+      <summary>Indicator interface that identifies a GxObject that corresponds to an MSDFile document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxMSDFileView">
+      <summary>Provides access to more members that control the GxMSDFileView.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxMSDFileView.ActiveView">
+      <summary>The active view object(either map or page layout).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxObjectEnumerator">
+      <summary>Provides access to methods that control the object enumerator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxObjectEnumerator.Count">
+      <summary>The number of GxObjects in the enumerator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxObjectEnumerator.Current">
+      <summary>The current GxObject in the enumerator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxObjectEnumerator.CurrentPos">
+      <summary>The current position of the GxObject in the enumerator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxPreview">
+      <summary>Provides access to members that control the GxPreview.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxPreview.SupportedViewClassIDs">
+      <summary>A list of the class IDs for the views that are supported given the current selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxPreview.View">
+      <summary>The current view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxPreview.ViewClassID">
+      <summary>The class ID of the current view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxRasterCatalogSubView">
+      <summary>Provides access to methods that control RasterCatalog sub view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxRasterCatalogSubView.SupportMultiSelection">
+      <summary>Indicates whether the multiple selection is supported.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxTableView">
+      <summary>Indicator interface that identifies the GX Table preview.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxTableView2">
+      <summary>Provides access to members that control the IGxTableView.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxTableView2.FilterRasterCatalog(System.Boolean)">
+      <summary>The RasterCatalogFilter for table view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxTableView2.SetObject(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>The object for table view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxTreeView">
+      <summary>Provides access to members that control the GxTreeView.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxTreeView.BeginRename">
+      <summary>Starts a rename operation on the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxTreeView.EnsureVisible(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Ensures that the current selection is visible, scrolling/expanding if necessary.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxTreeView.ExpandSelection(ESRI.ArcGIS.Catalog.IGxSelection)">
+      <summary>Instructs the tree view to expand the current selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxView">
+      <summary>Provides access to members that control the GxView.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxView.Activate(ESRI.ArcGIS.CatalogUI.IGxApplication,ESRI.ArcGIS.Catalog.IGxCatalog)">
+      <summary>Activates the view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxView.Applies(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Indicates if the view can display the given object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxView.ClassID">
+      <summary>The class ID of the view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxView.Deactivate">
+      <summary>Deactivates the view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxView.DefaultToolbarCLSID">
+      <summary>The class ID of the view's default toolbar.  Not currently used.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxView.hWnd">
+      <summary>The view's window handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxView.Name">
+      <summary>The name of the view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxView.Refresh">
+      <summary>Refreshes the view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxView.SupportsTools">
+      <summary>Indicates if the view supports tools.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxView.SystemSettingChanged(System.Int32,System.String)">
+      <summary>Informs the view that a system setting has changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxViewContainer">
+      <summary>Provides access to members that control the GxViewContainer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxViewContainer.FindView(ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Finds a view by CLSID. If recursive is true, it will return views in a container view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxViewContainer.Views">
+      <summary>All Gxviews in the application.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IGxViewPrint">
+      <summary>Provides access to members that control the printing of a GxView object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IGxViewPrint.IsPrintable">
+      <summary>Indicates if the view can be printed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IGxViewPrint.Print">
+      <summary>Prints the view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IMetadataEditor">
+      <summary>Provides access to members that define a metadata editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IMetadataEditor.Edit(ESRI.ArcGIS.esriSystem.IPropertySet,System.Int32)">
+      <summary>Shows the metadata editor and indicates if the metadata property set was modified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataEditor.Name">
+      <summary>Name of the metadata editor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IMetadataEvents">
+      <summary>Provides access to events that occur when the state of the Documentation View changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IMetadataEvents_Event">
+      <summary>Provides access to events that occur when the state of the Documentation View changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IMetadataEvents.OnStylesheetChanged(System.String)">
+      <summary>Occurs when the current stylesheet changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.IMetadataEvents_Event.OnStylesheetChanged">
+      <summary>Occurs when the current stylesheet changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IMetadataHelper">
+      <summary>Provides access to members that change the Catalog's metadata settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.DefaultStylesheet">
+      <summary>Name of the default stylesheet.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.Editor">
+      <summary>CLSID of the currently selected editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IMetadataHelper.Refresh(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Refreshes the currently selected object in the Catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.Stylesheet">
+      <summary>Name of the currently selected stylesheet.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.StylesheetPath">
+      <summary>Path to the Stylesheets directory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.SynchronizationInterval">
+      <summary>The interval in seconds from the last update which must elapse before the Catalog will again update the metadata.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.SynchronizationOption">
+      <summary>When the Catalog creates and updates metadata automatically.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IMetadataHelper.WebPagePath">
+      <summary>Path to the HTML directory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration">
+      <summary>Provides access to the network attribute configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.AgainstPrefixes">
+      <summary>The directional prefixes against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.AlongPrefixes">
+      <summary>The directional prefixes along the digitized direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.FindMatchingTemplateAttribute(ESRI.ArcGIS.Geodatabase.INetworkAttribute)">
+      <summary>Find the index of a matching template attribute.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.FindTemplateAttributeByName(System.String)">
+      <summary>Find the index of a template attribute by name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.QueryEvaluator(System.Int32,ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext,ESRI.ArcGIS.Geodatabase.INetworkEvaluator)">
+      <summary>Query for the best evaluator match if any.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.TemplateAttribute(System.Int32)">
+      <summary>The ith template attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration.TemplateAttributeCount">
+      <summary>The number of template attributes in the network configuration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2">
+      <summary>Provides access to the network attribute configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.AgainstSuffixes">
+      <summary>The directional suffixes against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.AlongSuffixes">
+      <summary>The directional suffixes along the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.HierachyRangeMaxValuesByName(System.String)">
+      <summary>The default hierarchy range max values for the specified attribute name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.TimeZoneTemplateAttributeNames">
+      <summary>The preferred candidate time zone attribute names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.AgainstPrefixes">
+      <summary>The directional prefixes against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.AlongPrefixes">
+      <summary>The directional prefixes along the digitized direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.FindMatchingTemplateAttribute(ESRI.ArcGIS.Geodatabase.INetworkAttribute)">
+      <summary>Find the index of a matching template attribute.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.FindTemplateAttributeByName(System.String)">
+      <summary>Find the index of a template attribute by name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.QueryEvaluator(System.Int32,ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext,ESRI.ArcGIS.Geodatabase.INetworkEvaluator)">
+      <summary>Query for the best evaluator match if any.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.TemplateAttribute(System.Int32)">
+      <summary>The ith template attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration2.TemplateAttributeCount">
+      <summary>The number of template attributes in the network configuration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3">
+      <summary>Provides access to the network attribute configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.DefaultSupportedScriptParserLanguage(ESRI.ArcGIS.esriSystem.esriArcGISVersion)">
+      <summary>The default script parser language supported at arcgisVersion.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.AgainstSuffixes">
+      <summary>The directional suffixes against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.AlongSuffixes">
+      <summary>The directional suffixes along the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.HierachyRangeMaxValuesByName(System.String)">
+      <summary>The default hierarchy range max values for the specified attribute name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.TimeZoneTemplateAttributeNames">
+      <summary>The preferred candidate time zone attribute names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.AgainstPrefixes">
+      <summary>The directional prefixes against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.AlongPrefixes">
+      <summary>The directional prefixes along the digitized direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.FindMatchingTemplateAttribute(ESRI.ArcGIS.Geodatabase.INetworkAttribute)">
+      <summary>Find the index of a matching template attribute.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.FindTemplateAttributeByName(System.String)">
+      <summary>Find the index of a template attribute by name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.QueryEvaluator(System.Int32,ESRI.ArcGIS.CatalogUI.IEditEvaluatorContext,ESRI.ArcGIS.Geodatabase.INetworkEvaluator)">
+      <summary>Query for the best evaluator match if any.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.TemplateAttribute(System.Int32)">
+      <summary>The ith template attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkAttributeConfiguration3.TemplateAttributeCount">
+      <summary>The number of template attributes in the network configuration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkConfiguration">
+      <summary>Provides access to the network configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkConfiguration.StatusDescription">
+      <summary>The template configuration status description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkConfiguration.TargetNamespace">
+      <summary>The template configuration target namespace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkConfiguration.TemplatesValid">
+      <summary>Indicates if the templates are valid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkConfiguration.XMLPath">
+      <summary>The template configuration path.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkConfiguration.XSDPath">
+      <summary>The schema definition path.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkDatasetDialog">
+      <summary>Provides access to members that show dialogs for creating and editing network datasets.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkDatasetDialog.DoModalAdvancedCreateNetwork(ESRI.ArcGIS.Geodatabase.IFeatureDatasetName,System.Int32)">
+      <summary>Prompts the user to define a new network dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkDatasetDialog.DoModalCreateNetwork(ESRI.ArcGIS.Geodatabase.IFeatureClassName,System.Int32)">
+      <summary>Prompts the user to define a new network dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkDatasetDialog.DoModalDataElementCreateNetwork(ESRI.ArcGIS.Geodatabase.IDatasetContainer2,ESRI.ArcGIS.Geodatabase.IDENetworkDataset,System.Int32)">
+      <summary>Prompts the user to define a new network dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.INetworkDatasetDialog.DoModalEdit(ESRI.ArcGIS.Geodatabase.INetworkDataset,System.Int32)">
+      <summary>Shows the properties of a network dataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration">
+      <summary>Provides access to the network direction configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.OutputLinearUnits">
+      <summary>The default output linear units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.PreDirNames">
+      <summary>The prefix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.PreTypeNames">
+      <summary>The prefix type direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.RoadClassAttributeNames">
+      <summary>The road class attribute names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.StreetNames">
+      <summary>The street name direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.SuffixNames">
+      <summary>The suffix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration.SuffixTypeNames">
+      <summary>The suffix type direction field names.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2">
+      <summary>Provides access to the network direction configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.DirectionsAttributeMappingConstraintsPropertySets">
+      <summary>The PropertySet containing a PropertySet of attribute mapping constraints for each attribute mapping key.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.DirectionsFieldMappingConstraintsPropertySets">
+      <summary>The PropertySet containing a PropertySet of field mapping constraints for each field mapping key.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.FullNames">
+      <summary>The full name direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.HighwayDirectionNames">
+      <summary>The highway direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.LanguageNames">
+      <summary>The language direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.OutputLinearUnits">
+      <summary>The default output linear units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.PreDirNames">
+      <summary>The prefix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.PreTypeNames">
+      <summary>The prefix type direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.RoadClassAttributeNames">
+      <summary>The road class attribute names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.StreetNames">
+      <summary>The street name direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.SuffixNames">
+      <summary>The suffix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration2.SuffixTypeNames">
+      <summary>The suffix type direction field names.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3">
+      <summary>Provides access to the network direction configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.LandmarkLabelFieldNames">
+      <summary>The landmark label field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.DirectionsAttributeMappingConstraintsPropertySets">
+      <summary>The PropertySet containing a PropertySet of attribute mapping constraints for each attribute mapping key.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.DirectionsFieldMappingConstraintsPropertySets">
+      <summary>The PropertySet containing a PropertySet of field mapping constraints for each field mapping key.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.FullNames">
+      <summary>The full name direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.HighwayDirectionNames">
+      <summary>The highway direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.LanguageNames">
+      <summary>The language direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.OutputLinearUnits">
+      <summary>The default output linear units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.PreDirNames">
+      <summary>The prefix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.PreTypeNames">
+      <summary>The prefix type direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.RoadClassAttributeNames">
+      <summary>The road class attribute names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.StreetNames">
+      <summary>The street name direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.SuffixNames">
+      <summary>The suffix direction field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkDirectionConfiguration3.SuffixTypeNames">
+      <summary>The suffix type direction field names.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration">
+      <summary>Provides access to the network elevation configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration.BaseNames">
+      <summary>The root names of the elevation fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration.FromEndPrefixes">
+      <summary>The elevation prefixes for the from end.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration.ToEndPrefixes">
+      <summary>The elevation prefixes for the to end.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2">
+      <summary>Provides access to the network elevation configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2.FromEndSuffixes">
+      <summary>The elevation suffixes for the from end.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2.ToEndSuffixes">
+      <summary>The elevation suffixes for the to end.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2.BaseNames">
+      <summary>The root names of the elevation fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2.FromEndPrefixes">
+      <summary>The elevation prefixes for the from end.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkElevationConfiguration2.ToEndPrefixes">
+      <summary>The elevation prefixes for the to end.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration">
+      <summary>Provides access to the network traffic configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.DayOfWeekNameGroups">
+      <summary>The weekday names for each day (in groups of 7) used for part of the Streets-Profiles table daily profile ID field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.DefaultFirstTimeSliceStartTime">
+      <summary>The default start time of the first time slice.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.DefaultLastTimeSliceFinishTime">
+      <summary>The default finish time of the last time slice.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.JoinTableProfileIDFieldBaseNames">
+      <summary>The candidate base names forming part of each Streets-Profiles table daily profile ID field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.TimeSliceBaseNames">
+      <summary>The candidate base names for the travel time factor field names in the profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.TrafficBaseTravelTimeBaseNames">
+      <summary>The candidate base names for the base travel time field name in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.TrafficTimeUnitNames(ESRI.ArcGIS.Geodatabase.esriNetworkAttributeUnits)">
+      <summary>The candidate time unit names for the time unit of the base travel time field in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.WeekdayFallbackTemplateAttributeNames">
+      <summary>The preferred weekday fallback template travel time attribute names used by the network edge traffic evaluator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration.WeekendFallbackTemplateAttributeNames">
+      <summary>The preferred weekend fallback template travel time attribute names used by the network edge traffic evaluator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2">
+      <summary>Provides access to the network traffic configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.DynamicTrafficTMCFullNames">
+      <summary>The candidate TMC field names in the Streets-TMC table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TimeSliceBaseSpeedFactorNames">
+      <summary>The candidate base names for the speed factor field names in the profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TrafficBaseFullNames(ESRI.ArcGIS.Geodatabase.esriNetworkAttributeUnits)">
+      <summary>The candidate full names in the specified unit for the base field name in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TrafficBaseSpeedBaseNames">
+      <summary>The candidate base names for the base speed field name in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TrafficSpeedUnitNames(ESRI.ArcGIS.Geodatabase.esriNetworkAttributeUnits)">
+      <summary>The candidate speed unit names for the speed unit of the base speed field in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.DayOfWeekNameGroups">
+      <summary>The weekday names for each day (in groups of 7) used for part of the Streets-Profiles table daily profile ID field names.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.DefaultFirstTimeSliceStartTime">
+      <summary>The default start time of the first time slice.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.DefaultLastTimeSliceFinishTime">
+      <summary>The default finish time of the last time slice.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.JoinTableProfileIDFieldBaseNames">
+      <summary>The candidate base names forming part of each Streets-Profiles table daily profile ID field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TimeSliceBaseNames">
+      <summary>The candidate base names for the travel time factor field names in the profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TrafficBaseTravelTimeBaseNames">
+      <summary>The candidate base names for the base travel time field name in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.TrafficTimeUnitNames(ESRI.ArcGIS.Geodatabase.esriNetworkAttributeUnits)">
+      <summary>The candidate time unit names for the time unit of the base travel time field in the Streets-Profiles table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.WeekdayFallbackTemplateAttributeNames">
+      <summary>The preferred weekday fallback template travel time attribute names used by the network edge traffic evaluator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.INetworkTrafficConfiguration2.WeekendFallbackTemplateAttributeNames">
+      <summary>The preferred weekend fallback template travel time attribute names used by the network edge traffic evaluator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IProjectedCoordinateSystemDialog">
+      <summary>Provides access to members that control the Projected Coordinate System Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IProjectedCoordinateSystemDialog.DoModalCreate(System.Int32)">
+      <summary>Prompts the user to define a new projected coordinate system.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IQueryTableDialog">
+      <summary>Provides access to member that display Query Table dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IQueryTableDialog.DoModalQueryTable(ESRI.ArcGIS.Geodatabase.IQueryTableName,System.Int32)">
+      <summary>Displays the  dialog to define a query layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IRelationshipClassDialog">
+      <summary>Provides access to members that control the Relationship Class Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IRelationshipClassDialog.DoModalCreate(System.Object,System.Int32)">
+      <summary>Prompts the user to define a new relationship class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IRepairMosaicDatasetDialog">
+      <summary>Provides access to methods that control the dialog for repairing a mosaic dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IRepairMosaicDatasetDialog.DoModal(System.Int32)">
+      <summary>Open dialog in modal.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IRepairMosaicDatasetDialog.MosaicDataset">
+      <summary>The Mosaic Dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IRepairMosaicDatasetDialog.SelectionSet">
+      <summary>The Selection Set.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISDEditorPropertyPage">
+      <summary>Optional Method called by the framework to allow the property page to validate itself at the very just before saving.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISDEditorPropertyPage.ValidateData(ESRI.ArcGIS.esriSystem.ITrackCancel,System.Object)">
+      <summary>Optional Method called by the framework to allow the property page to validate itself at the very just before saving.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISearchEngine">
+      <summary>Provides access to members that control the operation of the search engine.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISearchEngine.Enabled">
+      <summary>Indicates if the search engine is enabled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngine.ExecuteAsynchronous">
+      <summary>Executes the query asynchronously.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISearchEngine.IsExecuting">
+      <summary>Indicates if the search is currently executing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISearchEngine.Name">
+      <summary>Name of the search engine.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISearchEngine.Query">
+      <summary>Query that will be executed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngine.Stop">
+      <summary>Cancels an ongoing search (if it is currently executing).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents">
+      <summary>Provides access to events that are fired by an ongoing search.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event">
+      <summary>Provides access to events that are fired by an ongoing search.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents.ObjectFound(ESRI.ArcGIS.Catalog.IGxObject,System.String)">
+      <summary>Fired when an object is found that satisfies the search criteria.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event.ObjectFound">
+      <summary>Fired when an object is found that satisfies the search criteria.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents.SearchCanceled">
+      <summary>Fired when the search is explicitly canceled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event.SearchCanceled">
+      <summary>Fired when the search is explicitly canceled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents.SearchFailed">
+      <summary>Fired when the search terminates prematurely.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event.SearchFailed">
+      <summary>Fired when the search terminates prematurely.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents.SearchFinished">
+      <summary>Fired when the search is complete.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event.SearchFinished">
+      <summary>Fired when the search is complete.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents.SearchLocationChanged(System.String)">
+      <summary>Fired when the search begins looking inside a new folder or other container.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.CatalogUI.ISearchEngineEvents_Event.SearchLocationChanged">
+      <summary>Fired when the search begins looking inside a new folder or other container.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISearchEngineProperties">
+      <summary>Provides access to members that modify the search engine's property set.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineProperties.Edit(System.Int32)">
+      <summary>Opens a dialog box that lets a user set the search engine's properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineProperties.Load(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Loads the search engine properties from the given property set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISearchEngineProperties.LocationString">
+      <summary>Starting location of a search.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISearchEngineProperties.Save(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Saves the search engine properties to the given property set.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog">
+      <summary>Provides access to members that control the Spatial Reference Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog.DoModalCreate(System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+      <summary>Prompts the user to define a new spatial reference.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog.DoModalEdit(ESRI.ArcGIS.Geometry.ISpatialReference,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+      <summary>Displays/edits the properties of the given spatial reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog2">
+      <summary>Provides access to members that control the Spatial Reference Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog2.DoModalCreate(System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+      <summary>Prompts the user to define a new spatial reference.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog2.DoModalEdit(ESRI.ArcGIS.Geometry.ISpatialReference,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+      <summary>Displays/edits the properties of the given spatial reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog3">
+      <summary>Provides access to members that control the Spatial Reference Dialog 3.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog3.DoModalCreate3(System.Boolean,System.Int32)">
+      <summary>Prompts the user to define a new spatial reference.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialog3.DoModalEdit3(ESRI.ArcGIS.Geometry.ISpatialReference,System.Boolean,System.Int32)">
+      <summary>Displays/edits the properties of the given spatial reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialogContext">
+      <summary>Provides access to members that change the calling context of the Spatial Reference Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialogContext.BasicMap">
+      <summary>The basic map that provides the layer list and spatial filtering extent.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ISpatialReferenceDialogContext.XYFilter">
+      <summary>Restriction on the type of coordinate system to show.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage">
+      <summary>Provides access to members that control the Table Definition Fields Page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage.Fields">
+      <summary>The fields specified in the property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage.OnSetActive">
+      <summary>Notifies the property page when it becomes active.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage.PageContext">
+      <summary>The context of the property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage.WizardNext">
+      <summary>Notifies the property page that the Next button on the wizard has been selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.ITableDefFieldsPage.WorkspaceDomains">
+      <summary>The workspace domains property.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.ITableDefinitionDialog">
+      <summary>Provides access to members that control the Table Definition Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ITableDefinitionDialog.DoModalCreateFeatureClass(System.Object,System.Int32)">
+      <summary>Displays the dialog to define a new feature class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.ITableDefinitionDialog.DoModalCreateTable(ESRI.ArcGIS.Geodatabase.IFeatureWorkspace,System.Int32)">
+      <summary>Displays the dialog to define a new table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IVerticalCoordinateSystemDialog">
+      <summary>Provides access to members that control the Vertical Coordinate System Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IVerticalCoordinateSystemDialog.DoModalCreate(System.Int32)">
+      <summary>Prompts the user to define a new vertical coordinate system.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.IXmlQuery">
+      <summary>Provides access to members that generate XSL Pattern expressions from a query.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IXmlQuery.BuildExpressions">
+      <summary>Creates a set of XSL Pattern expressions from a query.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CatalogUI.IXmlQuery.GetExpression(System.Int32)">
+      <summary>The nth expression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IXmlQuery.IsAnd">
+      <summary>Indicates if the expressions are ANDed together (as opposed to ORed).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CatalogUI.IXmlQuery.NumExpressions">
+      <summary>Number of expressions that were generated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.AddAGSConnectionPage">
+      <summary>Esri AGS Server user connection general property page.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.AddAGSConnectionPageClass">
+      <summary>Esri AGS Server user connection general property page.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.esriAGSServiceWebAccessStatus">
+      <summary>Service Web Access status.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriAGSServiceWebAccessStatus.esriCSWAEnabled">
+      <summary>The service is web access enabled.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriAGSServiceWebAccessStatus.esriCSWADisabled">
+      <summary>The service is web access disabled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.esriContentsViewStyle">
+      <summary>Contents View Style Options.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriContentsViewStyle.esriCVSLargeIcons">
+      <summary>Show contents using large icons.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriContentsViewStyle.esriCVSList">
+      <summary>Show contents using a list of small icons.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriContentsViewStyle.esriCVSDetails">
+      <summary>Show contents using a detailed list.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriContentsViewStyle.esriCVSThumbnails">
+      <summary>Show contents using thumbnails.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.esriCoordSysContext">
+      <summary>Coordinate System Details Context.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriCoordSysContext.esriCoordSystemNone">
+      <summary>.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriCoordSysContext.esriCoordSystemXY">
+      <summary>.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriCoordSysContext.esriCoordSystemZ">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriCoordSysContext.esriCoordSystemRaster">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.esriSpatialReferenceXYFilter">
+      <summary>Options for restricting the type of XY coordinate systems shown.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriSpatialReferenceXYFilter.esriShowOnlyGeographic">
+      <summary>Show only geographic coordinate systems.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriSpatialReferenceXYFilter.esriShowOnlyProjected">
+      <summary>Show only projected coordinate systems.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriSpatialReferenceXYFilter.esriShowBoth">
+      <summary>Show geographic and projected coordinate systems.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CatalogUI.esriTableDefFieldsPageContext">
+      <summary>Table Definition Fields Property Pages Context.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriTableDefFieldsPageContext.esriFieldsPageTable">
+      <summary>Use the fields property page for creating/editing tables.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriTableDefFieldsPageContext.esriFieldsPageFeatureClass">
+      <summary>Use the fields property page for creating/editing feature classes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.CatalogUI.esriTableDefFieldsPageContext.esriFieldsPageRelationshipClass">
+      <summary>Use the fields property page for creating/editing relationship classes.</summary>
+    </member>
+  </members>
+</doc>

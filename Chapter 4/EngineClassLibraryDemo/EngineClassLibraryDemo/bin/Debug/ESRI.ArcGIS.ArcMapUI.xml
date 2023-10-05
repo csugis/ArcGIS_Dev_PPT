@@ -1,0 +1,2261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.ArcMapUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAddDataDialog">
+      <summary>Provides access to members that control the Add Data Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddDataDialog.Document">
+      <summary>The document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddDataDialog.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAddDataDialog.Show(System.Int32,System.Boolean@)">
+      <summary>Indicates if the dialog is shown and adds the data.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAddDataDialog2">
+      <summary>Provides access to members that control the Add Data Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddDataDialog2.GroupLayer">
+      <summary>The group layer to which data needs to be added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddDataDialog2.Document">
+      <summary>The document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddDataDialog2.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAddDataDialog2.Show(System.Int32,System.Boolean@)">
+      <summary>Indicates if the dialog is shown and adds the data.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAddLayersOperation">
+      <summary>Provides access to members that control the Add layers operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAddLayersOperation.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Layer to be added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddLayersOperation.ArrangeLayers">
+      <summary>A Boolean expression that represents whether the layers need to arranged as per their shape.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAddLayersOperation.Name">
+      <summary>Name of the the operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAddLayersOperation.SetDestinationInfo(System.Int32,ESRI.ArcGIS.Carto.IMap,System.Object)">
+      <summary>Information regarding where the the layer needs to be added. pDestination can be a Map or a GroupLayer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAggregateOptions">
+      <summary>Provides access to members that allows you to specify the types of aggregation that will be applied to all numeric fields during an aggregate spatial join.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsAverage">
+      <summary>Indicates if the average of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsCount">
+      <summary>Indicates if the count of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsMax">
+      <summary>Indicates if the maximum of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsMin">
+      <summary>Indicates if the minimum of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsStdDev">
+      <summary>Indicates if the standard deviation of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsSum">
+      <summary>Indicates if the sum of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAggregateOptions.IsVar">
+      <summary>Indicates if the variance of all numeric fields in the join feature class is appended to the result.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAnnotateFeaturesCallback">
+      <summary>Provides access to members for the annotate selected features callback.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAnnotateFeaturesCallback.AfterAnnotate(System.Boolean)">
+      <summary>Called after anno is added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAnnotateFeaturesCallback.BeforeAnnotate(ESRI.ArcGIS.Carto.IEnumLayer)">
+      <summary>Called before anno is added.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IAnnotateSelectedFeatures">
+      <summary>Provides access to members that control the annotate selected features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAnnotateSelectedFeatures.Callback">
+      <summary>Provides a hook before and after annotation is created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IAnnotateSelectedFeatures.DoModal(System.Int32)">
+      <summary>Shows annotate selected features window in a modal state.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAnnotateSelectedFeatures.Layer">
+      <summary>The layer to annotate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IAnnotateSelectedFeatures.Map">
+      <summary>The map to check for existing annotation classes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IApplicationWindows">
+      <summary>Provides access to members that control the DataWindow Container.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IApplicationWindows.DataWindows">
+      <summary>The data windows in the application.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IBasicDocument">
+      <summary>Provides access to members that control the Basic Document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IBasicDocument.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Adds a layer to the current focus map or scene.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument.ContextItem">
+      <summary>The last item that was right-clicked.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument.SelectedItem">
+      <summary>The selected item in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument.SelectedLayer">
+      <summary>The selected layer in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument.TableProperties">
+      <summary>Table properties, for Layers and Tables.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IBasicDocument.UpdateContents">
+      <summary>Notifies the document that the contents have been updated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IBasicDocument2">
+      <summary>Provides additional access to members that control the Basic Document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.ActivatedView">
+      <summary>The activated view.  This is the same as the active view unless a data frame is activated within a layout.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Adds a layer to the current focus map or scene.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.ContextItem">
+      <summary>The last item that was right-clicked.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.CurrentLocation">
+      <summary>The current mouse location in map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.FocusMap">
+      <summary>The current focus map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.Maps">
+      <summary>The collection of maps in the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.OperationStack">
+      <summary>The operation stack.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.PageLayout">
+      <summary>The page layout.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.SearchTolerance">
+      <summary>The global search tolerance in geographic units for selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.SearchTolerancePixels">
+      <summary>The global search tolerance in pixels for selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.SelectedItem">
+      <summary>The selected item in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.SelectedLayer">
+      <summary>The selected layer in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.StyleGallery">
+      <summary>Reference to the document's Style Gallery.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.TableProperties">
+      <summary>Table properties, for Layers and Tables.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IBasicDocument2.UpdateContents">
+      <summary>Notifies the document that the contents have been updated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols">
+      <summary>Provides access to members that control Default basic symbols for the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.AreaPatch">
+      <summary>Default Area Patch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.CustomTOCFont">
+      <summary>Custom TOC Font.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.CustomTOCFontSize">
+      <summary>Custom TOC Font Size in Points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.FillSymbol">
+      <summary>Default Fill Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.LinePatch">
+      <summary>Default Line Patch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.LineSymbol">
+      <summary>Default Line Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.MarkerSymbol">
+      <summary>Default Marker Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.PatchHeight">
+      <summary>Default Patch Height in Points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IBasicDocumentDefaultSymbols.PatchWidth">
+      <summary>Default Patch Width in Points.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IChangeLayout">
+      <summary>Provides access to members that control changing the document's layout.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IChangeLayout.ChangeLayout">
+      <summary>Indicates if the wizard used to select a new layout is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IClipboardFormat">
+      <summary>Provides access to members that control the ClipBoard Format.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.Copy(ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Copy selection to the Clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.Description(System.String@)">
+      <summary>Description of the Clipboard format.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.Format(System.Int32@)">
+      <summary>The Clipboard Format.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.Paste(ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Paste the Element in the GraphicsContainer to the Clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.Priority(System.Int16@)">
+      <summary>Priority of the Clipboard format for Paste (1 to 100, 100 highest priority).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat.StorageMedium(System.Int32@)">
+      <summary>StorageMedium for Paste.  (Look up the C++ TYMED enumeration on MSDN for details).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2">
+      <summary>Provides access to members that control the ClipBoard Format.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.Copy(ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Copy selection to the Clipboard.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.CopyMap(ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Copy the entire view to the Clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.Description(System.String@)">
+      <summary>Description of the Clipboard format.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.Format(System.Int32@)">
+      <summary>The Clipboard Format.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.Paste(ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Paste the Element in the GraphicsContainer to the Clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.Priority(System.Int16@)">
+      <summary>Priority of the Clipboard format for Paste (1 to 100, 100 highest priority).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IClipboardFormat2.StorageMedium(System.Int32@)">
+      <summary>StorageMedium for Paste.  (Look up the C++ TYMED enumeration on MSDN for details).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IContentsView">
+      <summary>Provides access to members that control table of contents views.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView.Activate(System.Int32,ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Activates the contents view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView.AddToSelectedItems(System.Object)">
+      <summary>Adds to the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.ContextItem">
+      <summary>The context item (could be an enumerator).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView.Deactivate">
+      <summary>Deactivates the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.hWnd">
+      <summary>The HWND of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.Name">
+      <summary>The name of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.ProcessEvents">
+      <summary>Indicates if the view is currently responding to events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView.Refresh(System.Object)">
+      <summary>Refreshes the contents view.  If a non-null item is specified, it refreshes only that item and its children.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView.RemoveFromSelectedItems(System.Object)">
+      <summary>Removes an item from the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.SelectedItem">
+      <summary>The selected item (could be an enumerator).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.ShowLines">
+      <summary>Indicates if lines are shown in the TOC tree.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView.Visible">
+      <summary>Indicates if the view is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IContentsView2">
+      <summary>Provides access to members that control the table of contents views of GMx.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.BasicActivate(System.Int32,ESRI.ArcGIS.Framework.IDocument)">
+      <summary>Activates the contents view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.Activate(System.Int32,ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Activates the contents view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.AddToSelectedItems(System.Object)">
+      <summary>Adds to the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.ContextItem">
+      <summary>The context item (could be an enumerator).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.Deactivate">
+      <summary>Deactivates the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.hWnd">
+      <summary>The HWND of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.Name">
+      <summary>The name of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.ProcessEvents">
+      <summary>Indicates if the view is currently responding to events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.Refresh(System.Object)">
+      <summary>Refreshes the contents view.  If a non-null item is specified, it refreshes only that item and its children.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView2.RemoveFromSelectedItems(System.Object)">
+      <summary>Removes an item from the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.SelectedItem">
+      <summary>The selected item (could be an enumerator).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.ShowLines">
+      <summary>Indicates if lines are shown in the TOC tree.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView2.Visible">
+      <summary>Indicates if the view is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IContentsView3">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.Bitmap">
+      <summary>Bitmap shown in Table Of Contents window toolbar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.Tooltip">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.BasicActivate(System.Int32,ESRI.ArcGIS.Framework.IDocument)">
+      <summary>Activates the contents view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.Activate(System.Int32,ESRI.ArcGIS.ArcMapUI.IMxDocument)">
+      <summary>Activates the contents view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.AddToSelectedItems(System.Object)">
+      <summary>Adds to the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.ContextItem">
+      <summary>The context item (could be an enumerator).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.Deactivate">
+      <summary>Deactivates the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.hWnd">
+      <summary>The HWND of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.Name">
+      <summary>The name of the contents view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.ProcessEvents">
+      <summary>Indicates if the view is currently responding to events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.Refresh(System.Object)">
+      <summary>Refreshes the contents view.  If a non-null item is specified, it refreshes only that item and its children.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsView3.RemoveFromSelectedItems(System.Object)">
+      <summary>Removes an item from the selected items.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.SelectedItem">
+      <summary>The selected item (could be an enumerator).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.ShowLines">
+      <summary>Indicates if lines are shown in the TOC tree.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsView3.Visible">
+      <summary>Indicates if the view is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IContentsViewEdit">
+      <summary>Provides access to members that control Contents View Edit.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsViewEdit.AddContentsView(ESRI.ArcGIS.ArcMapUI.IContentsView)">
+      <summary>Adds a contents view object to the TOC.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IContentsViewEdit.ClearContentsViews">
+      <summary>Removes all current contents views.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IContentsViewSelection">
+      <summary>Provides access to members that control table of contents views.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IContentsViewSelection.SelectedItems">
+      <summary>Selection set containing the highlighted items in contents view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataConnectionCallback">
+      <summary>Provides access to members that control Callback from data connection property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionCallback.NameChanged">
+      <summary>Table or FeatureClass changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataConnectionCallback2">
+      <summary>Provides more access to members that control Callback from data connection property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionCallback2.NameChangeFinished">
+      <summary>The user finished an action that modified the name of the Table or Feature Class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage">
+      <summary>Provides access to members that control the Data connection property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.AttemptToDeleteExistingName">
+      <summary>For save dialogs, attempt to delete the table/feature class. Returns successfully if the object is delete, S_FALSE if the user requested no, or the delete error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.Callback">
+      <summary>Callback implementation (not mandatory).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.DefaultName">
+      <summary>Default name when NewDataFile is true.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.Enabled">
+      <summary>Indicates if all the window controls in the property page are enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.Name">
+      <summary>User selected Name (ie, FeatureClassName, TableName).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.NewDataFile">
+      <summary>Indicates if the dialog is for new data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.PromptName">
+      <summary>Prompt name. Default is to use 'Save As:' for saving and 'Choose:' for loading.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.Skip">
+      <summary>When NewDataFile is false, skip this table/featureclass in the ComboBox.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage.Type">
+      <summary>Type of data we are getting or putting.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2">
+      <summary>Provides access to members that control the Data connection property page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.AttemptToDeleteExistingName">
+      <summary>For save dialogs, attempt to delete the table/feature class. Returns successfully if the object is delete, S_FALSE if the user requested no, or the delete error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.BrowseLocation">
+      <summary>Last location of the GxDialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.Callback">
+      <summary>Callback implementation (not mandatory).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.DatasetFilter">
+      <summary>Filter (optional) for the page. Determines what datasets are visible.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.DefaultName">
+      <summary>Default name when NewDataFile is true.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.DialogFilter">
+      <summary>Filter (optional) for the GxDialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.Enabled">
+      <summary>Indicates if all the window controls in the property page are enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.Name">
+      <summary>User selected Name (ie, FeatureClassName, TableName).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.NewDataFile">
+      <summary>Indicates if the dialog is for new data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.PromptName">
+      <summary>Prompt name. Default is to use 'Save As:' for saving and 'Choose:' for loading.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.ReturnDisplayTableName">
+      <summary>Indicates if a raw FDO or a display table name is returned when get_Name method is called.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.SelectName(ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Selects the name from the list.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.SetFocus">
+      <summary>Sets the focus to the file name window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.SetUniqueDefaultName(System.String)">
+      <summary>A Unique Default name when NewDataFile is true.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.ShowDropdown">
+      <summary>Indicates if existing data is shown in a dropdown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.ShowNone">
+      <summary>Indicates if the option &lt;None&gt; is shown in a dropdown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.Skip">
+      <summary>When NewDataFile is false, skip this table/featureclass in the ComboBox.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataConnectionPropertyPage2.Type">
+      <summary>Type of data we are getting or putting.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataGraphTWizard">
+      <summary>Provides access to members that control the data graph wizard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphTWizard.Application">
+      <summary>The application to which the wizard dialog belongs.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphTWizard.DataGraphT">
+      <summary>The data graph created by this new wizard.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphTWizard.DoModal(System.Int32)">
+      <summary>Starts the wizard dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphTWizard.SelectDataSource(System.Object)">
+      <summary>Default data source to select in the wizard.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2">
+      <summary>Provides access to members that control the DataGraph Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.DataGraphBase">
+      <summary>The window that uses data graph.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataGraphWindow2.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDatasetFilter">
+      <summary>Provides access to members that control the Filter for dataset inclusion.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDatasetFilter.ApplyFilter(ESRI.ArcGIS.Geodatabase.IDataset)">
+      <summary>Indicates if the dataset should be included.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataWindow">
+      <summary>Provides access to members that control popup windows that show map data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataWindow2">
+      <summary>Provides access to members that control popup windows that show map data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow2.Destroy">
+      <summary>Close and destroy the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.EnableContextMenu">
+      <summary>Indicates if the context menu should be enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow2.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow2.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow2.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindow2.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindow2.Tag">
+      <summary>For developer use.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents">
+      <summary>Provides access to events that occur in a data window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents_Event">
+      <summary>Provides access to events that occur in a data window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents.DestroyWindow(ESRI.ArcGIS.ArcMapUI.IDataWindow)">
+      <summary>Fired when window is destroyed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents_Event.DestroyWindow">
+      <summary>Fired when window is destroyed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents.HideWindow(ESRI.ArcGIS.ArcMapUI.IDataWindow)">
+      <summary>Fired when window is hidden.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents_Event.HideWindow">
+      <summary>Fired when window is hidden.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents.ShowWindow(ESRI.ArcGIS.ArcMapUI.IDataWindow)">
+      <summary>Fired when window is shown.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDataWindowEvents_Event.ShowWindow">
+      <summary>Fired when window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDataWindowFactory">
+      <summary>Provides access to members that control the Factory for creating floating windows.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindowFactory.CanCreate(System.Object)">
+      <summary>Indicates if the window is available given the current application state.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDataWindowFactory.Create(System.Object)">
+      <summary>Create a new floating window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDataWindowFactory.Name">
+      <summary>The name of objects created by this factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDissolveUI">
+      <summary>Provides access to members that dissolve features by a common attribute value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDissolveUI.Application">
+      <summary>A reference to the application to which this window belongs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDissolveUI.DoModal(System.Int32)">
+      <summary>Shows or hides the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDissolveUIAdmin">
+      <summary>Provides access to alternative members that dissolve features by a common attribute value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDissolveUIAdmin.DissolveTable">
+      <summary>The dissolve table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols">
+      <summary>Provides access to members that control Default Symbols for the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.AreaPatch">
+      <summary>Default Area Patch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.Callout">
+      <summary>Default Callout.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.CustomTOCFont">
+      <summary>Custom TOC Font.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.CustomTOCFontSize">
+      <summary>Custom TOC Font Size in Points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.FillSymbol">
+      <summary>Default Fill Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.LinePatch">
+      <summary>Default Line Patch.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.LineSymbol">
+      <summary>Default Line Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.MarkerSymbol">
+      <summary>Default Marker Symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.PatchHeight">
+      <summary>Default Patch Height in Points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.PatchWidth">
+      <summary>Default Patch Width in Points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IDocumentDefaultSymbols.TextSymbol">
+      <summary>Default Text Symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDocumentEvents">
+      <summary>Provides access to events that occur in ArcMap.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event">
+      <summary>Provides access to events that occur in ArcMap.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.ActiveViewChanged">
+      <summary>Fired when the active view changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.BeforeCloseDocument">
+      <summary>Fired before a document is closed. Return True to abort the close process.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.BeforeCloseDocument">
+      <summary>Fired before a document is closed. Return True to abort the close process.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.MapsChanged">
+      <summary>Fired when a change is made to the map collection.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.MapsChanged">
+      <summary>Fired when a change is made to the map collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.OnContextMenu(System.Int32,System.Int32)">
+      <summary>Indicates if a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.OnContextMenu">
+      <summary>Indicates if a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEvents.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEvents_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp">
+      <summary>Provides access to events that occur in ArcMap.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event">
+      <summary>Provides access to events that occur in ArcMap.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.ActiveViewChanged">
+      <summary>Fired when the active view has changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.ActiveViewChanged">
+      <summary>Fired when the active view has changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.BeforeCloseDocument">
+      <summary>Fired before a document is closed. Return True to abort the close process.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.BeforeCloseDocument">
+      <summary>Fired before a document is closed. Return True to abort the close process.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.CloseDocument">
+      <summary>Fired when a document is closed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.MapsChanged">
+      <summary>Fired when a change is made to the map collection.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.MapsChanged">
+      <summary>Fired when a change is made to the map collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.NewDocument">
+      <summary>Fired when a new document is created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.OnContextMenu(System.Int32,System.Int32)">
+      <summary>Indicates if a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.OnContextMenu">
+      <summary>Indicates if a context menu should be displayed at the given xy location. Return true if handled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.OpenDocument">
+      <summary>Fired when a document is opened.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.ArcMapUI.IDocumentEventsDisp_Event.VBAReset">
+      <summary>Fired when VBA is reset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IEnumPrinterNames">
+      <summary>Provides access to an enumeration of all the Printers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IEnumPrinterNames.Next">
+      <summary>The next Printer Name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IEnumPrinterNames.Reset">
+      <summary>Reset the Enumeration to the beginning.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IEnumTableProperties">
+      <summary>Provides access to an enumeration of table properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IEnumTableProperties.Next">
+      <summary>Get the next table property.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IEnumTableProperties.Reset">
+      <summary>Reset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IFindCallBack">
+      <summary>Provides access to members that control the results in a custom find dialog page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindCallBack.AddNewRow">
+      <summary>Adds a new row to the listbox, using values set with ColumnValue.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindCallBack.Application">
+      <summary>The application that this dialog belongs to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindCallBack.ColumnCount">
+      <summary>Number of columns to display in list box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindCallBack.ColumnValue(System.Int32)">
+      <summary>Rows column value in listbox.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindCallBack.FlashGeometry(ESRI.ArcGIS.Geometry.IGeometry,System.Int32,System.Boolean)">
+      <summary>Generic method to flash a point on the display n times.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindCallBack.Object">
+      <summary>The object value of the new row. This object is passed to the popup menu in an ISet.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindCallBack.ProcessMessages(System.Boolean@)">
+      <summary>Processes messages. Run this method often.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IFinder">
+      <summary>Provides access to IFinder interface for the MxFind routine. Implement this interface to create a custom find dialog page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.ColumnCount">
+      <summary>Number of columns to display in list box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.ColumnName(System.Int32)">
+      <summary>The column name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.ColumnWidth(System.Int32)">
+      <summary>The column width in Dialog Units (1/4 of avg. char width).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFinder.Find(ESRI.ArcGIS.ArcMapUI.IFindCallBack)">
+      <summary>Perform find functionality.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.hWnd">
+      <summary>The window handle for the finder.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFinder.InitializeControl(ESRI.ArcGIS.Framework.IApplication,ESRI.ArcGIS.ArcMapUI.IFindPanelEvents)">
+      <summary>Called to initialize control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.MenuUID">
+      <summary>UID of menu to popup in list box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFinder.Name">
+      <summary>The control name. Used for the FindUI tab.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFinder.NewSearch">
+      <summary>New search. Clear control input boxes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFinder.Stop">
+      <summary>User requested find to stop.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFinder.UpdateControl">
+      <summary>Called whenever ArcMap status changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IFindPanelEvents">
+      <summary>Provides access to events that control communication from find pages to the main find form.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindPanelEvents.ExecuteFind(System.Boolean)">
+      <summary>Tells Find Dialog to execute a find.  If the parameter passed is true, the dialog will only find if there are already results showing.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindPanelEvents.OutputsChanged">
+      <summary>Notifies Find Dialog that the outputs of the find panel have changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IFindWindow">
+      <summary>Provides access to members that control the Find Window. Allows you to search for features/addresses/etc. Deprecated. Please consider using the IFind interface in the Carto library instead.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindWindow.Application">
+      <summary>The application to which the window belongs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindWindow.Show(System.Boolean)">
+      <summary>Shows or hides the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IFindWindow2">
+      <summary>Provides access to additional control of the Find Window. Deprecated. Please consider using the IFind interface in the Carto library instead.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindWindow2.CategoryID">
+      <summary>The component category to use in the Find Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IFindWindow2.Application">
+      <summary>The application to which the window belongs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IFindWindow2.Show(System.Boolean)">
+      <summary>Shows or hides the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IGenericWindow">
+      <summary>Provides access to members that control a data window with a particular hWnd.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.ActiveXUID">
+      <summary>UID of ActiveX component to place in data window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.FindWindow(System.String)">
+      <summary>Find an already displayed window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.Name">
+      <summary>Name of data window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.Title">
+      <summary>Name displayed on form.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGenericWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGenericWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGenericWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGenericWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGenericWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IGNetExtension">
+      <summary>Provides access to members that control the Geography Network Extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGNetExtension.ShowWindow(System.Boolean)">
+      <summary>Shows/hides the GNet dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IGpsExtension">
+      <summary>Provides access to GPS Extension properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGpsExtension.RealTimeFeedManager">
+      <summary>The RealTimeFeedManager object associated with the extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IGpsPositionDialog">
+      <summary>Provides access to members that control GPS position dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGpsPositionDialog.RealTimeFeed">
+      <summary>The RealTimeFeed which is used to display the GPS position information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGpsPositionDialog.Visible">
+      <summary>Indicates if the GPS position dialog is displayed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IGroupLayersOperation">
+      <summary>Provides access to members that control the Group layers operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IGroupLayersOperation.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Adds layer to be added to the group.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGroupLayersOperation.SourceGroupLayer">
+      <summary>Parent group if the layers belongs to a group layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IGroupLayersOperation.SourceMap">
+      <summary>Parent map of the layers being added.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IHistoryViewerWindow">
+      <summary>Provides access to members of HistoryViewerWindow.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IHistoryViewerWindow.Show(System.Int32)">
+      <summary>Show the HistoryViewerWindow.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IJoinData">
+      <summary>Provides access to members that join a feature class or a table to a layer/standalone table in ArcMap.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinData.Application">
+      <summary>The application to which this window belongs (Optional).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IJoinData.DoModal(System.Int32)">
+      <summary>Shows modal window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinData.Layer">
+      <summary>Primary layer to join from (removes standalone table setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IJoinData2">
+      <summary>Provides access to members that join a feature class or a table to a layer/standalone table in ArcMap.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinData2.Application">
+      <summary>The application to which this window belongs (Optional).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IJoinData2.DoModal(System.Int32)">
+      <summary>Shows modal window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinData2.Layer">
+      <summary>Primary layer to join from (removes standalone table setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinData2.StandaloneTable">
+      <summary>Primary table to join from (removes layer setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IJoinPages">
+      <summary>Provides access to members that control which pages are shown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinPages.ShowJoinAttributePage">
+      <summary>Indicates if attribute page is shown. Default: True.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinPages.ShowJoinLocationPage">
+      <summary>Indicates if location page is shown. Default: True.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IJoinPages.ShowJoinRelationshipPage">
+      <summary>Indicates if relationship page is shown. Default: True. If no relationships are present for layer, page will not be shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment">
+      <summary>Provides access to members that control the Layer Effects Environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment.ActiveView">
+      <summary>The IActiveView interface of the view to be refreshed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment.EffectsLayer">
+      <summary>The ILayerEffects interface of the current effects layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment2">
+      <summary>Provides access to members that control the Layer Effects Environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment2.ActiveView">
+      <summary>The IActiveView interface of the view to be refreshed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment2.EffectsLayer">
+      <summary>The ILayerEffects interface of the current effects layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment2.SelectedLayer">
+      <summary>Currenttly selected layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment3">
+      <summary>Provides access to members that control the Layer Effects Environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment3.ActiveView">
+      <summary>The IActiveView interface of the view to be refreshed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment3.Document">
+      <summary>Current document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment3.EffectsLayer">
+      <summary>The ILayerEffects interface of the current effects layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILayerEffectsEnvironment3.SelectedLayer">
+      <summary>Currenttly selected layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ILensWindow">
+      <summary>Provides access to members that control the Lens Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.IsLive">
+      <summary>Indicates if the window shows a live view of what's under it or a snapshot.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.ScreenDisplay">
+      <summary>The screen display used by this window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.UpdateWhileDragging">
+      <summary>Indicates if the window is redrawn as it's moved or not.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ILensWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ILensWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ILensWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ILensWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ILensWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow">
+      <summary>Provides access to members that control the Map Inset Window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.FlashLocation">
+      <summary>Draw leader lines from the inset to the location on the map shown by the inset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.MapInset">
+      <summary>The MapInset used by this window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.IsLive">
+      <summary>Indicates if the window shows a live view of what's under it or a snapshot.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.ScreenDisplay">
+      <summary>The screen display used by this window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.UpdateWhileDragging">
+      <summary>Indicates if the window is redrawn as it's moved or not.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMapInsetWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMensurationResult">
+      <summary>Provides access to members that control mensuration result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMensurationResult.UpdateMessage(System.String,System.String,System.String,System.String,System.String)">
+      <summary>Update measurement result</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMensurationResult.UpdateResultList(ESRI.ArcGIS.esriSystem.IStringArray,ESRI.ArcGIS.esriSystem.IStringArray,ESRI.ArcGIS.esriSystem.IStringArray,ESRI.ArcGIS.esriSystem.ILongArray)">
+      <summary>Update result lists</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow">
+      <summary>Provides access to members setting the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.DataSource">
+      <summary>Pass the data source name of the selected layer to Metadata View window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is Metadata (of a layer's data source) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is Metadata (of a standalone table) already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.hWnd">
+      <summary>HWND of the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.Layer">
+      <summary>The stored layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.Metadata">
+      <summary>The Metadata of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.MetadataHelper">
+      <summary>The Metadata helper to get stylesheet path and metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.Refresh">
+      <summary>Refresh the metadata view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.SelectedStylesheet">
+      <summary>Selected Stylesheet from Metadata helper.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.Show(System.Boolean)">
+      <summary>Show MetadataViewWindow of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.StandaloneTable">
+      <summary>The standalone table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow.StylesheetPath">
+      <summary>Stylesheet path from Metadata helper.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2">
+      <summary>Provides access to members setting the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Metadata">
+      <summary>Pass the metadata directly to Metadata View window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.DataSource">
+      <summary>Pass the data source name of the selected layer to Metadata View window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is Metadata (of a layer's data source) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is Metadata (of a standalone table) already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.hWnd">
+      <summary>HWND of the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Layer">
+      <summary>The stored layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Metadata">
+      <summary>The Metadata of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.MetadataHelper">
+      <summary>The Metadata helper to get stylesheet path and metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Refresh">
+      <summary>Refresh the metadata view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.SelectedStylesheet">
+      <summary>Selected Stylesheet from Metadata helper.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.Show(System.Boolean)">
+      <summary>Show MetadataViewWindow of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.StandaloneTable">
+      <summary>The standalone table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow2.StylesheetPath">
+      <summary>Stylesheet path from Metadata helper.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3">
+      <summary>Provides access to members setting the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.AGSServerObjectName">
+      <summary>Pass the server object name to Metadata View window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Metadata">
+      <summary>Pass the metadata directly to Metadata View window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.DataSource">
+      <summary>Pass the data source name of the selected layer to Metadata View window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is Metadata (of a layer's data source) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is Metadata (of a standalone table) already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.hWnd">
+      <summary>HWND of the Metadata View Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Layer">
+      <summary>The stored layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Metadata">
+      <summary>The Metadata of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.MetadataHelper">
+      <summary>The Metadata helper to get stylesheet path and metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Refresh">
+      <summary>Refresh the metadata view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.SelectedStylesheet">
+      <summary>Selected Stylesheet from Metadata helper.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.Show(System.Boolean)">
+      <summary>Show MetadataViewWindow of the selected layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.StandaloneTable">
+      <summary>The standalone table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMetadataViewWindow3.StylesheetPath">
+      <summary>Stylesheet path from Metadata helper.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IModelessQueryAttributes">
+      <summary>Provides access to members that control the Modeless Attribute query window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IModelessQueryAttributes.Refresh">
+      <summary>Refreshes the attribute query window when it's in a modeless state.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IModelessQueryAttributes.Show(System.Int32)">
+      <summary>Shows attribute query window in a modeless state.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMoveLayersOperation">
+      <summary>Provides access to members that control the Move layer operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMoveLayersOperation.AddLayerInfo(ESRI.ArcGIS.Carto.ILayer,ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.IGroupLayer)">
+      <summary>Information of the layer to be moved. Source group is NULL if the layer belongs to a map. This method can be called repeatedly until all the layers are added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMoveLayersOperation.SetDestinationInfo(System.Int32,ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.IGroupLayer)">
+      <summary>Information regarding where the the layer needs to be moved. Destination group is NULL if the layer is bing moved to into a map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMoveMapsOperation">
+      <summary>Provides access to members that control the Move maps operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMoveMapsOperation.Add(ESRI.ArcGIS.Carto.IMap)">
+      <summary>Information of the map to be moved.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMoveMapsOperation.NewIndex">
+      <summary>Information regarding where the the layer needs to be moved. Destination group is NULL if the layer is bing moved to into a map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMxApplication">
+      <summary>Provides access to members that control the Mx Application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication.CopyToClipboard">
+      <summary>Copies the current view to the clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication.Display">
+      <summary>The application display.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication.Export">
+      <summary>Exports the current document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication.Paper">
+      <summary>The current paper settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication.Printer">
+      <summary>The current printer settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication.SelectionEnvironment">
+      <summary>The selection environment.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMxApplication2">
+      <summary>Provides access to members that control the Mx Application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication2.CopyToClipboard">
+      <summary>Copies the current view to the clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication2.Display">
+      <summary>The application display.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication2.Export">
+      <summary>Exports the current document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication2.Paper">
+      <summary>The current paper settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication2.PauseDrawing">
+      <summary>Pause display updates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication2.Printer">
+      <summary>The current printer settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication2.SelectionEnvironment">
+      <summary>The selection environment.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMxApplication3">
+      <summary>Provides access to members that control the Mx Application.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication3.CopyToClipboard">
+      <summary>Copies the current view to the clipboard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.Display">
+      <summary>The application display.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxApplication3.Export">
+      <summary>Exports the current document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.Paper">
+      <summary>The current paper settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.PauseDrawing">
+      <summary>Pause display updates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.Printer">
+      <summary>The current printer settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.SelectionEnvironment">
+      <summary>The selection environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxApplication3.ShowStatusBar">
+      <summary>Show or hide the status bar.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMxDocument">
+      <summary>Provides access to members that control the Mx Document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ActivatedView">
+      <summary>The activated view.  This is the same as the active view unless a data frame is activated within a layout.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ActiveView">
+      <summary>The active view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ActiveViewCommand">
+      <summary>The command associated with the active view.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocument.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Adds a layer to the current focus map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocument.CanInsertObject(System.Boolean@)">
+      <summary>Indicates if the document allows objects to be inserted.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ContentsView(System.Int32)">
+      <summary>The contents view at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ContentsViewCount">
+      <summary>The number of contents views in the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.ContextItem">
+      <summary>The last item that was right-clicked.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.CurrentContentsView">
+      <summary>The current contents view of the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.CurrentLocation">
+      <summary>The current mouse location in map units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.DefaultColor(ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes)">
+      <summary>The default color for the given type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.DefaultTextFont">
+      <summary>The default font for text.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.DefaultTextFontSize">
+      <summary>The default font size for text.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.DelayUpdateContents">
+      <summary>Indicates document update notifications should be ignored.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.FocusMap">
+      <summary>The current focus map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocument.InsertObject">
+      <summary>Inserts an object into the document.  Displays the insert object dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.Maps">
+      <summary>The collection of maps in the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.OperationStack">
+      <summary>The operation stack.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.PageLayout">
+      <summary>The page layout.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.RelativePaths">
+      <summary>Indicates if path names are stored relative to the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.SearchTolerance">
+      <summary>The global search tolerance in geographic units for selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.SearchTolerancePixels">
+      <summary>The global search tolerance in pixels for selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.SelectedItem">
+      <summary>The selected item in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.SelectedLayer">
+      <summary>The selected layer in the layer control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.StyleGallery">
+      <summary>Reference to the document's Style Gallery.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IMxDocument.TableProperties">
+      <summary>Table properties, for Layers and Tables in ArcMap.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocument.UpdateContents">
+      <summary>Notifies the document that the contents have been updated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IMxDocumentDropTarget">
+      <summary>Provides access to members that control the MxDocument Drop Target.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocumentDropTarget.CanCreate(ESRI.ArcGIS.ArcMapUI.IMxDocument,ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Indicates if targetName can be added to the Document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IMxDocumentDropTarget.Create(ESRI.ArcGIS.ArcMapUI.IMxDocument,ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Adds targetName to the current Document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.INewDocumentDialog">
+      <summary>Provides access to members that control the new document dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.INewDocumentDialog.Database">
+      <summary>The database for the document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.INewDocumentDialog.DoModal(System.Int32)">
+      <summary>Shows the new document dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.INewDocumentDialog.FilePath">
+      <summary>The selected document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IOverviewWindow">
+      <summary>Provides access to members that control the Overview Window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.Overview">
+      <summary>The Overview used by this window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IOverviewWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IPageIndexControl">
+      <summary>Data Driven Page Control interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.IsFirstPageShown">
+      <summary>Is the current data driven page the first?</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.IsLastPageShown">
+      <summary>Is the current data driven page the last?</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.ShowFirstPage">
+      <summary>Show the first data driven page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.ShowLastPage">
+      <summary>Show the last data driven page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.ShowNextPage">
+      <summary>Show the next data driven page.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IPageIndexControl.ShowPreviousPage">
+      <summary>Show the previous data driven page.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IQueryAttributes">
+      <summary>Provides access to members that control the Attribute query window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.CombinationMethod">
+      <summary>CombinationMethod on form.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.DoModal(System.Int32)">
+      <summary>Shows attribute query window in a modal state.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.Expression">
+      <summary>Default expression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.Layer">
+      <summary>Layer selected by the user.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.QueryFilter">
+      <summary>Provide a QueryFilter after form has been executed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IQueryAttributes.SelectFeaturesInLayerOnOK">
+      <summary>When the user presses OK, select features. If there is an error, don't return. Default: FALSE.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRasterDockWin">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IRasterDockWin.Update">
+      <summary>Updates child windows</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IRasterDockWin.UpdateResult(System.String)">
+      <summary>Updates child windows</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IReferenceScaleOperation">
+      <summary>Provides access to members that control the Reference Scale Operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReferenceScaleOperation.Map">
+      <summary>The map that the Reference Scale operates on.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReferenceScaleOperation.Name">
+      <summary>The name of this operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReferenceScaleOperation.PreviousScale">
+      <summary>The previous Reference Scale.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReferenceScaleOperation.ReferenceScale">
+      <summary>The new Reference Scale.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRelateData">
+      <summary>Provides access to members that relate a class or a table to a layer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IRelateData.DoModal(System.Int32)">
+      <summary>Shows modal window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRelateData.RelateOrigin">
+      <summary>Primary layer to join from.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRelateData2">
+      <summary>Provides access to members that join a feature class or a table to a layer/standalone table in ArcMap.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRelateData2.Application">
+      <summary>The application to which this window belongs (Optional).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IRelateData2.DoModal(System.Int32)">
+      <summary>Shows modal window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRelateData2.Layer">
+      <summary>Primary layer to relate from (removes standalone table setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRelateData2.RelateOrigin">
+      <summary>Primary layer to join from.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRelateData2.StandaloneTable">
+      <summary>Primary table to relate from (removes layer setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation">
+      <summary>Provides access to members that control the Remove layer operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation.Layer">
+      <summary>The layer to remove.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation2">
+      <summary>Provides access to members that control the Remove layer operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation2.GroupLayer">
+      <summary>The group layer from which the layer needs to be removed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation2.Layer">
+      <summary>The layer to remove.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IRemoveLayerOperation2.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IRemoveLayersOperation">
+      <summary>Provides access to members that control the Remove layers operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IRemoveLayersOperation.AddLayerInfo(ESRI.ArcGIS.Carto.ILayer,ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.IGroupLayer)">
+      <summary>Adds the information of the layer that needs to be removed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat">
+      <summary>Provides access to report unit formatting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat.LatLonFormat">
+      <summary>The format object used for reporting lat-lon values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat.NumericFormat">
+      <summary>The format object used for reporting numeric values.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat2">
+      <summary>Provides access to report unit formatting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat2.CoordinateReadoutLatLonFormat">
+      <summary>The format used for the coordinate readout on the status bar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat2.CoordinateReadoutUnits">
+      <summary>The units used for the coordinate readout on the status bar. If set to esriUnknown,  map display units are used.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat2.LatLonFormat">
+      <summary>When a map's display units are set to esriDecimalDegrees, tools use this format to report coordinates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IReportUnitFormat2.NumericFormat">
+      <summary>The number format used to report coordinate values.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ISelectFeaturesOperation">
+      <summary>Provides access to members that control the Select Features operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISelectFeaturesOperation.ActiveView">
+      <summary>The active view (for refresh).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISelectFeaturesOperation.Layer">
+      <summary>The layer from which to select features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISelectFeaturesOperation.SelectionSet">
+      <summary>The selection set.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ISpatialJoin">
+      <summary>Provides access to members that join the attributes of feature classes based on the spatial relationships of the features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.JoinAggregate(ESRI.ArcGIS.esriSystem.IName,System.Double)">
+      <summary>Join using aggregate. Only features within a distance of maxMapDist will be joined. A maxMapDist of -1 means infinity.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.JoinNearest(ESRI.ArcGIS.esriSystem.IName,System.Double)">
+      <summary>Joins with the nearest feature in the join feature class. Only features within a distance of maxMapDist will be joined. A maxMapDist of -1 means infinity.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.JoinTable">
+      <summary>The spatial table to append fields from.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.JoinWithin(ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Joins a feature in the source feature class with the feature if it falls within in the join feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.LeftOuterJoin">
+      <summary>Indicates whether a match is required before adding a record from the source feature class to the result. If TRUE, all records in the source feature class are added regardless of whether there is a match.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.ShowProcess(System.Boolean)">
+      <summary>Indicates whether to show update messages while processing join.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISpatialJoin.SourceTable">
+      <summary>The spatial table to append fields to.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IStartupDialog">
+      <summary>Provides access to members that control the Startup Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IStartupDialog.DoModal(System.Int32)">
+      <summary>Shows the startup dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialog.FilePath">
+      <summary>An initial file name (may be blank).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IStartupDialog2">
+      <summary>Provides access to more members that control the Startup Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialog2.InitialCommand">
+      <summary>An initial command to run (may be nothing).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IStartupDialog3">
+      <summary>Provides access to more members that control the Startup Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialog3.Database">
+      <summary>The database for the document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialog3.IsTemplate">
+      <summary>Gets the value determining if file path is a template.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings">
+      <summary>Provides access to members that contorl the behavior of the Getting Started window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings.AddData">
+      <summary>Indicates if the Add Data dialog should be displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings.Load">
+      <summary>Loads the current values from the registry.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings.OpenLastDocument">
+      <summary>Indicates if the last document should be opened.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings.ProgId">
+      <summary>The startup window prog id.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IStartupDialogSettings.ShowStartup">
+      <summary>Indicates if the startup window should be displayed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ISummarizeUI">
+      <summary>Provides access to members that summarize a table by an attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISummarizeUI.Application">
+      <summary>The reference to the application to which this window belongs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ISummarizeUI.DoModal(System.Int32)">
+      <summary>Shows or hides the window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISummarizeUI.SummarizeField">
+      <summary>The summarize field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISummarizeUI.SummarizeOnSelectedOnly">
+      <summary>Indicates whether to summarize only on selected records.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ISummarizeUI.SummarizeTable">
+      <summary>The summarize table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin">
+      <summary>Provides access to the table docking window.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.ActiveTableWindow">
+      <summary>Gets the active table window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.Close(ESRI.ArcGIS.ArcMapUI.ITableWindow)">
+      <summary>Close table pane.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.CloseAllTables">
+      <summary>Close all table panes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindOpenTableWindows(ESRI.ArcGIS.esriSystem.ISet@)">
+      <summary>Gets all the open table windows.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindViaFeatureLayer(ESRI.ArcGIS.Carto.IFeatureLayer,System.Boolean)">
+      <summary>Is table (of a featurelayer) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is table (of a layer) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is table (of a standalonetable) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindViaTable(ESRI.ArcGIS.Geodatabase.ITable,System.Boolean)">
+      <summary>Is table already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.FindViaUnknown(System.Object)">
+      <summary>Is table already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.IsOpen(ESRI.ArcGIS.ArcMapUI.ITableWindow,System.Boolean@)">
+      <summary>Is Table window open.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.SetActiveWindow(ESRI.ArcGIS.ArcMapUI.ITableWindow)">
+      <summary>Set the active window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.Show(ESRI.ArcGIS.ArcMapUI.ITableWindow,System.Boolean)">
+      <summary>Show Table pane.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.ShowNextTable(System.Boolean)">
+      <summary>Show next table pane.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableDockWindowAdmin.UpdateTitle(ESRI.ArcGIS.ArcMapUI.ITableWindow)">
+      <summary>Update the pane title.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableFrame">
+      <summary>Provides access to members that control table frames.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableFrame.StartCol">
+      <summary>The first column to display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableFrame.StartRow">
+      <summary>The first row to display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableFrame.Table">
+      <summary>The table (either standalone table or feature layer).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableFrame.TableProperty">
+      <summary>The table property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableFrame.TableView">
+      <summary>The table view to show.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableProperties">
+      <summary>Provides access to members that control Table properties, for Layers and Tables in ArcMap.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableProperties.Add(ESRI.ArcGIS.ArcMapUI.ITableProperty)">
+      <summary>Add a table property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperties.IEnumTableProperties">
+      <summary>Table Property Enum.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableProperties.Remove(ESRI.ArcGIS.ArcMapUI.ITableProperty)">
+      <summary>Remove a table property.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableProperties.RemoveAll">
+      <summary>Remove all table properties.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableProperty">
+      <summary>Provides access to members that control Table window properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty.FeatureLayer">
+      <summary>Feature class of table window (Overrides table setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty.SelectedTable">
+      <summary>Indicates if the Selected table is shown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty.Table">
+      <summary>Table of table window (Overrides feature class setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableProperty2">
+      <summary>Provides access to members that control Linked table window properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty2.FeatureLayer">
+      <summary>Feature class of table window (Overrides table setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty2.Layer">
+      <summary>Layer for table window (Overrides table and featurelayer setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty2.SelectedTable">
+      <summary>Indicates if the Selected table is shown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty2.Table">
+      <summary>Table of table window (Overrides feature class setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableProperty3">
+      <summary>Provides access to members that control Linked table window properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty3.Layer">
+      <summary>Layer for table window (Overrides table and featurelayer setting).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty3.SelectedTable">
+      <summary>Indicates if the Selected table is shown.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableProperty3.StandaloneTable">
+      <summary>StandaloneTable for table window (Overrides table and layer setting).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableWindow">
+      <summary>Provides access to members that display table window in ArcMap. This interface intergrates ITableView with ArcMap's events and selections.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.FeatureLayer">
+      <summary>Setup feature class to view/edit.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.FindViaFeatureLayer(ESRI.ArcGIS.Carto.IFeatureLayer,System.Boolean)">
+      <summary>Is table (of a featurelayer) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.FindViaTable(ESRI.ArcGIS.Geodatabase.ITable,System.Boolean)">
+      <summary>Is table already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.SelectionSet">
+      <summary>Current s1election set of the table. Only valid for tables showing all rows.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.ShowAliasNamesInColumnHeadings">
+      <summary>Show alias names or the real field name in column headings. Default False.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.ShowSelected">
+      <summary>Indicates whether to show only features that are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.Table">
+      <summary>Setup table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.TableControl">
+      <summary>The table control. Table needs to be showing before you can get a valid pointer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.TableSelectionAction">
+      <summary>Action to perform when table selections are made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.UpdateSelection(ESRI.ArcGIS.Geodatabase.ISelectionSet)">
+      <summary>Updates current table selection. Does not update Mx feature layer selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableWindow2">
+      <summary>Provides access to members that extend ITableWindow functionality to work with ILayers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is table (of a layer) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is table (of a standalonetable) already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.Layer">
+      <summary>Setup layer attributes to view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.SelectionSet">
+      <summary>Current selection set of the table. Only valid for tables showing all rows.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.ShowAliasNamesInColumnHeadings">
+      <summary>Show alias names or the real field name in column headings. Default False.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.ShowSelected">
+      <summary>Indicates whether to show only features that are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.StandaloneTable">
+      <summary>The standalone table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.TableControl">
+      <summary>The table control. Table needs to be showing before you can get a valid pointer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.TableSelectionAction">
+      <summary>Action to perform when table selections are made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.UpdateSelection(ESRI.ArcGIS.Geodatabase.ISelectionSet)">
+      <summary>Updates current table selection. Does not update Mx feature layer selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow2.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow2.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITableWindow3">
+      <summary>Provides access to members that extend ITableWindow functionality to work with dockable tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.ActiveTableWindow">
+      <summary>Gets the active table window.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.FindOpenTableWindows(ESRI.ArcGIS.esriSystem.ISet@)">
+      <summary>Gets all the open table windows.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.IsOpen">
+      <summary>Indicates if the window is open in the table window docking pane.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.FindViaLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Is table (of a layer) already being displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.FindViaStandaloneTable(ESRI.ArcGIS.Carto.IStandaloneTable)">
+      <summary>Is table (of a standalonetable) already being displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.Layer">
+      <summary>Setup layer attributes to view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.SelectionSet">
+      <summary>Current selection set of the table. Only valid for tables showing all rows.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.ShowAliasNamesInColumnHeadings">
+      <summary>Show alias names or the real field name in column headings. Default False.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.ShowSelected">
+      <summary>Indicates whether to show only features that are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.StandaloneTable">
+      <summary>The standalone table to view/edit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.TableControl">
+      <summary>The table control. Table needs to be showing before you can get a valid pointer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.TableSelectionAction">
+      <summary>Action to perform when table selections are made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.UpdateSelection(ESRI.ArcGIS.Geodatabase.ISelectionSet)">
+      <summary>Updates current table selection. Does not update Mx feature layer selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.Application">
+      <summary>Provides the window with a reference to the application.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.hWnd">
+      <summary>The window's handle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.IsDockable">
+      <summary>Indicates if the window is dockable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITableWindow3.IsVisible">
+      <summary>Indicates if the window is visible.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.PutPosition(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.QueryPosition(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>The window's position in screen pixels.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.Refresh">
+      <summary>Cause the window to redraw.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.ITableWindow3.Show(System.Boolean)">
+      <summary>Indicates if the window is shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.ITinHistogram">
+      <summary>Provides access to members that create a Histogram from TIN data values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITinHistogram.HistogramType">
+      <summary>The TIN histogram type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITinHistogram.Sampling">
+      <summary>The TIN histogram data sampling.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.ITinHistogram.Tin">
+      <summary>The TIN used to define the histogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IUngroupLayerOperation">
+      <summary>Provides access to members that control the Ungroup layers operation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IUngroupLayerOperation.GroupLayer">
+      <summary>Group layer that needs to be ungrouped.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IUngroupLayerOperation.ParentGroupLayer">
+      <summary>Parent group layer, if any to which the layer that needs to be ungrouped belongs to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IUngroupLayerOperation.ParentMap">
+      <summary>Parent map to which the group layer or parent group layer belongs to.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IViewCommand">
+      <summary>Provides access to members that control view commands.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IViewCommand.Applies(ESRI.ArcGIS.Carto.IActiveView)">
+      <summary>Indicates if command works with the specified view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IViewCommand.Selection">
+      <summary>The selection object used by the associated view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.IViewCommandToolbars">
+      <summary>Provides access to members that control view commands which have toolbars associated with them.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.IViewCommandToolbars.AutoShowToolbars">
+      <summary>Indicates if toolbars associated with the view should be shown automatically.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.IViewCommandToolbars.ShowToolbars(System.Boolean)">
+      <summary>Shows or hides the toolbars associated with a view.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.AddDataDialog">
+      <summary>Add Data Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass">
+      <summary>Add Data Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.Document">
+      <summary>The document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog_Document">
+      <summary>The document.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcMapUI..">
+      <summary>Add Data Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.ArcMapUI.._">
+      <summary>Add Data Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.#ctor">
+      <summary>Add Data Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog_Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.Show(System.Int32,System.Boolean@)">
+      <summary>Indicates if the dialog is shown and adds the data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog_Show(System.Int32,System.Boolean@)">
+      <summary>Indicates if the dialog is shown and adds the data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.GroupLayer">
+      <summary>The group layer to which data needs to be added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog2_GroupLayer">
+      <summary>The group layer to which data needs to be added.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog2_Document">
+      <summary>The document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog2_Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMapUI.AddDataDialogClass.IAddDataDialog2_Show(System.Int32,System.Boolean@)">
+      <summary>Indicates if the dialog is shown and adds the data.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.AddLayersOperation">
+      <summary>Add Layers Operation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.AddLayersOperationClass">
+      <summary>Add Layers Operation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.esriDCType">
+      <summary>The type of data we are getting or putting from the DataConnection property page.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriDCType.esriDCFeatureClass">
+      <summary>Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriDCType.esriDCTable">
+      <summary>Table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriDCType.esriDCDataFile">
+      <summary>Feature Class or Table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriDCType.esriDCRasterCatalog">
+      <summary>Raster Catalog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.esriMxCustomizationEvent">
+      <summary>Mx customization event types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxCustomizationEvent.esriCEShowDataFrameProperties">
+      <summary>Show Data Frame Properties.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxCustomizationEvent.esriCEShowAddDataDialog">
+      <summary>Show Add Data Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxCustomizationEvent.esriCEShowLayersProperties">
+      <summary>Show Layer Properties.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes">
+      <summary>Default properties Identifiers.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes.esriMxTextColor">
+      <summary>Text Color.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes.esriMxFillColor">
+      <summary>Fill Color.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes.esriMxLineColor">
+      <summary>Line Color.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDefaultColorTypes.esriMxMarkerColor">
+      <summary>Marker Color.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs">
+      <summary>Dialog Identifiers.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgCustomize">
+      <summary>Customize Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgStyleGallery">
+      <summary>Style Manager Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgOverflowLabels">
+      <summary>Overflow Labels Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgMacros">
+      <summary>Macros Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgVBA">
+      <summary>VBA Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgOptions">
+      <summary>Options Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgContents">
+      <summary>Contents Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgZoom">
+      <summary>Zoom Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgPageSetup">
+      <summary>Page Setup Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgPrintSetup">
+      <summary>Print Setup Dialog (No longer used).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgProperties">
+      <summary>Properties Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgUnlockCustomization">
+      <summary>Unlock Customization Dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriMxDlgIDs.esriMxDlgLockCustomization">
+      <summary>Lock Customization Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType">
+      <summary>The TIN Histogram Types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTinElevationHisto">
+      <summary>Elevation Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTinAspectHisto">
+      <summary>Aspect Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTinSlopeHisto">
+      <summary>Slope Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTinNodeElevationHisto">
+      <summary>Node Elevation Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTerrainPointElevationHisto">
+      <summary>Terrain Point Elevation Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriTerrainPointAttributeHisto">
+      <summary>Terrain Point Attribute Histogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMapUI.esriTinHistogramType.esriLasPointElevationHisto">
+      <summary>LAS dataset Point Elevation Histogram.</summary>
+    </member>
+  </members>
+</doc>

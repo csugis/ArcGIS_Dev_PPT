@@ -301,8 +301,7 @@ class ToolSelectRect(object):
         with arcpy.da.SearchCursor(layer,["OID@","SHAPE@WKT"]) as cursor:
             for row in cursor:
                 if str(row[0]) in arcpy.Describe("lyr").FIDSet:
-                    print u"FID:{0},SHAPE:{1}".format(row[0],row[1]);
-        del cursor;
+                    print u"FID:{0},SHAPE:{1}".format(row[0],row[1]);        
         pass
 
 class ToolZoomIn(object):

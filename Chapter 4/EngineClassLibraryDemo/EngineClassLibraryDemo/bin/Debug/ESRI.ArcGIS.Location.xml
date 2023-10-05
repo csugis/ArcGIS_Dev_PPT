@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.Location</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.Location.IAddressCandidates">
+      <summary>Provides access to members for generating candidates for an address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAddressCandidates.CandidateFields">
+      <summary>Fields contained in a list of candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressCandidates.FindAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for an address.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAddressCandidates2">
+      <summary>Provides access to members for generating matching candidates for an address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressCandidates2.FindMatchingAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for an address, including only matching ones.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAddressCandidates2.CandidateFields">
+      <summary>Fields contained in a list of candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressCandidates2.FindAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for an address.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAddressGeocoding">
+      <summary>Provides access to members for geocoding addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressGeocoding.MatchAddress(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAddressGeocoding.MatchFields">
+      <summary>Fields contained in the geocoding result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressGeocoding.MatchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Geocodes a table of addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAddressGeocoding.Validate">
+      <summary>Checks that the locator properties and locator dataset are present and valid.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAddressInputs">
+      <summary>Provides access to members that specify fields for address tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAddressInputs.AddressFields">
+      <summary>Fields needed to geocode a table of addresses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAddressInputs.DefaultInputFieldNames(System.String)">
+      <summary>Recognized names for an input field.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAdvancedGeocoding">
+      <summary>Provides access to members for advanced geocoding functions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.FindStandardizedAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.MatchStandardizedAddress(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.RematchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Rematches a geocoded feature class or shapefile.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.StandardizeAddress(ESRI.ArcGIS.esriSystem.IPropertySet,System.Boolean@)">
+      <summary>Standardizes an address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedGeocoding.StandardizeFields">
+      <summary>Fields contained in a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.MatchAddress(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedGeocoding.MatchFields">
+      <summary>Fields contained in the geocoding result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.MatchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Geocodes a table of addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding.Validate">
+      <summary>Checks that the locator properties and locator dataset are present and valid.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAdvancedGeocoding2">
+      <summary>Provides access to members for advanced geocoding functions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.MatchRecordSet(ESRI.ArcGIS.Geodatabase.ICursor,System.String,ESRI.ArcGIS.Geodatabase.IRecordSetInit,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Geocodes a cursor of addresses to a RecordSet.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.FindStandardizedAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.MatchStandardizedAddress(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.RematchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Rematches a geocoded feature class or shapefile.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.StandardizeAddress(ESRI.ArcGIS.esriSystem.IPropertySet,System.Boolean@)">
+      <summary>Standardizes an address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedGeocoding2.StandardizeFields">
+      <summary>Fields contained in a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.MatchAddress(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedGeocoding2.MatchFields">
+      <summary>Fields contained in the geocoding result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.MatchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Geocodes a table of addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedGeocoding2.Validate">
+      <summary>Checks that the locator properties and locator dataset are present and valid.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding">
+      <summary>Provides access to members for advanced intersection geocoding functions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding.FindStandardizedIntersectionCandidates(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for a standardized intersection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding.MatchStandardizedIntersection(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single standardized intersection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding.StandardizeIntersectionFields">
+      <summary>Fields contained in a standardized intersection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding.IntersectionCandidateFields">
+      <summary>Fields contained by intersection candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IAdvancedIntersectionGeocoding.IsIntersection(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Indicates if an address is an intersection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAGSLocatorWorkspace">
+      <summary>Provides access to members for inspecting an ArcGIS server locator workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAGSLocatorWorkspace.AGSServerConnection">
+      <summary>The ArcGIS server connection that contains the locator workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IAttachedLocator">
+      <summary>Provides access to members that describe the process used to create the feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.InputFieldNamesList">
+      <summary>Names of fields in the input table used by the locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.InputJoinFieldName">
+      <summary>Name of the ObjectID field in the input table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.InputTable">
+      <summary>Table that was located.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.Locator">
+      <summary>Locator used to create the feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.OutputFieldNamesList">
+      <summary>Names of result fields in the output feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.OutputJoinFieldName">
+      <summary>Name of the JoinOID field in the output feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IAttachedLocator.OutputTable">
+      <summary>Feature class that was created.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IBatchGeocoding">
+      <summary>Provides access to members for batch geocoding functions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IBatchGeocoding.MatchRecordSet(ESRI.ArcGIS.Geodatabase.ICursor,System.String,ESRI.ArcGIS.Geodatabase.IRecordSetInit,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Geocodes a cursor of addresses to a RecordSet.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IBatchGeocoding.RematchTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Rematches a geocoded feature class or shapefile.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ICompositeLocator">
+      <summary>Provides access to participating locators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ICompositeLocator.Locator(System.String)">
+      <summary>Participating locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ICompositeLocator.LocatorNames">
+      <summary>Names of participating locators.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IDatabaseLocatorWorkspace">
+      <summary>Provides access to members for inspecting a Geodatabase locator workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDatabaseLocatorWorkspace.Workspace">
+      <summary>The Geodatabase workspace that contains the locator workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IDEAddressLocator">
+      <summary>Provides access to members describing the address locator data element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDEAddressLocator.AddressFields">
+      <summary>The set of address input fields used by the address locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDEAddressLocator.AddressTable">
+      <summary>Table of addresses to geocode using the locator.  Used for validiation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDEAddressLocator.DefaultInputFieldNames(System.String)">
+      <summary>Default input field names for the address field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDEAddressLocator.LocatorPropsRetrieved">
+      <summary>Indicates if the locator propertries been retrieved.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IDEAddressLocator.MatchFields">
+      <summary>Fields output by geocoding.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IDEAddressLocatorType">
+      <summary>Provides access to members describing the address locator data type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IEnumHatchDefinition">
+      <summary>Provides access to hatch definitions within a hatch template.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumHatchDefinition.Next(System.Int32@,ESRI.ArcGIS.Location.IHatchDefinition@)">
+      <summary>Returns the next hatch definition.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumHatchDefinition.Reset">
+      <summary>Resets the hatch definition enumerator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IEnumReferenceDataField">
+      <summary>Provides access to members for retrieving the reference data fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IEnumReferenceDataField.Count">
+      <summary>The number of reference data fields in the reference data table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataField.Next">
+      <summary>Returns the next reference data field.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataField.Reset">
+      <summary>Resets the enumeration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IEnumReferenceDataIndex">
+      <summary>Provides access to members for retrieving the geocoding indexes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IEnumReferenceDataIndex.Count">
+      <summary>The number of geocoding indexes on the reference data table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataIndex.Next">
+      <summary>Returns the next geocoding index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataIndex.Reset">
+      <summary>Resets the enumeration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IEnumReferenceDataTable">
+      <summary>Provides access to members for retrieving the reference data tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IEnumReferenceDataTable.Count">
+      <summary>The number of reference data tables for the locator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataTable.Next">
+      <summary>Returns the next reference data table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumReferenceDataTable.Reset">
+      <summary>Resets the enumeration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IEnumRouteIdentifyResult">
+      <summary>Provides access to the route locations and features found enumeration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IEnumRouteIdentifyResult.Count">
+      <summary>The number of route locations and features in the enumeration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumRouteIdentifyResult.Next(ESRI.ArcGIS.Location.IRouteLocation@,ESRI.ArcGIS.Geodatabase.IFeature@)">
+      <summary>Returns the next route location and route feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IEnumRouteIdentifyResult.Reset">
+      <summary>Starts from the beginning of the route location and feature collection the next time Next is called.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IESRILocatorBuildOptions">
+      <summary>Provides access to members that describe Esri locator creation properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptions.EmbedGeocodingRules">
+      <summary>Indicates if the locator should contain a copy of geocoding rules it uses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptions.GDBVersionName">
+      <summary>The name of the GDB version the locator is built against.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptions.StoreStandardizedRefData">
+      <summary>Indicates if the locator should store information extracted from the reference data in a standardized form.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit">
+      <summary>Provides access to members that control Esri locator creation properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.EmbedGeocodingRules">
+      <summary>Indicates if the locator should contain a copy of geocoding rules it uses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.GDBVersionName">
+      <summary>The name of the GDB version the locator is built against.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.StoreStandardizedRefData">
+      <summary>Indicates if the locator should store information extracted from the reference data in a standardized form.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.EmbedGeocodingRules">
+      <summary>Indicates if the locator should contain a copy of geocoding rules it uses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.GDBVersionName">
+      <summary>The name of the GDB version the locator is built against.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorBuildOptionsEdit.StoreStandardizedRefData">
+      <summary>Indicates if the locator should store information extracted from the reference data in a standardized form.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IESRILocatorReleaseInfo">
+      <summary>Provides access to members that describe Esri locator release information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IESRILocatorReleaseInfo.Release">
+      <summary>The description of locator release.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodedFeatureClass">
+      <summary>Provides access to members for automatically maintaining a geocoded feature class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodedFeatureClass.GeocodeAddress(ESRI.ArcGIS.Geodatabase.IObject,ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>Updates the geocoded feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodedFeatureClass.NeedsUpdate(ESRI.ArcGIS.Geodatabase.IObject,ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>Indicates if a geocoded feature needs to be updated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodeServer">
+      <summary>Provides access to members for geocoding addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.FindAddressCandidates(ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates candidates for an address (normal or standardized form).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GeocodeAddress(ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a single address (normal or standardized form).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GeocodeAddresses(ESRI.ArcGIS.Geodatabase.IRecordSet,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Geocodes a table of addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetAddressFields">
+      <summary>Fields needed to geocode a table of addresses.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetCandidateFields(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Fields contained in a list of candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetDefaultInputFieldMapping">
+      <summary>Suggested field name mappings for all input fields.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetIntersectionCandidateFields(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Fields contained by intersection candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetLocatorProperties">
+      <summary>Default properties for a locator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetResultFields(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Fields contained in the geocoding result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetStandardizedFields">
+      <summary>Fields contained in a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.GetStandardizedIntersectionFields">
+      <summary>Fields contained in a standardized intersection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.ReverseGeocode(ESRI.ArcGIS.Geometry.IPoint,System.Boolean,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Generates an address for a point.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IGeocodeServer.StandardizeAddress(ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Standardizes an address.  One of the properties returned indicates if it is an intersection or not.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodeServerObjects">
+      <summary>Provides access to the objects used by the geocode server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodeServerObjects.AddressLocator">
+      <summary>The address locator used by the geocode server.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodingOutputs">
+      <summary>Provides access to members describing the outputs of geocoding.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingOutputs.MatchFields">
+      <summary>Fields contained in the geocoding result.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodingProperties">
+      <summary>Provides access to members that control geocoding settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.AddPercentAlongToMatchFields">
+      <summary>Indicates if the percentage along the reference feature at which the address is located is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.AddReferenceIDToMatchFields">
+      <summary>Indicates if the feature ID of the matched feature is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.AddStandardizeStringToMatchFields">
+      <summary>Indicates if the standardized address is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.AddXYCoordsToMatchFields">
+      <summary>Indicates if the x and y coordinates of the address location are included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.DefaultInputFieldNames(System.String)">
+      <summary>Recognized names for a required input field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.EndOffset">
+      <summary>End offset percentage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.IntersectionConnectors">
+      <summary>Connector strings used to designate intersections.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.MatchIfScoresTie">
+      <summary>Indicates whether addresses should be arbitrarily matched to a feature when two or more features have the same best score.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.MinimumCandidateScore">
+      <summary>Minimum candidate score setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.MinimumMatchScore">
+      <summary>Minimum match score setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.SideOffset">
+      <summary>Side offset distance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.SideOffsetUnits">
+      <summary>Units used for the side offset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.SpellingSensitivity">
+      <summary>Spelling sensitivity setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.UseRelativePaths">
+      <summary>Indicates if the paths to the reference data should be stored relative to the locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.AddressFields">
+      <summary>Fields needed to geocode a table of addresses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties.DefaultInputFieldNames(System.String)">
+      <summary>Recognized names for an input field.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGeocodingProperties2">
+      <summary>Provides access to members that control geocoding settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.EndOffsetDistance">
+      <summary>End offset using either distance or percentage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.EndOffsetDistanceUnits">
+      <summary>Units used for the end offset. Use esriUnknownUnits to specify the end offset as a percentage of the segment's length.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.AddPercentAlongToMatchFields">
+      <summary>Indicates if the percentage along the reference feature at which the address is located is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.AddReferenceIDToMatchFields">
+      <summary>Indicates if the feature ID of the matched feature is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.AddStandardizeStringToMatchFields">
+      <summary>Indicates if the standardized address is included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.AddXYCoordsToMatchFields">
+      <summary>Indicates if the x and y coordinates of the address location are included in the geocoding result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.DefaultInputFieldNames(System.String)">
+      <summary>Recognized names for a required input field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.EndOffset">
+      <summary>End offset percentage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.IntersectionConnectors">
+      <summary>Connector strings used to designate intersections.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.MatchIfScoresTie">
+      <summary>Indicates whether addresses should be arbitrarily matched to a feature when two or more features have the same best score.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.MinimumCandidateScore">
+      <summary>Minimum candidate score setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.MinimumMatchScore">
+      <summary>Minimum match score setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.SideOffset">
+      <summary>Side offset distance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.SideOffsetUnits">
+      <summary>Units used for the side offset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.SpellingSensitivity">
+      <summary>Spelling sensitivity setting.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.UseRelativePaths">
+      <summary>Indicates if the paths to the reference data should be stored relative to the locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.AddressFields">
+      <summary>Fields needed to geocode a table of addresses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGeocodingProperties2.DefaultInputFieldNames(System.String)">
+      <summary>Recognized names for an input field.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGPAddressLocatorStyle">
+      <summary>Provides access to members describing the address locator style data element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.AddressFields">
+      <summary>Fields needed to do geocoding with an address locator created with this style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.AliasTable">
+      <summary>Table mapped as the place name alias table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.DefaultAliasFieldNames">
+      <summary>Default field names for the place name alias table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.DefaultFieldNames(System.Int32,System.Int32)">
+      <summary>Default field names for the indicated reference data field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.DefaultInputFieldNames(System.String)">
+      <summary>Default field names for the indicated address field of an address locator created with this style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.MappedTable(System.String)">
+      <summary>Table mapped to the indicated reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.MatchFields">
+      <summary>Fields output by an address locator created with this style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.Name">
+      <summary>Name of the locator style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.ReferenceDataFields(System.Int32)">
+      <summary>Reference data fields for the indicated reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.ReferenceDataFilters(System.Int32)">
+      <summary>Filters for the indicated reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.ReferenceDataFilterUIDs(System.Int32)">
+      <summary>Filters for the indicated reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.ReferenceDataTableCount">
+      <summary>Number of reference data tables needed for the style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.ReferenceDataTableName(System.Int32)">
+      <summary>Display name of the indicated reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.SimpleStandardizeFields">
+      <summary>Fields needed to do address standardization.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IGPAddressLocatorStyle.SupportsPlaceNameAliasTable">
+      <summary>Indicates if the locator style supports a place name alias table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IGPAddressLocatorStyleType">
+      <summary>Provides access to members describing the address locator style data type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchClass">
+      <summary>Provides access to hatch class properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchClass.ConvertToGraphics(ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Carto.IGraphicsLayer,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.Location.esriConvertHatchesToGraphicsType)">
+      <summary>Convert to graphics.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchClass.Draw(ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Draw.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.EndRange">
+      <summary>The EndRange.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.Filter">
+      <summary>Query definition hatch class is defined by.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.HatchInterval">
+      <summary>Hatch Interval for the class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.HatchTemplate">
+      <summary>HatchTemplate for hatch class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.LateralOffset">
+      <summary>The LateralOffset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.MaximumScale">
+      <summary>Maximum scale at which the hatch class will display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.MinimumScale">
+      <summary>Minimum scale at which the hatch class will display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.ShowHatches">
+      <summary>Indicates whether to show hatches.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchClass.StartRange">
+      <summary>The StartRange.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchDefinition">
+      <summary>Provides access to hatch definition properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.AdjustTextOrientation">
+      <summary>Indicates whether to adjust text orientation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.Alignment">
+      <summary>The hatch alignment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.DisplayPrecision">
+      <summary>The display precision.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.Expression">
+      <summary>The Expression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.ExpressionParserEngine">
+      <summary>The Expression Parser Engine.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.ExpressionSimple">
+      <summary>Indicates whether the expression is simple.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.HatchSymbol">
+      <summary>The hatch symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.Offset">
+      <summary>The offset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.Prefix">
+      <summary>The prefix.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.ShowSign">
+      <summary>Indicates whether to show negative sign in hatch text for negative M values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.Suffix">
+      <summary>The suffix.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.TextDisplay">
+      <summary>Text display setting for the style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchDefinition.TextSymbol">
+      <summary>The text symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchInputValue">
+      <summary>Provides access to members controlling whether certain hatching properties will be a single value or a feature attribute value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchInputValue.Field">
+      <summary>The field.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchInputValue.QueryValue(ESRI.ArcGIS.Geodatabase.IFeature)">
+      <summary>Returns the value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchInputValue.Value">
+      <summary>The value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchLayerExtension">
+      <summary>Provides access to the hatch layer extension properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.AddClass(System.String,ESRI.ArcGIS.Location.IHatchClass)">
+      <summary>Adds a class to the hatch extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.ConvertToGraphics(ESRI.ArcGIS.Carto.IFeatureLayer,ESRI.ArcGIS.Carto.IGraphicsLayer,ESRI.ArcGIS.Display.IDisplay)">
+      <summary>Converts hatches to graphics.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.HatchClass(System.String)">
+      <summary>The hatch class at the specified index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.HatchClassCount">
+      <summary>The number of hatch classes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.HatchClassNames">
+      <summary>String array of class names.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.RemoveAll">
+      <summary>Removes all classes from the hatch extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchLayerExtension.RemoveClass(System.String)">
+      <summary>Removes a class from the hatch extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchLayerExtension.ShowHatches">
+      <summary>Indicates whether to show hatches.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchLineDefinition">
+      <summary>Provides access to the line hatch definition properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchLineDefinition.Length">
+      <summary>The hatch line length.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchLineDefinition.SupplementalAngle">
+      <summary>The SupplementalAngle.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchMarkerDefinition">
+      <summary>Provides access to hatch marker definition.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IHatchTemplate">
+      <summary>Provides access to hatch template properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.AddHatchDefinition(System.Int32,ESRI.ArcGIS.Location.IHatchDefinition)">
+      <summary>Adds a hatch definition to the hatch class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.ConvertToGraphics(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.esriSystem.esriUnits,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.Carto.IGraphicsLayer)">
+      <summary>Converts hatches to graphics.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.ConvertUnits">
+      <summary>Indicates whether to convert units for displaying Ms in hatch text.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.DefaultHatchInterval">
+      <summary>The hatch interval.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.DisplayUnits">
+      <summary>The units to be used for displaying M values in hatch text.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.DrawFeature(ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.Location.IHatchInputValue,ESRI.ArcGIS.esriSystem.esriUnits,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Draws hatches on along a given feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.DrawGeometry(ESRI.ArcGIS.Geometry.IGeometry,System.Double,System.Object,System.Object,System.Object,ESRI.ArcGIS.esriSystem.esriUnits,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Draws hatches along a given geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.DrawPreview(ESRI.ArcGIS.Geometry.IGeometry,System.Double,System.Int32,System.Object,System.Object,System.Object,ESRI.ArcGIS.esriSystem.esriUnits,ESRI.ArcGIS.Display.IDisplay,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Draws a sample of hatching to a given display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.EndHatchDefinition">
+      <summary>The hatch definition to be used on the ends of a feature.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.EndHatchDrawingTolerance">
+      <summary>The end hatch drawing tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.EnumHatchDefinitions">
+      <summary>The hatch definition enumeration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.HatchByPart">
+      <summary>Indicates whether to hatch by part vs. by polyline.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.HatchDefinitionCount">
+      <summary>The number of hatch definitions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.Name">
+      <summary>The descriptive name of a hatch class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.RemoveAll">
+      <summary>Removes all definitions from the hatch class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IHatchTemplate.RemoveHatchDefinition(System.Int32)">
+      <summary>Removes a hatch definition from the hatch class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.StartAtIntervalMultiple">
+      <summary>Indicates whether to start at the interval multiple.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IHatchTemplate.UIDisplayUnits">
+      <summary>The user interface display units.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IInitGeocodeServer">
+      <summary>Provides access to members for initializing a geocode server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IInitGeocodeServer.AdjustableProperties">
+      <summary>The list of properties (comma delimited) that can be modified at runtime (for a given method).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IInitGeocodeServer.AttachToLocator(ESRI.ArcGIS.Geodatabase.ILocatorName)">
+      <summary>Attach this service to the locator specified by the locator name.  This is the locator that the service will use internally.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IInitGeocodeServer.SuggestedBatchSize">
+      <summary>The suggested number of addresses to send to a server in one batch request.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IIntersectionGeocoding">
+      <summary>Provides access to members for geocoding intersections.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IIntersectionGeocoding.IntersectionCandidateFields">
+      <summary>Fields contained by intersection candidates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IIntersectionGeocoding.IsIntersection(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Indicates if an address is an intersection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocalLocatorWorkspace">
+      <summary>Provides access to members for inspecting a local locator workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ILocalLocatorWorkspace.Path">
+      <summary>The path to the folder that contains the locator workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocator2">
+      <summary>Provides access to members that describe general locator properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ILocator2.BuildTime">
+      <summary>The date and time the locator was built.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorAttach">
+      <summary>Provides access to members that attach locators to datasets.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorAttach.AttachLocator(ESRI.ArcGIS.Geodatabase.ILocator,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String)">
+      <summary>Attaches a locator to a table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorAttach2">
+      <summary>Provides access to members that attach locators to datasets.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorAttach2.AttachLocator(ESRI.ArcGIS.Geodatabase.ILocator,ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String)">
+      <summary>Attaches a locator to a table (simple function).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorDatasetImpl">
+      <summary>Provides access to members for setting objects associated with the Locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ILocatorDatasetImpl.LocatorWorkspaceName">
+      <summary>The Name object for the locator's workspace. Used internally by geocoding framework.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorEvents">
+      <summary>Provides access to members to respond to locator management operations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorEvents.OnBuild(System.Boolean,System.String,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Responds to the client building or rebuilding the locator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorEvents.OnCopy(ESRI.ArcGIS.Geodatabase.ILocatorWorkspace,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Responds to the client copying the locator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorEvents.OnDelete(ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Responds to the client deleting the locator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorEvents.OnRename(System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Responds to the client renaming the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorManager">
+      <summary>Provides access to members for manipulating located datasets and locator workspaces.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager.GetLocatorFromDataset(ESRI.ArcGIS.Geodatabase.IDataset)">
+      <summary>Returns the locator attached to the dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager.GetLocatorWorkspace(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Returns the locator workspace for a workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager.GetLocatorWorkspaceFromPath(System.String)">
+      <summary>Returns the locator workspace for a path.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager.HasLocatorAttached(ESRI.ArcGIS.Geodatabase.IDatasetName)">
+      <summary>Indicates if a dataset has an attached locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorManager2">
+      <summary>Provides access to members for manipulating located datasets and locator workspaces.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager2.GetAGSLocatorWorkspace(ESRI.ArcGIS.GISClient.IAGSServerConnectionName)">
+      <summary>Returns the locator workspace for an ArcGIS server connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager2.GetLocatorFromDataset(ESRI.ArcGIS.Geodatabase.IDataset)">
+      <summary>Returns the locator attached to the dataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager2.GetLocatorWorkspace(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Returns the locator workspace for a workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager2.GetLocatorWorkspaceFromPath(System.String)">
+      <summary>Returns the locator workspace for a path.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ILocatorManager2.HasLocatorAttached(ESRI.ArcGIS.Geodatabase.IDatasetName)">
+      <summary>Indicates if a dataset has an attached locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ILocatorWorkspaceName2">
+      <summary>Provides access to members that describe a locator workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ILocatorWorkspaceName2.AGSServerConnectionName">
+      <summary>The name of the ArcGIS server connection that contains the locator workspace.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IPlaceNameAlias">
+      <summary>Provides access to memebers that specify a place name alias table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IPlaceNameAlias.AddressFields">
+      <summary>Names of the address fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IPlaceNameAlias.AliasField">
+      <summary>Name of the alias field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IPlaceNameAlias.DefaultAliasFieldNames">
+      <summary>Recognized names for the address fields in the place name alias table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IPlaceNameAlias.Table">
+      <summary>Name object for the place name alias table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataField">
+      <summary>Provides access to members for inspecting a reference data field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.DisplayName">
+      <summary>Name for the reference data field to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.InternalName">
+      <summary>Internal name for the reference data field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.IsObjectID">
+      <summary>Indicates if the field is the ObjectID field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.IsShape">
+      <summary>Indicates if the field is the Shape field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.Name">
+      <summary>Name of the field in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataField.Required">
+      <summary>Indicates whether the field is a required by the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataFieldEdit">
+      <summary>Provides access to members for modifying reference data field information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.DefaultNames">
+      <summary>Recognized names for the reference data field in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.Name">
+      <summary>Name of the field in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.DisplayName">
+      <summary>Name for the reference data field to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.InternalName">
+      <summary>Internal name for the reference data field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.IsObjectID">
+      <summary>Indicates if the field is the ObjectID field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.IsShape">
+      <summary>Indicates if the field is the Shape field.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.Name">
+      <summary>Name of the field in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFieldEdit.Required">
+      <summary>Indicates whether the field is a required by the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataFile">
+      <summary>Provides access to members for specifying location of custom reference data file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFile.Filters">
+      <summary>Filters to use to browse for the reference data file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFile.PathName">
+      <summary>Path to the custom reference data file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataFile2">
+      <summary>Provides access to members for specifying location of custom reference data file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFile2.FilterUIDs">
+      <summary>UID's of filters to use to browse for the reference data file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFile2.Filters">
+      <summary>Filters to use to browse for the reference data file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataFile2.PathName">
+      <summary>Path to the custom reference data file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataIndex">
+      <summary>Provides access to members for retrieving the geocoding index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IReferenceDataIndex.Build(System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Builds the geocoding index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataIndex.DisplayName">
+      <summary>Name for the geocoding index to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataIndex.Exists">
+      <summary>Indicates if the geocoding index exists.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataIndex.Name">
+      <summary>Name of the geocoding index.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataTable">
+      <summary>Provides access to members for retrieving reference data table information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable.DisplayName">
+      <summary>Name for the reference data table to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable.Fields">
+      <summary>Reference data fields in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable.Filters">
+      <summary>Filters to use to browse for the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable.GeocodingIndexes">
+      <summary>Geocoding indexes on the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable.Name">
+      <summary>Name of the reference data table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataTable2">
+      <summary>Provides access to members for retrieving reference data table information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.FilterUIDs">
+      <summary>UID's of the filters to use to browse for the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.DisplayName">
+      <summary>Name for the reference data table to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.Fields">
+      <summary>Reference data fields in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.Filters">
+      <summary>Filters to use to browse for the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.GeocodingIndexes">
+      <summary>Geocoding indexes on the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTable2.Name">
+      <summary>Name of the reference data table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataTableEdit">
+      <summary>Provides access to members for modifying reference data table information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.Name">
+      <summary>Name of the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.DisplayName">
+      <summary>Name for the reference data table to display in the user interface.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.Fields">
+      <summary>Reference data fields in the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.Filters">
+      <summary>Filters to use to browse for the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.GeocodingIndexes">
+      <summary>Geocoding indexes on the reference data table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTableEdit.Name">
+      <summary>Name of the reference data table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReferenceDataTables">
+      <summary>Provides access to members for specifying the reference data used by the locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTables.HasEnoughInfo">
+      <summary>Indicates if the locator has sufficient reference data in order to geocode.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReferenceDataTables.Tables">
+      <summary>The reference data tables used by the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReverseGeocoding">
+      <summary>Provides access to members for reverse geocoding.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IReverseGeocoding.ReverseGeocode(ESRI.ArcGIS.Geometry.IPoint,System.Boolean)">
+      <summary>Generate an address based on a point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IReverseGeocodingProperties">
+      <summary>Provides access to members that control reverse geocoding settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReverseGeocodingProperties.SearchDistance">
+      <summary>Search distance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IReverseGeocodingProperties.SearchDistanceUnits">
+      <summary>Units used for the search distance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteEventSource">
+      <summary>Provides access to the route event source properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteEventSource.EventProperties">
+      <summary>The route event properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteEventSource.EventTable">
+      <summary>The table of containing route events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteEventSource.ExpandDistance">
+      <summary>The distance used to expand spatial searches for laterally offset events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteEventSource.RouteLocator">
+      <summary>The route locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLayerExtension">
+      <summary>Provides access to the route layer extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLayerExtension.RouteIDFieldName">
+      <summary>The route id field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLayerExtension.RouteLocatorName(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>The route locator name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLayerExtension.SetRouteIDFieldName(ESRI.ArcGIS.Carto.ILayer,System.String)">
+      <summary>Set the route id field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocation">
+      <summary>Provides access to route location properites.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation.LateralOffset">
+      <summary>The route location's lateral offset (default 0.0).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation.MeasureUnit">
+      <summary>The route location's measure units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation.RouteID">
+      <summary>The route identifier (string, integer or double).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocation2">
+      <summary>Provides access to route location properites.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation2.MDirectionOffsetting">
+      <summary>Indicates if the offset should based on the M direction or the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation2.LateralOffset">
+      <summary>The route location's lateral offset (default 0.0).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation2.MeasureUnit">
+      <summary>The route location's measure units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocation2.RouteID">
+      <summary>The route identifier (string, integer or double).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocator">
+      <summary>Provides access to properties and methods of a route locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.Extent">
+      <summary>The route locator's extent (same a route feature class' extent).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator.GetRouteGeometry(ESRI.ArcGIS.Location.IRouteLocation,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>The route(s) corresponding to the route location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.HasSpatialIndex">
+      <summary>Indicates if the route feature class has a spatial index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator.Locate(ESRI.ArcGIS.Location.IRouteLocation,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>Locates a point or line route location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator.LocateRow(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IRow,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>Locates an event table row containing a point or line route location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.MeasureUnit">
+      <summary>The units of the route measures.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteFeatureClass">
+      <summary>The route feature class (Polyline with M feature class).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteIDFieldIndex">
+      <summary>The field index of the route identifier.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteIDFieldName">
+      <summary>The route identifier field from the route feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteIDFieldNameDelimited">
+      <summary>The delimited route identifier field of the route feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteIDIsString">
+      <summary>Indicates if the route identifier field type is string.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteIDIsUnique">
+      <summary>Indicates whether the route ID is unique (Obsolete).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.RouteWhereClause">
+      <summary>The where clause that limits the routes events can be located on.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator.SpatialReference">
+      <summary>The route locator's spatial reference (same as route feature class' spatial reference).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocator2">
+      <summary>Provides access to properties and methods of a route locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.HasZs">
+      <summary>Indicates whether the route locator is Z-Aware.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator2.Identify(ESRI.ArcGIS.Geometry.IEnvelope,System.String)">
+      <summary>Identify route locations in an envelope.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDIsIndexed">
+      <summary>Indicates if the route ID has an index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.Extent">
+      <summary>The route locator's extent (same a route feature class' extent).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator2.GetRouteGeometry(ESRI.ArcGIS.Location.IRouteLocation,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>The route(s) corresponding to the route location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.HasSpatialIndex">
+      <summary>Indicates if the route feature class has a spatial index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator2.Locate(ESRI.ArcGIS.Location.IRouteLocation,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>Locates a point or line route location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocator2.LocateRow(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IRow,ESRI.ArcGIS.Geometry.IGeometry@,ESRI.ArcGIS.Geodatabase.esriLocatingError@)">
+      <summary>Locates an event table row containing a point or line route location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.MeasureUnit">
+      <summary>The units of the route measures.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteFeatureClass">
+      <summary>The route feature class (Polyline with M feature class).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDFieldIndex">
+      <summary>The field index of the route identifier.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDFieldName">
+      <summary>The route identifier field from the route feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDFieldNameDelimited">
+      <summary>The delimited route identifier field of the route feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDIsString">
+      <summary>Indicates if the route identifier field type is string.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteIDIsUnique">
+      <summary>Indicates whether the route ID is unique (Obsolete).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.RouteWhereClause">
+      <summary>The where clause that limits the routes events can be located on.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocator2.SpatialReference">
+      <summary>The route locator's spatial reference (same as route feature class' spatial reference).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocatorOperations">
+      <summary>Provides access to operations on the route locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations.InputFeatureClass">
+      <summary>The input features to locate along the routes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations.InputFeatureSelection">
+      <summary>A selection set of features to locate.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations.LocateLineFeatures(System.Double,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate line features along routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations.LocatePointEvents(System.Double,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate point events along target routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations.LocatePointFeatures(System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate point features along a routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations.LocatePolygonFeatures(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate polygon features along routes and write the result in an object class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations.RouteLocator">
+      <summary>The route locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteLocatorOperations2">
+      <summary>Provides access to operations on the route locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.RouteFeatureClass">
+      <summary>The route feature class (Polyline with M feature class).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.RouteFeatureSelection">
+      <summary>A selection set of route features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.RouteIDFieldName">
+      <summary>The route feature identifier.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.InputFeatureClass">
+      <summary>The input features to locate along the routes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.InputFeatureSelection">
+      <summary>A selection set of features to locate.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations2.LocateLineFeatures(System.Double,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate line features along routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations2.LocatePointEvents(System.Double,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate point events along target routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations2.LocatePointFeatures(System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate point features along a routes and write the result in an object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteLocatorOperations2.LocatePolygonFeatures(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Locate polygon features along routes and write the result in an object class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteLocatorOperations2.RouteLocator">
+      <summary>The route locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureCalibrator">
+      <summary>Provides access to route measure calibration methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.CalibrateRoutesByDistance(System.Int32,System.Boolean,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Calibrate route features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.CalibrateRoutesByMs(System.Int32,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Calibrate route features by using existing M values for the interpolation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.InputFeatureClass">
+      <summary>The input features to locate along the routes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.InputFeatureSelection">
+      <summary>A selection set of features to locate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.InputMeasureFieldName">
+      <summary>The input measure field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.InputRouteIDFieldName">
+      <summary>The input route identifier field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator.RouteLocator">
+      <summary>The route locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2">
+      <summary>Provides access to route measure calibration methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.RouteFeatureClass">
+      <summary>The route feature class (Polyline with M feature class).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.RouteFeatureSelection">
+      <summary>A selection set of route features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.RouteIDFieldName">
+      <summary>The route identifier field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.CalibrateRoutesByDistance(System.Int32,System.Boolean,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Calibrate route features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.CalibrateRoutesByMs(System.Int32,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Calibrate route features by using existing M values for the interpolation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.InputFeatureClass">
+      <summary>The input features to locate along the routes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.InputFeatureSelection">
+      <summary>A selection set of features to locate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.InputMeasureFieldName">
+      <summary>The input measure field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.InputRouteIDFieldName">
+      <summary>The input route identifier field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCalibrator2.RouteLocator">
+      <summary>The route locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureCreator">
+      <summary>Provides access to the route creation properties and methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator.CreateUsing2Fields(System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from polylines using two fields.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator.CreateUsingCoordinatePriority(System.String,ESRI.ArcGIS.Location.esriMSeedingCorner,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from using topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator.CreateUsingPoints(ESRI.ArcGIS.Geodatabase.ISelectionSet,System.String,System.String,System.Int32,System.Boolean,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from polylines using points to assign measures.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator.InputFeatureClass">
+      <summary>The input features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator.InputFeatureSelection">
+      <summary>A selection set of input features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator.InputRouteIDFieldName">
+      <summary>The input route identifier field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureCreator2">
+      <summary>Provides access to the route creation properties and methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator2.CreateUsing2Fields2(System.String,System.String,System.Double,System.Double,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from polylines using two fields.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator2.CreateUsingCoordinatePriority2(System.String,System.Double,System.Double,ESRI.ArcGIS.Location.esriMSeedingCorner,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from using topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator2.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator2.CreateUsing2Fields(System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from polylines using two fields.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator2.CreateUsingCoordinatePriority(System.String,ESRI.ArcGIS.Location.esriMSeedingCorner,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from using topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureCreator2.CreateUsingPoints(ESRI.ArcGIS.Geodatabase.ISelectionSet,System.String,System.String,System.Int32,System.Boolean,System.Double,System.Boolean,ESRI.ArcGIS.Geodatabase.IFeatureClassName,ESRI.ArcGIS.Geodatabase.IGeometryDef,System.String,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Create routes from polylines using points to assign measures.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator2.InputFeatureClass">
+      <summary>The input features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator2.InputFeatureSelection">
+      <summary>A selection set of input features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureCreator2.InputRouteIDFieldName">
+      <summary>The input route identifier field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor">
+      <summary>Provides access to the route measure event geoprocessor properties and methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.Concatenate(System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Concatenate events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.Dissolve(System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Dissolve events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.InputEventProperties">
+      <summary>The input table's route event properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.InputSelection">
+      <summary>The input table's selection set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.InputTable">
+      <summary>The input table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.Intersect(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Intersect events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.KeepZeroLengthLineEvents">
+      <summary>Indicates whether zero length events should be included in the overlay result (line on line overlays only).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.OverlayEventProperties">
+      <summary>The overlay table's route event properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.OverlaySelection">
+      <summary>The overlay table's selection set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.OverlayTable">
+      <summary>The table to overlay with the input table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor.Union(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Union events.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2">
+      <summary>Provides access to the route measure event geoprocessor properties and methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Concatenate2(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Concatenate events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Dissolve2(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Dissolve events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Intersect2(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Intersect events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Union2(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,System.Boolean,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Union events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.BuildOutputIndex">
+      <summary>Indicates whether an index is going to be built on the route id field on the output result.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Concatenate(System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Concatenate events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Dissolve(System.Object,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Dissolve events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.InputEventProperties">
+      <summary>The input table's route event properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.InputSelection">
+      <summary>The input table's selection set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.InputTable">
+      <summary>The input table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Intersect(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Intersect events.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.KeepZeroLengthLineEvents">
+      <summary>Indicates whether zero length events should be included in the overlay result (line on line overlays only).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.OverlayEventProperties">
+      <summary>The overlay table's route event properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.OverlaySelection">
+      <summary>The overlay table's selection set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.OverlayTable">
+      <summary>The table to overlay with the input table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.IRouteMeasureEventGeoprocessor2.Union(ESRI.ArcGIS.Geodatabase.IRouteEventProperties,ESRI.ArcGIS.Geodatabase.IDatasetName,ESRI.ArcGIS.esriSystem.ITrackCancel,System.String)">
+      <summary>Union events.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureLineLocation">
+      <summary>Provides access to point specific route-measure location properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureLineLocation.FromMeasure">
+      <summary>The 'from' measure value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureLineLocation.ToMeasure">
+      <summary>The 'to' measure value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasureLineProperties">
+      <summary>Provides access to the route measure properties unique to line event tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureLineProperties.FromMeasureFieldName">
+      <summary>The from-measure field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasureLineProperties.ToMeasureFieldName">
+      <summary>The to-measure field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasurePointLocation">
+      <summary>Provides access to point specific route-measure location properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointLocation.Measure">
+      <summary>The measure value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasurePointProperties">
+      <summary>Provides access to the route measure properties unique to point event tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties.MeasureFieldName">
+      <summary>The measure field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2">
+      <summary>Provides access to the route measure properties unique to point event tables.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.AddAngleField">
+      <summary>Indicates if an angle field should be added to the field set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.AngleFieldName">
+      <summary>Name of the angle field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.AsPointFeature">
+      <summary>Indicates if the point event shape should be output as a multipoint or a point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.ComplementAngle">
+      <summary>Indicates if 180 degres should be added to the angle field value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.NormalAngle">
+      <summary>Indicates if the angle field should be the normal or the tangent anglea.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.IRouteMeasurePointProperties2.MeasureFieldName">
+      <summary>The measure field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ISdeLocator">
+      <summary>Provides access to locator properties specific to ArcSDE locators.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ISdeLocator.Owner">
+      <summary>Name of the ArcSDE user who owns the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.ISimpleStandardization">
+      <summary>Provides access to members for address standardization.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ISimpleStandardization.SimpleStandardizeAddress(System.String)">
+      <summary>Standardize a single address.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.ISimpleStandardization.SimpleStandardizeFields">
+      <summary>Fields contained in a standardized address.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.ISimpleStandardization.SimpleStandardizeTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,ESRI.ArcGIS.Geodatabase.ITable,System.String,ESRI.ArcGIS.esriSystem.IPropertySet,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Standardize a table of addresses.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtension">
+      <summary>Address Locator Workspace Extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass">
+      <summary>Address Locator Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.DataDictionaryTableNames">
+      <summary>Any data dictionary tables that should not be exposed to browsers and should not participate in edit sessions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension_DataDictionaryTableNames">
+      <summary>Any data dictionary tables that should not be exposed to browsers and should not participate in edit sessions.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.Location..">
+      <summary>Address Locator Workspace Extension. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.Location.._">
+      <summary>Address Locator Workspace Extension. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.#ctor">
+      <summary>Address Locator Workspace Extension. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.GUID">
+      <summary>The GUID that identifies this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension_GUID">
+      <summary>The GUID that identifies this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.Name">
+      <summary>The Name for this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension_Name">
+      <summary>The Name for this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.PrivateDatasetNames(ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+      <summary>The private datasets that should not be exposed to browsers.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension_PrivateDatasetNames(ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+      <summary>The private datasets that should not be exposed to browsers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.OwnsDatasetType(ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+      <summary>Indicates if the workspace extension owns the dataset type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_OwnsDatasetType(ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+      <summary>Indicates if the workspace extension owns the dataset type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.Workspace">
+      <summary>The workspace associated with this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_Workspace">
+      <summary>The workspace associated with this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_DataDictionaryTableNames">
+      <summary>Any data dictionary tables that should not be exposed to browsers and should not participate in edit sessions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_GUID">
+      <summary>The GUID that identifies this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_Name">
+      <summary>The Name for this Workspace Extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtension2_PrivateDatasetNames(ESRI.ArcGIS.Geodatabase.esriDatasetType)">
+      <summary>The private datasets that should not be exposed to browsers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.Init(ESRI.ArcGIS.Geodatabase.IWorkspaceHelper)">
+      <summary>Initializes the  extension, passing in a reference to its workspace helper.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtensionControl_Init(ESRI.ArcGIS.Geodatabase.IWorkspaceHelper)">
+      <summary>Initializes the  extension, passing in a reference to its workspace helper.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.Shutdown">
+      <summary>Informs the extension that its workspace helper (and workspace) are going away.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Location.AddressLocatorWorkspaceExtensionClass.IWorkspaceExtensionControl_Shutdown">
+      <summary>Informs the extension that its workspace helper (and workspace) are going away.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.AGSAddressLocator">
+      <summary>A locator adaptor for the GeocodeServer proxies.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.AGSAddressLocatorClass">
+      <summary>A locator adaptor for the GeocodeServer proxies.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriConvertHatchesToGraphicsType">
+      <summary>Different options for converting to graphics.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriConvertHatchesToGraphicsType.esriConvertHatchesWholeLayer">
+      <summary>Converts the whole layer's hatches to graphics.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriConvertHatchesToGraphicsType.esriConvertHatchesVisible">
+      <summary>Only converts hatches from features in the visible extent to graphics.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriConvertHatchesToGraphicsType.esriConvertHatchesSelected">
+      <summary>Only converts hatches from the selected features to graphics.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum">
+      <summary>GeocodeServer message codes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_NotLicensed">
+      <summary>GeocodeServer is not licensed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ConstructStart">
+      <summary>Starting GeocodeServer object construction.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ConstructFinish">
+      <summary>Finished GeocodeServer object construction.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ErrorOpeningLocator">
+      <summary>Error opening locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_InitializingGeocodeServer">
+      <summary>Initializing geocode server.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ApplyingServiceConfigurationProperties">
+      <summary>Applying GeocodeServer configuration properties.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ErrorInvalidServiceConfiguration">
+      <summary>Invalid GeocodeServer configuration.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_RequestNotSupported">
+      <summary>Request with this name is not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_CapabilityNotSupported">
+      <summary>Capability either not supported or disabled in GeocodeServer configuration.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ApplyingSpatialReference">
+      <summary>Applying output spatial reference.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GettingLocator">
+      <summary>Getting locator object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_BatchGeocoding">
+      <summary>Geocoding a batch of addresses.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_FindAddressCandidates">
+      <summary>Finding address candidates.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetAddressFields">
+      <summary>Getting address fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetCandidateFields">
+      <summary>Getting candidate fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetIntersectionCandidateFields">
+      <summary>Getting candidate fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetStandardizedFields">
+      <summary>Getting standardized fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetStandardizedIntersectionFields">
+      <summary>Getting standardized intersection fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetResultFields">
+      <summary>Getting result fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetDefaultInputFieldMapping">
+      <summary>Getting default field mapping.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetLocatorProperties">
+      <summary>Getting locator properties.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_MatchAddress">
+      <summary>Matching address.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_StandardizeAddress">
+      <summary>Standardizing address.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_FindMatchingAddressCandidates">
+      <summary>Finding matching address candidates.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ReverseGeocode">
+      <summary>Reverse geocoding location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_LocatorIsNotComposite">
+      <summary>Current locator does not support Composite locator functionality.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetParticipatingLocatorNames">
+      <summary>Retrieving participating locator names.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetSingleLineAddressField">
+      <summary>Retrieving single line input address field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_GetDefaultInputFieldNames">
+      <summary>Retrieving default input field names for the single line address input.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_InvalidLocNamePropertyValue">
+      <summary>The locator name specified with the Loc_name property is not valid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_UsingParticipatingLocator">
+      <summary>Using Participating locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_CachingSucceeded">
+      <summary>Locators caching succeeded.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_CachePath">
+      <summary>Locators were read from cache.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_SendToRemote">
+      <summary>Sending request to remote locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_ReceivedFromRemote">
+      <summary>Response received from remote locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_Find">
+      <summary>Finding address.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_SeparateBrokerDisabled">
+      <summary>Separate broker settings are disabled.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeBatchGeocoding">
+      <summary>Immediately before Geocoding a batch of addresses.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeFindAddressCandidates">
+      <summary>Immediately before Finding address candidates.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeMatchAddress">
+      <summary>Immediately before Matching address.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeFindMatchingAddressCandidates">
+      <summary>Immediately before Finding matching address candidates.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeReverseGeocode">
+      <summary>Immediately before Reverse geocoding location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeStandardizeAddress">
+      <summary>Immediately before standardizing address.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeFind">
+      <summary>Immediately before Find request.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_Suggest">
+      <summary>Suggest request.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_beforeSuggest">
+      <summary>Immediately before Suggest request.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_UnhandledException">
+      <summary>Unhandled exception while processing request.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodeServerMessageCodeEnum.esriGeocodeServerMessageCode_BrokeringReport">
+      <summary>Brokering progress report.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriGeocodingError">
+      <summary>Special error codes generated by geocoding.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_REFDATA_NOT_REGISTERED">
+      <summary>The reference data is not registered with the geodatabase.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_UICLASS_NOT_SUPPORTED">
+      <summary>The user interface class specified by the locator is not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_INTERSECTION_FIELDS_MISSING">
+      <summary>The locator does not specify any intersection fields.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_REQUIRED_LOCATION_FIELD_MISSING">
+      <summary>The input location is missing a required attribute.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCATOR_CLASS_NOT_SUPPORTED">
+      <summary>The locator class does not support this operation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_TABLE_HAS_NO_OID">
+      <summary>The input table does not have a unique, registered OID attribute.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_TABLE_HAS_TOO_MANY_LOCATORS">
+      <summary>This table has too many attached locators.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_TABLE_HAS_CORRUPTED_LOCATOR">
+      <summary>The locator attached to this table is corrupted.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_INVALID_PROPERTIES">
+      <summary>One or more of the locator's properties is invalid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_UNSUPPORTED_SSA_DATA">
+      <summary>The LOCSSA shared library is trying to return an unsupported data format.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_INVALID_LOCATOR_NAME">
+      <summary>This name is invalid for a locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_NOT_LOCATOR_OWNER">
+      <summary>The user does not own the locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCATOR_ALREADY_EXISTS">
+      <summary>A locator with that name already exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_CANNOT_CREATE_LOC_FILE">
+      <summary>The system cannot create a .loc file with that name.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_NO_LICENSE">
+      <summary>This software is not licensed for this operation in SDE.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_STREETMAP_NOT_ENABLED">
+      <summary>The StreetMap extension must be enabled for this operation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_OPTIONAL_INTERFACE_NOT_SUPPORTED">
+      <summary>Optional interface is not supported by this locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCATOR_WKS_CANNOT_CREATE_LOCATOR">
+      <summary>The system cannot create locator in this workspace.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_REBUILD_NOT_SUPPORTED_FOR_LOCATOR">
+      <summary>The address locator cannot be rebuilt.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCATOR_DOES_NOT_EXIST">
+      <summary>A locator with that name does not exist.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_REMOTE_WKS_COPY_NOT_SUPPORTED_FOR_LOCATOR">
+      <summary>The address locator cannot be copied between local and remote workspaces.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_REVERSE_GEOCODE_NO_ADDRESS_FOUND">
+      <summary>Reverse geocoding cannot find address at the specified location.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCB_FILE_COULD_NOT_BE_CREATED">
+      <summary>LOCB file(s) could not be created.  LOCB files are used when sharing locators with Runtime.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_LOCATOR_CLIPPING_FAILURE">
+      <summary>Locator clipping failure.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriGeocodingError.GEOCODING_E_UNSUPPORTED_CATEGORY">
+      <summary>The category value entered is not a supported value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriHatchAlignmentType">
+      <summary>Options for hatch alignment.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchAlignmentType.esriHatchAlignRight">
+      <summary>Right-justify hatch line.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchAlignmentType.esriHatchAlignCenter">
+      <summary>Center-justify hatch line.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchAlignmentType.esriHatchAlignLeft">
+      <summary>Left-justify hatch line.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriHatchExpressionEngine">
+      <summary>Hatch expression engine options.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchExpressionEngine.esriHatchVBScriptEngine">
+      <summary>VBScript expression engine.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchExpressionEngine.esriHatchJScriptEngine">
+      <summary>JScript expression engine.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchExpressionEngine.esriHatchPythonEngine">
+      <summary>Python expression engine.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriHatchTextDisplay">
+      <summary>Hatch text display options.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchTextDisplay.esriHatchTDValueOnly">
+      <summary>Only display the measure value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchTextDisplay.esriHatchTDPrefixSuffix">
+      <summary>Display the measure value with a prefix and suffix.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchTextDisplay.esriHatchTDExpression">
+      <summary>Display a text string derived from a custom expression.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriHatchTextDisplay.esriHatchTDNone">
+      <summary>Do not display any text.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriMSeedingCorner">
+      <summary>Describes the seeding corner used when assigning Ms to a polyline.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriMSeedingCorner.esriMSeedingUpperLeft">
+      <summary>Upper left corner.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriMSeedingCorner.esriMSeedingBottomLeft">
+      <summary>Bottom Left corner.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriMSeedingCorner.esriMSeedingUpperRight">
+      <summary>Upper right corner.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriMSeedingCorner.esriMSeedingBottomRight">
+      <summary>Bottom Left corner.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Location.esriRouteEventError">
+      <summary>Error codes used by route event classes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_FEATURECLASSNAME">
+      <summary>The name must be a feature class name object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_LOCATORNAME_NOT_CORRECTLY_SETUP">
+      <summary>The RouteLocatorName object has not been correctly setup. Can't create the RouteLocator object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_POLYLINE_FEATURECLASS">
+      <summary>The route feature class is not a Polyline feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_RIDFIELD">
+      <summary>The route identifer field does not exist in the route feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_RIDFIELD">
+      <summary>Invalid route identifier field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_POLYLINEM_FEATURECLASS">
+      <summary>The route feature class is not a Polyline with M's feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVENTPROPERTY_OBJECT">
+      <summary>The route event property object is invalid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_EVT_RIDFIELD">
+      <summary>The event route identifier field does not exist in the source table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVT_RIDFIELD">
+      <summary>Invalid event route identifier field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_EVT_MFIELD">
+      <summary>The measure field does not exist in the source table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_EVT_FMFIELD">
+      <summary>The from-measure field does not exist in the source table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVT_MFIELD">
+      <summary>Invalid measure field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVT_FMFIELD">
+      <summary>Invalid from-measure field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_EVT_TMFIELD">
+      <summary>The to-measure field does not exist in the source table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVT_TMFIELD">
+      <summary>Invalid to-measure field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_FIND_EVT_LOFIELD">
+      <summary>The lateral offset field does not exist in the source table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_EVT_LOFIELD">
+      <summary>Invalid lateral offset field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_CONVERT_RID_STRING">
+      <summary>The route identifier value could not be converted to a string.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_SOURCENAME_NOT_CORRECTLY_SETUP">
+      <summary>The RouteSourceName object has not been correctly setup.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_DATASETNAME">
+      <summary>The Name must be a dataset name object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_EVENTPROPERTY_NOT_CORRECTLY_SETUP">
+      <summary>One or more missing event properties.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_SELECT">
+      <summary>The RouteEventSource doesn't have an OID column.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_CREATE_ROUTECURSOR">
+      <summary>Cannot open a cursor on the route feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_ROUTEFEATURECLASS_TOO_LARGE">
+      <summary>The route feature class is too large.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_DELETE_FIELD">
+      <summary>Can't delete a route location field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_CREATE_TMP_FILE">
+      <summary>Can't create a temporary file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_CANT_READ_TMP_FILE">
+      <summary>Can't read from a temporary file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_INVALID_OUTPUT_FIELD">
+      <summary>An output field is in conlict with a source field or is invalid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_OBJECTCLASS_EXISTS">
+      <summary>The output object class or feature class already exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_DUPLICATED_FIELDS">
+      <summary>The output object class or feature class already exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NO_OIDFIELD">
+      <summary>The input doesn't have an OID field, can't process.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_POINTFEATURE">
+      <summary>The input is not a multipoint or a point feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_POLYLINEFEATURE">
+      <summary>The input is not a polyline feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_POLYGONEFEATURE">
+      <summary>The input is not a polygon feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_RESFC">
+      <summary>The input is a route event source feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Location.esriRouteEventError.ROUTEEVENT_E_NOT_LICENSED">
+      <summary>Incorrect license for this operation.</summary>
+    </member>
+  </members>
+</doc>

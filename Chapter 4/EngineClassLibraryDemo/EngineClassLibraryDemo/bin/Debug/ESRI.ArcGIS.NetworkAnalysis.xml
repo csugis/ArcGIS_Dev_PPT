@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.NetworkAnalysis</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag">
+      <summary>Provides access to members that return and set properties that are specific to edge flags on the network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag.Position">
+      <summary>Position of the flag along the edge.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag.TwoWay">
+      <summary>Indicates if the trace can proceed in either direction from this edge flag.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IEdgeFlagDisplay">
+      <summary>Provides access to members that return and set the properties that are specific to edge flags.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEdgeFlagDisplay.Percentage">
+      <summary>Position of the flag along the edge element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper">
+      <summary>Provides access to members that get the features and/or geometries from an enumeration of element IDs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.AddField(System.String)">
+      <summary>Adds a field to the list of fields to return with the feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.ClearFields">
+      <summary>Clears the list of fields to return with the feature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.CreateEnumEIDInfo(ESRI.ArcGIS.Geodatabase.IEnumNetEID)">
+      <summary>Creates an enumeration of EIDInfo objects based on the specified EIDs and parameters on this EIDHelper object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.DisplayEnvelope">
+      <summary>Envelope in which valid geometries and features must reside to be returned in the EnumEIDInfo object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.GeometricNetwork">
+      <summary>Geometric network from which these element IDs come.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.OutputSpatialReference">
+      <summary>Spatial reference the returned geometries should be in.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.PartialComplexEdgeGeometry">
+      <summary>Indicates if the EIDs representing partial complex edges return the geometry of the partial complex edge.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.ReturnFeatures">
+      <summary>Indicates if the created IEIDInfo enumeration should contain features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDHelper.ReturnGeometries">
+      <summary>Indicates if the created EIDInfo enumeration should contain geometries.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IEIDInfo">
+      <summary>Provides access to members that contain the geometry and/or feature associated with a network element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDInfo.EID">
+      <summary>Network element ID with which the feature and geometry are associated.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDInfo.Feature">
+      <summary>Feature associated with this network element ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEIDInfo.Geometry">
+      <summary>Geometry associated with this network element ID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IEnumEIDInfo">
+      <summary>Provides access to members that iterate through an enumeration of EIDInfo objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IEnumEIDInfo.Count">
+      <summary>Number of EIDInfo objects in the enumeration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IEnumEIDInfo.Next">
+      <summary>Gets the next EIDInfo object in the enumeration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IEnumEIDInfo.Reset">
+      <summary>Resets the enumeration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay">
+      <summary>Provides access to members that specify the network element on which a flag is located.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.ClientClassID">
+      <summary>User-specified client class ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.ClientFID">
+      <summary>User-specified feature ID of the flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.FeatureClassID">
+      <summary>Feature class ID of the element on which the flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.FID">
+      <summary>Feature ID of the network element on which the flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.Geometry">
+      <summary>Point object containing the flag's coordinates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.SubID">
+      <summary>Sub ID of the network element on which the flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IFlagDisplay.Symbol">
+      <summary>Symbol used to display the flag.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IJunctionFlag">
+      <summary>Indicator interface that identifies the junction flags on the network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IJunctionFlagDisplay">
+      <summary>Indicator interface that identifies junction flag displays.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers">
+      <summary>Provides access to members that specify a set of barriers for the TraceFlowSolver object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers.ElementType">
+      <summary>Type of network element on which the barriers are placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers.Network">
+      <summary>Network on which the barrier set is placed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers.SetBarriers(System.Int32,System.Int32,System.Int32@)">
+      <summary>Specifies a set of network features to use as barriers.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers2">
+      <summary>Provides access to members that specify a set of barriers by EIDs for the TraceFlowSolver object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers2.SetBarriersByEID(System.Int32,System.Int32@)">
+      <summary>Specifies a set of network element IDs to use as barriers.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers2.ElementType">
+      <summary>Type of network element on which the barriers are placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers2.Network">
+      <summary>Network on which the barrier set is placed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers2.SetBarriers(System.Int32,System.Int32,System.Int32@)">
+      <summary>Specifies a set of network features to use as barriers.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriersGEN">
+      <summary>Provides access to members that specify a set of barriers by EIDs for the TraceFlowSolver object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriersGEN.ElementType">
+      <summary>Type of network element on which the barriers are placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriersGEN.Network">
+      <summary>Network on which the barrier set is placed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriersGEN.SetBarriers(System.Int32,System.Int32[]@)">
+      <summary>Specifies a set of network features to use as barriers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetElementBarriersGEN.SetBarriersByEID(System.Int32[]@)">
+      <summary>Specifies a set of network element IDs to use as barriers.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetFlag">
+      <summary>Provides access to members that specify the network element on which a flag is located.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.ClientClassID">
+      <summary>User-specified client class ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.ClientID">
+      <summary>User-specified client ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.Label">
+      <summary>Label of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.UserClassID">
+      <summary>User class ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.UserID">
+      <summary>User ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetFlag.UserSubID">
+      <summary>User sub ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetSolver">
+      <summary>Provides access to members that specify the network and the barriers to be used with this solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetSolver.DisableElementClass(System.Int32)">
+      <summary>Sets an element class as disabled within this solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolver.ElementBarriers(ESRI.ArcGIS.Geodatabase.esriElementType)">
+      <summary>Network element barrier set to be used in this solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolver.SelectionSetBarriers">
+      <summary>Selection set barriers to be used in this solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolver.SourceNetwork">
+      <summary>Source network to be used in this solver.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights">
+      <summary>Provides access to members that specify the weights to be used for this solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.FromToEdgeFilterWeight">
+      <summary>Weight to be used for filtering edge elements traced in the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.FromToEdgeWeight">
+      <summary>Weight to be used to determine the cost of passing through edge elements in the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.JunctionFilterWeight">
+      <summary>Weight to be used for filtering junction elements.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.JunctionWeight">
+      <summary>Weight to be used to determine the cost of passing through junction elements.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.SetFilterRanges(ESRI.ArcGIS.Geodatabase.esriElementType,System.Int32,System.Object@,System.Object@)">
+      <summary>Sets the range of values to be filtered for the specified network element type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.SetFilterType(ESRI.ArcGIS.Geodatabase.esriElementType,ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType,System.Boolean)">
+      <summary>Sets the filter type for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.ToFromEdgeFilterWeight">
+      <summary>Weight to be used for filtering edge elements traced against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeights.ToFromEdgeWeight">
+      <summary>Weight to be used to determine the cost of passing through edge elements against the digitized direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN">
+      <summary>Provides access to members that specify the weights to be used for this solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.FromToEdgeFilterWeight">
+      <summary>Weight to be used for filtering edge elements traced in the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.FromToEdgeWeight">
+      <summary>Weight to be used to determine the cost of passing through edge elements in the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.JunctionFilterWeight">
+      <summary>Weight to be used for filtering junction elements.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.JunctionWeight">
+      <summary>Weight to be used to determine the cost of passing through junction elements.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.SetFilterRanges(ESRI.ArcGIS.Geodatabase.esriElementType,System.Object[]@,System.Object[]@)">
+      <summary>Sets the range of values to be filtered for the specified network element type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.SetFilterType(ESRI.ArcGIS.Geodatabase.esriElementType,ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType,System.Boolean)">
+      <summary>Sets the filter type for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.ToFromEdgeFilterWeight">
+      <summary>Weight to be used for filtering edge elements traced against the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetSolverWeightsGEN.ToFromEdgeWeight">
+      <summary>Weight to be used to determine the cost of passing through edge elements against the digitized direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder">
+      <summary>Provides access to members that rebuild the logical network index for an existing geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder.RebuildNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork,System.String,System.String)">
+      <summary>Recreates the logical network index for the geometric network, features are not changed in this process.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder2">
+      <summary>Provides access to members that rebuild the logical network index for an existing geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder2.AddWeightToNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork,System.String,ESRI.ArcGIS.Geodatabase.esriWeightType,System.Int32,ESRI.ArcGIS.esriSystem.ISet)">
+      <summary>Adds a weight to an existing the geometric network, features are not changed in this process.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder2.DeleteWeightFromNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork,System.String)">
+      <summary>Deletes a weight from an existing the geometric network, features are not changed in this process.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkBuilder2.RebuildNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork,System.String,System.String)">
+      <summary>Recreates the logical network index for the geometric network, features are not changed in this process.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader">
+      <summary>Provides access to members used to create a new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.AddFeatureClass(System.String,ESRI.ArcGIS.Geodatabase.esriFeatureType,ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Adds a feature class to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.AddWeight(System.String,ESRI.ArcGIS.Geodatabase.esriWeightType,System.Int32)">
+      <summary>Adds a weight to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.AddWeightAssociation(System.String,System.String,System.String)">
+      <summary>Adds an association between a network weight and a feature class attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.FeatureDatasetName">
+      <summary>Feature dataset name to where the new geometric network is to be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.LoadNetwork">
+      <summary>Creates the new geometric network inside the feature dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.NetworkName">
+      <summary>Name of the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.NetworkType">
+      <summary>Network type of the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.PutAncillaryRole(System.String,ESRI.ArcGIS.Geodatabase.esriNetworkClassAncillaryRole,System.String)">
+      <summary>Specifies the ancillary role attribute field for the specified feature class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.PutEnabledDisabledFieldName(System.String,System.String)">
+      <summary>Specifies the enabled/disabled field for the specified feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader.SnapTolerance">
+      <summary>Snap tolerance to be used in creating the new geometric network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2">
+      <summary>Provides access to members that specify parameters for creating a new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.CanUseFeatureClass(System.String)">
+      <summary>Determines if the given feature class can participate in a network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.CheckAncillaryRoleField(System.String,System.String)">
+      <summary>Determines whether the given AncillaryRole field is valid.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.CheckEnabledDisabledField(System.String,System.String)">
+      <summary>Determines whether the given Enabled field is valid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.ConfigurationKeyword">
+      <summary>Configuration keyword for the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.ErrorTableName">
+      <summary>Name of the table containing errors encountered while building the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.MinSnapTolerance">
+      <summary>Minimum nonzero snap tolerance for creating a new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.NumInvalidFeatures(System.String)">
+      <summary>Number of features with invalid geometry in the given feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.PreserveEnabledValues">
+      <summary>Indicates if the Network Loader should preserve the values in the existing Enabled fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.TotalNumInvalidFeatures">
+      <summary>Total number of features with invalid geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.AddFeatureClass(System.String,ESRI.ArcGIS.Geodatabase.esriFeatureType,ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Adds a feature class to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.AddWeight(System.String,ESRI.ArcGIS.Geodatabase.esriWeightType,System.Int32)">
+      <summary>Adds a weight to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.AddWeightAssociation(System.String,System.String,System.String)">
+      <summary>Adds an association between a network weight and a feature class attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.FeatureDatasetName">
+      <summary>Feature dataset name to where the new geometric network is to be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.LoadNetwork">
+      <summary>Creates the new geometric network inside the feature dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.NetworkName">
+      <summary>Name of the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.NetworkType">
+      <summary>Network type of the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.PutAncillaryRole(System.String,ESRI.ArcGIS.Geodatabase.esriNetworkClassAncillaryRole,System.String)">
+      <summary>Specifies the ancillary role attribute field for the specified feature class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.PutEnabledDisabledFieldName(System.String,System.String)">
+      <summary>Specifies the enabled/disabled field for the specified feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader2.SnapTolerance">
+      <summary>Snap tolerance to be used in creating the new geometric network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3">
+      <summary>Provides access to members that specify parameters for creating a new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.CanUseZs">
+      <summary>Indicates if Z coordinates are used for snapping and connectivity.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.DefaultSnapTolerance">
+      <summary>Default nonzero XY cluster tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.DefaultZSnapTolerance">
+      <summary>Default nonzero Z cluster tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.MaxSnapTolerance">
+      <summary>Maximum nonzero XY cluster tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.MaxZSnapTolerance">
+      <summary>Maximum nonzero Z cluster tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.MinZSnapTolerance">
+      <summary>Minimum nonzero Z cluster tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.UseXYsForSnapping">
+      <summary>Indicates if the feature classes are snapped on XY plane.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.UseZs">
+      <summary>Indicates if Z coordinates are used for snapping and connectivity.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.ZSnapTolerance">
+      <summary>Snap tolerance for Z coordinates.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.CanUseFeatureClass(System.String)">
+      <summary>Determines if the given feature class can participate in a network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.CheckAncillaryRoleField(System.String,System.String)">
+      <summary>Determines whether the given AncillaryRole field is valid.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.CheckEnabledDisabledField(System.String,System.String)">
+      <summary>Determines whether the given Enabled field is valid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.ConfigurationKeyword">
+      <summary>Configuration keyword for the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.ErrorTableName">
+      <summary>Name of the table containing errors encountered while building the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.MinSnapTolerance">
+      <summary>Minimum nonzero snap tolerance for creating a new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.NumInvalidFeatures(System.String)">
+      <summary>Number of features with invalid geometry in the given feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.PreserveEnabledValues">
+      <summary>Indicates if the Network Loader should preserve the values in the existing Enabled fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.TotalNumInvalidFeatures">
+      <summary>Total number of features with invalid geometry.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.AddFeatureClass(System.String,ESRI.ArcGIS.Geodatabase.esriFeatureType,ESRI.ArcGIS.esriSystem.IUID,System.Boolean)">
+      <summary>Adds a feature class to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.AddWeight(System.String,ESRI.ArcGIS.Geodatabase.esriWeightType,System.Int32)">
+      <summary>Adds a weight to the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.AddWeightAssociation(System.String,System.String,System.String)">
+      <summary>Adds an association between a network weight and a feature class attribute.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.FeatureDatasetName">
+      <summary>Feature dataset name to where the new geometric network is to be created.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.LoadNetwork">
+      <summary>Creates the new geometric network inside the feature dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.NetworkName">
+      <summary>Name of the new geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.NetworkType">
+      <summary>Network type of the new geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.PutAncillaryRole(System.String,ESRI.ArcGIS.Geodatabase.esriNetworkClassAncillaryRole,System.String)">
+      <summary>Specifies the ancillary role attribute field for the specified feature class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.PutEnabledDisabledFieldName(System.String,System.String)">
+      <summary>Specifies the enabled/disabled field for the specified feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoader3.SnapTolerance">
+      <summary>Snap tolerance to be used in creating the new geometric network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress">
+      <summary>Provides access to events that occur when building a geometric network using a NetworkLoader object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress_Event">
+      <summary>Provides access to events that occur when building a geometric network using a NetworkLoader object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress.IsCancelled">
+      <summary>Indicates if the Cancel button has been pressed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress.MaxFeatures">
+      <summary>Total number of features in the current task of building the geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress.PutMessage(ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress,System.String)">
+      <summary>Puts the fixed networkLoaderProgress message and the additional message to the progress bar.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress_Event.PutMessage">
+      <summary>Puts the fixed networkLoaderProgress message and the additional message to the progress bar.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress.Step">
+      <summary>Updates the progress bar.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress_Event.Step">
+      <summary>Updates the progress bar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProgress.StepValue">
+      <summary>Number of features to be processed between updates of the progress bar.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProps">
+      <summary>Provides access to memebers that return the default names of fields and domains used by the network loader.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProps.DefaultAncillaryRoleDomain">
+      <summary>Default ancillary role domain name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProps.DefaultAncillaryRoleField">
+      <summary>Default ancillary role field name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProps.DefaultEnabledDomain">
+      <summary>Default enabled domain name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.INetworkLoaderProps.DefaultEnabledField">
+      <summary>Default enabled field name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IPointToEID">
+      <summary>Provides access to members that find the nearest network element to a given point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IPointToEID.GeometricNetwork">
+      <summary>Source geometric network from which the result EID will come.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IPointToEID.GetNearestEdge(ESRI.ArcGIS.Geometry.IPoint,System.Int32@,ESRI.ArcGIS.Geometry.IPoint@,System.Double@)">
+      <summary>Returns the edge EID nearest to the input point, the physical point location that corresponds to the EID, and the percentage along that EID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.IPointToEID.GetNearestJunction(ESRI.ArcGIS.Geometry.IPoint,System.Int32@,ESRI.ArcGIS.Geometry.IPoint@)">
+      <summary>Returns the junction EID nearest to the input point, and the physical point location that corresponds to the EID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IPointToEID.SnapTolerance">
+      <summary>Maximum distance from the input point to an acceptable EID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IPointToEID.SourceMap">
+      <summary>Source map in which to search for the nearest EID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.ISelectionSetBarriers">
+      <summary>Provides access to members that specify a set of barriers for the TraceFlowSolver object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ISelectionSetBarriers.Add(System.Int32,System.Int32)">
+      <summary>Adds a network feature to the set of barriers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ISelectionSetBarriers.Not">
+      <summary>Specifies that the network features not in this set act as barriers.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.IStringPair">
+      <summary>Provides access to an ordered pair of strings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IStringPair.FirstString">
+      <summary>The first string in the pair.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.IStringPair.SecondString">
+      <summary>The second string in the pair.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver">
+      <summary>Provides access to members that perform basic traces on a network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.FindCircuits(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are parts of closed circuits in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.FindCommonAncestors(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are upstream from all the specified origins.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.FindFlowElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.FindFlowEndElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network end elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.FindPath(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Int32,System.Object@)">
+      <summary>Finds a path between the specified origins in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.PutEdgeOrigins(System.Int32,ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag@)">
+      <summary>Sets the starting edges for this trace solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.PutJunctionOrigins(System.Int32,ESRI.ArcGIS.NetworkAnalysis.IJunctionFlag@)">
+      <summary>Sets the starting junctions for this trace solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver.TraceIndeterminateFlow">
+      <summary>Indicates if directional traces include edges with indeterminate or uninitialized flow direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2">
+      <summary>Provides access to members that perform traces on a network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindAccumulation(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Object@)">
+      <summary>Finds the total cost of all reachable network elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindFlowUnreachedElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all unreachable network elements based on the flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindSource(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Int32,System.Object@)">
+      <summary>Finds a path upstream to a source or downstream to a sink, depending on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindCircuits(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are parts of closed circuits in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindCommonAncestors(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are upstream from all the specified origins.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindFlowElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindFlowEndElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network end elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.FindPath(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Int32,System.Object@)">
+      <summary>Finds a path between the specified origins in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.PutEdgeOrigins(System.Int32,ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag@)">
+      <summary>Sets the starting edges for this trace solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.PutJunctionOrigins(System.Int32,ESRI.ArcGIS.NetworkAnalysis.IJunctionFlag@)">
+      <summary>Sets the starting junctions for this trace solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolver2.TraceIndeterminateFlow">
+      <summary>Indicates if directional traces include edges with indeterminate or uninitialized flow direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN">
+      <summary>Provides access to members that perform traces on a network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindAccumulation(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Object@)">
+      <summary>Finds the total cost of all reachable network elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindCircuits(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are parts of closed circuits in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindCommonAncestors(ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements that are upstream from all the specified origins.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindFlowElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindFlowEndElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all reachable network end elements based on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindFlowUnreachedElements(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriFlowElements,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@)">
+      <summary>Finds all unreachable network elements based on the flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindPath(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Int32,System.Object[]@)">
+      <summary>Finds a path between the specified origins in the network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.FindSource(ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod,ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,ESRI.ArcGIS.Geodatabase.IEnumNetEID@,System.Int32,System.Object[]@)">
+      <summary>Finds a path upstream to a source or downstream to a sink, depending on the specified flow method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.PutEdgeOrigins(ESRI.ArcGIS.NetworkAnalysis.IEdgeFlag[]@)">
+      <summary>Sets the starting edges for this trace solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.PutJunctionOrigins(ESRI.ArcGIS.NetworkAnalysis.IJunctionFlag[]@)">
+      <summary>Sets the starting junctions for this trace solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.ITraceFlowSolverGEN.TraceIndeterminateFlow">
+      <summary>Indicates if directional traces include edges with indeterminate or uninitialized flow direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.EdgeFlag">
+      <summary>A container for defining a network flag on an edge element for a trace flow solver.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass">
+      <summary>A container for defining a network flag on an edge element for a trace flow solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.Position">
+      <summary>Position of the flag along the edge.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.IEdgeFlag_Position">
+      <summary>Position of the flag along the edge.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.NetworkAnalysis..">
+      <summary>A container for defining a network flag on an edge element for a trace flow solver. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.NetworkAnalysis.._">
+      <summary>A container for defining a network flag on an edge element for a trace flow solver. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.#ctor">
+      <summary>A container for defining a network flag on an edge element for a trace flow solver. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.TwoWay">
+      <summary>Indicates if the trace can proceed in either direction from this edge flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.IEdgeFlag_TwoWay">
+      <summary>Indicates if the trace can proceed in either direction from this edge flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.ClientClassID">
+      <summary>User-specified client class ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_ClientClassID">
+      <summary>User-specified client class ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.ClientID">
+      <summary>User-specified client ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_ClientID">
+      <summary>User-specified client ID of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.Label">
+      <summary>Label of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_Label">
+      <summary>Label of this flag.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.UserClassID">
+      <summary>User class ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_UserClassID">
+      <summary>User class ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.UserID">
+      <summary>User ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_UserID">
+      <summary>User ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.UserSubID">
+      <summary>User sub ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagClass.INetFlag_UserSubID">
+      <summary>User sub ID of the network element on which this flag is placed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagDisplay">
+      <summary>A container for defining and displaying a network flag or barrier on an edge feature of a network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.EdgeFlagDisplayClass">
+      <summary>A container for defining and displaying a network flag or barrier on an edge feature of a network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriFlowElements">
+      <summary>Types of network elements to be returned by the trace flow solver.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowElements.esriFEJunctions">
+      <summary>Only junctions are returned in the trace results.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowElements.esriFEEdges">
+      <summary>Only edges are returned in trace the results.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowElements.esriFEJunctionsAndEdges">
+      <summary>Both junctions and edges are returned in the trace results.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowElements.esriFENone">
+      <summary>Neither junctions nor edges are returned in the trace results.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod">
+      <summary>Directions the trace flow solver is allowed to pass along the edges.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod.esriFMUpstream">
+      <summary>The trace flow solver is allowed to pass upstream along edges.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod.esriFMDownstream">
+      <summary>The trace flow solver is allowed to pass downstream along edges.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriFlowMethod.esriFMConnected">
+      <summary>The trace flow solver is allowed to pass in both directions along edges.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck">
+      <summary>NetworkLoader feature class checker return codes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCValid">
+      <summary>The given feature class can participate in a network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCCannotOpen">
+      <summary>The given feature class cannot be opened.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCInAnotherNetwork">
+      <summary>The given feature class is already in another network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCInvalidFeatureType">
+      <summary>The given feature class has invalid type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCInvalidShapeType">
+      <summary>The given feature class does not have point or line geometry.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCRegisteredAsVersioned">
+      <summary>The given feature class is registered as versioned.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCInTopology">
+      <summary>The given feature class is in a topology.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCIsCompressedReadOnly">
+      <summary>The given feature class is compressed read-only.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCInTerrain">
+      <summary>The given feature class is in a terrain.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCIsChangeTracked">
+      <summary>The given feature class is change tracked .</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFeatureClassCheck.esriNLFCCUnknownError">
+      <summary>An unknown error was encountered.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck">
+      <summary>NetworkLoader field checker return codes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck.esriNLFCValid">
+      <summary>The given field is valid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck.esriNLFCNotFound">
+      <summary>The given field cannot be found or does not exist.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck.esriNLFCInvalidType">
+      <summary>The given field has invalid type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck.esriNLFCInvalidDomain">
+      <summary>The given field has invalid domain.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderFieldCheck.esriNLFCUnknownError">
+      <summary>An unknown error was encountered.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress">
+      <summary>NetworkLoader progress messages.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPOpenFeatureClasses">
+      <summary>Opening feature classes...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPSnapSimpleFeatures">
+      <summary>Snapping simple features...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPSnapComplexFeatures">
+      <summary>Snapping complex features...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPCreateGeometricNetwork">
+      <summary>Creating geometric network...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPExtractAttributes">
+      <summary>Extracting attributes...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPComputeTopology">
+      <summary>Computing network topology...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPAddJunctions">
+      <summary>Adding junctions...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPAddEdges">
+      <summary>Adding edges...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPSetDefaultFlowDirections">
+      <summary>Setting default flow directions...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPWriteTopology">
+      <summary>Writing topology...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPRebuildingBaseNetwork">
+      <summary>Rebuilding network in base state...</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriNetworkLoaderProgress.esriNLPRebuildingChildNetworks">
+      <summary>Rebuilding network in child states...</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn">
+      <summary>Optimization method of the trace flow solver when finding a path.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn.esriSPObjFnMinSum">
+      <summary>Minimizes the total impedance of the path.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriShortestPathObjFn.esriSPObjFnMinMax">
+      <summary>Minimizes the maximum element impedance.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors">
+      <summary>Utility network analysis error codes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_GEOMETRICINDEX">
+      <summary>There is no geometric network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_INDEX">
+      <summary>The provided index is not valid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_FILTERTYPE">
+      <summary>The provided index is not valid.  Filters can only be on edges or junctions.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_FEATURELAYER">
+      <summary>The feature layer parameter does not have a feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_DOCUMENT">
+      <summary>The document has been changed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_PERCENTAGE">
+      <summary>Edge flag percentages must be between 0.0 and 1.0.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_FEATURE">
+      <summary>A flag or barrier could not be placed because the network feature was corrupted.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_ELEMENT_TYPE">
+      <summary>Invalid element type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_MULTIPLE_NETWORK">
+      <summary>Network already specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_USER_CLASS_ID">
+      <summary>Invalid user class id.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_NO_JUNCTION_WEIGHT_FILTER">
+      <summary>No junction weight filter specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_NO_EDGE_WEIGHT_FILTER">
+      <summary>No edge weight filter specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_WEIGHT_FILTER_TYPE">
+      <summary>Invalid weight filter type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_FLOW_METHOD">
+      <summary>Invalid flow method.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_FLOW_ELEMENTS">
+      <summary>Invalid flow elements.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_PATH_OBJECTIVE">
+      <summary>Invalid path objective function.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_USER_ID">
+      <summary>Invalid user id.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_USER_SUB_ID">
+      <summary>Invalid user sub id.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_INVALID_NETWORK">
+      <summary>No network is present.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_MISMATCH_ELEMENT_TYPE">
+      <summary>The input element type does not agree with the element type of the barrier set.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_NO_PATH_ORIGINS">
+      <summary>No junction or edge origins are specified for FindPath.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKANALYSIS_E_BOTH_PATH_ORIGINS">
+      <summary>Both junction and edge origins are specified for FindPath.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_FEATURE_DATASET_NAME">
+      <summary>An invalid feature dataset name was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_FEATURE_CLASS_NAME">
+      <summary>An invalid feature class name was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_NETWORK_NAME">
+      <summary>An invalid network name was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_FIELD_NAME">
+      <summary>An invalid field name was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_WEIGHT_NAME">
+      <summary>An invalid weight name was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_Z_USE_CONDITION">
+      <summary>Unable to use Zs for network connectivity.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_WEIGHT_TYPE">
+      <summary>Invalid weight type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_UNSUPPORTED_NETWORK_TYPE">
+      <summary>An unsupported network type was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_FEATURE_TYPE">
+      <summary>An invalid feature type was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_SHAPE_TYPE">
+      <summary>An invalid shape type was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_ENABLED_FIELD_TYPE">
+      <summary>An invalid enabled field type was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_ENABLED_FIELD_DOMAIN">
+      <summary>An invalid enabled field domain was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_ANCILLARY_ROLE">
+      <summary>An invalid ancillary role was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_ANCILLARY_ROLE_FIELD_TYPE">
+      <summary>An invalid ancillary role field type was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_ANCILLARY_ROLE_FIELD_DOMAIN">
+      <summary>An invalid ancillary role field domain was specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_SNAP_TOLERANCE">
+      <summary>The snapping tolerance cannot be negative or smaller than the minimum tolerance.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_INVALID_BITGATE_SIZE">
+      <summary>Bitgate weights sizes must be in the range from 1 to 31.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_OPEN_FEATURE_DATASET">
+      <summary>Unable to open the feature dataset.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_OPEN_FEATURE_CLASS">
+      <summary>Unable to open the feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_READ_FEATURE_CLASS">
+      <summary>Unable to read from the feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_UPDATE_FEATURE_CLASS">
+      <summary>Unable to update the feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ACQUIRE_LOGICAL_NETWORK">
+      <summary>Unable to acquire logical network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_CREATE_GEOMETRIC_NETWORK">
+      <summary>Unable to create geometric network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ADD_FEATURE_CLASS">
+      <summary>Unable to add a feature class to the geometric network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_CREATE_ENABLED_FIELD">
+      <summary>Cannot create enabled field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_UPDATE_ENABLED_FIELD">
+      <summary>Cannot update enabled field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_CREATE_ANCILLARY_ROLE_FIELD">
+      <summary>Cannot create ancillary role field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_UPDATE_ANCILLARY_ROLE_FIELD">
+      <summary>Cannot update ancillary role field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_OPEN_ORPHAN_JUNCTION_CLASS">
+      <summary>Unable to open orphan junction feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ADD_ORPHAN_JUNCTION_ROW">
+      <summary>Cannot insert rows into orphan junction feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_CREATE_ERROR_TABLE">
+      <summary>Unable to create the error table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_UPDATE_ERROR_TABLE">
+      <summary>Unable to update the error table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ADD_JUNCTION_ELEMENT">
+      <summary>Cannot add junction elements to the network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ADD_EDGE_ELEMENT">
+      <summary>Cannot add edge elements to the network.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_CREATE_INDEX">
+      <summary>Creating indexes on network tables failed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_DROP_INDEX">
+      <summary>Dropping indexes on network tables failed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_OPEN_LOG_FILE">
+      <summary>Cannot open log file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_CANNOT_ACCESS_TEMP_FILE">
+      <summary>Cannot access temporary files.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriUtilityNetworkErrors.NETWORKLOADER_E_UNKNOWN_ERROR">
+      <summary>An unknown error occurred.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType">
+      <summary>Type of weight filter to use in the trace task.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType.esriWFNone">
+      <summary>Do not use a filter in the trace task.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType.esriWFRange">
+      <summary>Use a range filter in the trace task.</summary>
+    </member>
+  </members>
+</doc>
