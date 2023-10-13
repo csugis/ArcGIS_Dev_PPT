@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.MainForm.resources
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.Properties.Resources.resources
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.csproj.GenerateResource.cache
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\MapControlAppDemo.exe
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\MapControlAppDemo.pdb
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.exe
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.pdb
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.Form1.resources

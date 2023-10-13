@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapControlAppDemo", "MapControlAppDemo\MapControlAppDemo.csproj", "{5D9B711A-C9AB-4838-9C3F-F224870E2C7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D9B711A-C9AB-4838-9C3F-F224870E2C7C}.Debug|x86.ActiveCfg = Debug|x86
+		{5D9B711A-C9AB-4838-9C3F-F224870E2C7C}.Debug|x86.Build.0 = Debug|x86
+		{5D9B711A-C9AB-4838-9C3F-F224870E2C7C}.Release|x86.ActiveCfg = Release|x86
+		{5D9B711A-C9AB-4838-9C3F-F224870E2C7C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE1C25D0-A3A6-4CD7-BF97-1B1ABC80D30E}
+	EndGlobalSection
+EndGlobal
