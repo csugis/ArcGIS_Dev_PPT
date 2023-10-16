@@ -10,6 +10,7 @@ using ESRI.ArcGIS.Display;
 using ESRI.ArcGIS.Geometry;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -307,6 +308,281 @@ namespace MapControlAppDemo
             Form1 frm = new Form1();
             frm.setDataTable(dt);
             frm.ShowDialog();
+        }
+
+        private void listFeatureClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IWorkspace ws = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            List<IFeatureClass> list = new List<IFeatureClass>();
+            IEnumDatasetName datasetName = ws.DatasetNames[esriDatasetType.esriDTFeatureClass]; //筛选出shp
+            IDatasetName dn = datasetName.Next(); //获取的数据集名称无后缀名
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("GeometryType");
+            DataRow row;            
+            while (dn != null)
+            {
+                row = dt.NewRow();
+                IFeatureClass fc = fws.OpenFeatureClass(dn.Name);
+                list.Add(fc);
+                row[0] = dn.Name;
+                row[1] = Convert.ToString(fc.ShapeType);
+                dt.Rows.Add(row);                
+                dn = datasetName.Next();
+            }
+
+            Form1 frm = new Form1();
+            frm.setDataTable(dt);
+            frm.ShowDialog();
+        }
+        /// <summary>
+        /// 使用要素类描述对象创建最简单的要素类，只包含2个必要字段“SHAPE”和“OBJECTID”，无空间参考
+        /// </summary>
+        /// <param name="featureWorkspace">目标工作空间</param>
+        public void CreatSimpleFeatureClass(IFeatureWorkspace featureWorkspace)
+        {
+            // 检查要素类是否已经存在
+            IWorkspace2 ws2 = featureWorkspace as IWorkspace2;
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "Simple"))
+            {
+                // 如果要素类已经存在，可以选择删除它
+                IFeatureClass existingFClass = featureWorkspace.OpenFeatureClass("Simple");
+                IDataset ds = existingFClass as IDataset;
+                ds.Delete();
+            }            
+            //ESRI 要素类描述对象
+            IFeatureClassDescription fcDesc = new FeatureClassDescription() as IFeatureClassDescription;
+            IObjectClassDescription ocDesc = (IObjectClassDescription)fcDesc;
+            IFeatureClass targetFClass = featureWorkspace.CreateFeatureClass("Simple",
+                  ocDesc.RequiredFields,
+                  null, null, esriFeatureType.esriFTSimple, fcDesc.ShapeFieldName, "");
+            IFeatureLayer layer = new FeatureLayer();
+            layer.FeatureClass = targetFClass;
+            layer.Name = targetFClass.AliasName;
+            this.axMapControl1.AddLayer(layer);
+        }
+        public void CreatCustomerizeFeatureClass(IFeatureWorkspace featureWorkspace)
+        {
+            IWorkspace2 ws2 = featureWorkspace as IWorkspace2;
+            // 检查要素类是否已经存在
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "points"))
+            {
+                // 如果要素类已经存在，可以选择删除它
+                IFeatureClass existingFClass = featureWorkspace.OpenFeatureClass("points");
+                IDataset ds = existingFClass as IDataset;
+                ds.Delete();
+            }
+            //ESRI 要素类描述对象
+            IFeatureClassDescription fcDesc = new FeatureClassDescription() as IFeatureClassDescription;
+            IObjectClassDescription ocDesc = (IObjectClassDescription)fcDesc;
+            IFields fields = ocDesc.RequiredFields;
+            int shapeFieldIndex = fields.FindField(fcDesc.ShapeFieldName);
+            IField field = fields.get_Field(shapeFieldIndex);
+            IGeometryDef geometryDef = field.GeometryDef;
+            IGeometryDefEdit geometryDefEdit = (IGeometryDefEdit)geometryDef;
+            geometryDefEdit.GeometryType_2 = esriGeometryType.esriGeometryPoint;
+            //添加自定义字段
+            IFieldsEdit fields2 = fields as IFieldsEdit;
+            IFieldEdit field2 = new Field() as IFieldEdit;
+            field2.Name_2 = "Name";
+            field2.Type_2 = esriFieldType.esriFieldTypeString;
+            field2.Length_2 = 20;
+            fields2.AddField(field2);
+            //生成有效的字段集
+            IFieldChecker fieldChecker = new FieldChecker() as IFieldChecker;
+            IEnumFieldError enumFieldError = null;
+            IFields validatedFields = null;
+            fieldChecker.ValidateWorkspace = (IWorkspace)featureWorkspace;
+            fieldChecker.Validate(fields, out enumFieldError, out validatedFields);
+            //创建要素类
+            IFeatureClass targetFClass = featureWorkspace.CreateFeatureClass("points",
+                  validatedFields,
+                  null, null, esriFeatureType.esriFTSimple, fcDesc.ShapeFieldName, "");
+            //IFeatureClass targetFClass = featureWorkspace.CreateFeatureClass("Simple1",
+            //      ocDesc.RequiredFields,
+            //      null, null, esriFeatureType.esriFTSimple, fcDesc.ShapeFieldName, "");
+            IFeatureLayer layer = new FeatureLayer();
+            layer.FeatureClass = targetFClass;
+            layer.Name = targetFClass.AliasName;
+            this.axMapControl1.AddLayer(layer);
+        }
+
+        private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IWorkspace ws = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            CreatSimpleFeatureClass(fws);
+        }
+
+        private void customerizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IWorkspace ws = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            CreatCustomerizeFeatureClass(fws);
+        }
+
+        private void addFieldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IWorkspace ws = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace featureWorkspace = (IFeatureWorkspace)ws;
+            IWorkspace2 ws2 = featureWorkspace as IWorkspace2;
+            // 检查要素类是否已经存在
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "points"))
+            {
+                // 如果要素类已经存在
+                IFeatureClass existingFClass = featureWorkspace.OpenFeatureClass("points");
+                //添加字段
+                IFieldEdit field = new Field() as IFieldEdit;
+                field.Name_2 = "Num";
+                field.Type_2 = esriFieldType.esriFieldTypeInteger;
+                existingFClass.AddField(field);
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Name");
+                dt.Columns.Add("Type");
+                IFields fields = existingFClass.Fields;
+                DataRow row;
+                for (int i = 0; i < fields.FieldCount; i++)
+                {
+                    row = dt.NewRow();
+                    row[0] = fields.Field[i].Name;
+                    row[1] = Convert.ToString(fields.Field[i].Type);
+                    dt.Rows.Add(row);
+                }
+                Form1 frm = new Form1();
+                frm.setDataTable(dt);
+                frm.ShowDialog();
+            }
+        }
+
+        private void addAFeatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //生成单个要素
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass featureClass = fws.OpenFeatureClass("points");
+            IFeature feature = featureClass.CreateFeature();
+            //生成点
+            IPoint point = new ESRI.ArcGIS.Geometry.Point();
+            point.X = 800; point.Y = 800;
+            feature.Shape = point;
+            feature.Value[featureClass.FindField("Name")] =
+                                   string.Format("Point_{0}", featureClass.FeatureCount(null));
+            feature.Store();
+        }
+
+        private void addFeaturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //批量添加要素
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass featureClass = fws.OpenFeatureClass("points");
+            // Create the feature buffer.
+            IFeatureBuffer featureBuffer = featureClass.CreateFeatureBuffer();
+            // Create insert feature cursor using buffering.
+            IFeatureCursor featureCursor = featureClass.Insert(true);
+            int index = featureClass.FindField("Name");
+            Random rand = new Random();
+            for (int i = 0; i < 500; i++)
+            {
+                IPoint point = new ESRI.ArcGIS.Geometry.Point();
+                point.PutCoords(rand.NextDouble() * 100, rand.NextDouble() * 100);
+                featureBuffer.Shape = point;
+                featureBuffer.Value[index] = "Point_" + rand.Next(1000, 9999).ToString();
+                featureCursor.InsertFeature(featureBuffer);
+            }
+            // Attempt to flush the buffer
+            featureCursor.Flush();
+            axMapControl1.Refresh();
+        }
+
+        private void deleteFeature1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //删除要素
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass featureClass = fws.OpenFeatureClass("points");
+            IQueryFilter filter = new QueryFilter();
+            filter.WhereClause = "FID>300";
+            ITable table = (ITable)featureClass;
+            table.DeleteSearchedRows(filter);  //如果filter=null，则删除全部要素
+            axMapControl1.Refresh();
+        }
+
+        private void deleteFeature2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //删除要素方法2
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass featureClass = fws.OpenFeatureClass("points");
+            IQueryFilter queryFilter = new QueryFilter();
+            queryFilter.WhereClause = "FID>100";
+            IFeatureCursor updateCursor = featureClass.Update(queryFilter, false);
+            IFeature feature = updateCursor.NextFeature();
+            while (feature != null)
+            {
+                updateCursor.DeleteFeature();
+                feature = updateCursor.NextFeature();
+            }
+            axMapControl1.Refresh();
+        }
+
+        private void updateFeaturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //批量更新要素
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass featureClass = fws.OpenFeatureClass("points");
+            IQueryFilter filter = new QueryFilter();
+            filter.WhereClause = "FID>100";
+            //利用FeatureCursor进行数据更新
+            IFeatureCursor updateCursor = featureClass.Update(filter, false);
+            IFeature feature = updateCursor.NextFeature();
+
+            while (feature != null)
+            {
+                feature.Value[2] = "X_" + feature.Value[0].ToString();
+                updateCursor.UpdateFeature(feature);
+                feature = updateCursor.NextFeature();
+            }
+        }
+
+        private void intersectCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //检查建筑物是否存在相交？
+            IWorkspaceFactory wf = new ShapefileWorkspaceFactory();
+            IFeatureWorkspace fws = wf.OpenFromFile(@"d:\csu", 0) as IFeatureWorkspace;
+            IFeatureClass fc = fws.OpenFeatureClass("jmd.shp");
+            if (fc == null) return;
+            IFeature f1, f2;
+            IFeatureCursor cur1 = fc.Search(null, true);
+            while ((f1 = cur1.NextFeature()) != null)
+            {
+                ISpatialFilter filter = new SpatialFilter();
+                filter.WhereClause = "FID<>" + f1.OID.ToString();
+                filter.SpatialRel = esriSpatialRelEnum.esriSpatialRelIntersects;
+                filter.Geometry = f1.Shape as IGeometry;
+                ISelectionSet set = fc.Select(filter, esriSelectionType.esriSelectionTypeHybrid,
+                                                     esriSelectionOption.esriSelectionOptionNormal, null);
+                if (set.Count > 0) { MessageBox.Show(string.Format("{0} 有相交!", f1.OID)); }
+            }
+            MessageBox.Show("检查完成!");
+        }
+
+        private void drawAFeatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand cmd = new ToolDrawFeature();
+            cmd.OnCreate(axMapControl1.Object);
+            cmd.OnClick();
+            axMapControl1.CurrentTool = cmd as ITool;            
         }
     }
 }
