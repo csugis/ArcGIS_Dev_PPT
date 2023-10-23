@@ -249,6 +249,7 @@ namespace MapControlAppDemo
                 object symbol = pLineSym as object;
                 this.axMapControl1.DrawShape(line, ref symbol);
                 this.drawnLine = line;
+                ConstructPointAlongLine(line);
             }
         }
 
@@ -258,6 +259,59 @@ namespace MapControlAppDemo
                 this.op = 1;
             else
                 this.op = -1;
+        }
+
+        public void ConstructPointAlongLine(IPolyline pl)
+        {
+            ICurve polyLine = pl;
+            
+            for(int i = 0; i< pl.Length/100 - 1; i++)
+            {
+                IPoint point1 = ConstructPointAlong(100*(i+1), polyLine, esriSegmentExtension.esriNoExtension, false);
+                //System.Windows.Forms.MessageBox.Show("x,y = " + point1.X + "," + point1.Y);
+                //this.axMapControl1.DrawShape(point1);
+            }
+
+            for(int i = 0 ; i< 10; i++)
+            {
+                IPoint point2 = ConstructPointAlong(0.1*(i+1), polyLine, esriSegmentExtension.esriNoExtension, true);
+                //System.Windows.Forms.MessageBox.Show("x,y = " + point2.X + "," + point2.Y);
+                this.axMapControl1.DrawShape(point2);
+            }
+
+        }
+
+        public IPoint ConstructPointAlong(double distance, ICurve curve,
+                                   esriSegmentExtension extension, bool asRatio)
+        {
+            IConstructPoint contructionPoint = new ESRI.ArcGIS.Geometry.Point() as IConstructPoint;
+            contructionPoint.ConstructAlong(curve, extension, distance, asRatio);
+            return contructionPoint as IPoint;
+        }
+
+        private void ConstructDivideEqual()
+        {
+            IPoint centerPoint = new ESRI.ArcGIS.Geometry.Point();
+            centerPoint.PutCoords(1000, 1000);
+            this.axMapControl1.DrawShape(centerPoint);
+            IPoint fromPoint = new ESRI.ArcGIS.Geometry.Point();
+            fromPoint.PutCoords(10, 10);
+            this.axMapControl1.DrawShape(centerPoint);
+            IPoint toPoint = new ESRI.ArcGIS.Geometry.Point();
+            toPoint.PutCoords(10, 2000);
+            this.axMapControl1.DrawShape(toPoint);
+            ICircularArc circularArcConstruction = new CircularArc();
+            circularArcConstruction.PutCoords(centerPoint, fromPoint, toPoint, esriArcOrientation.esriArcClockwise);
+            ISegmentCollection sc = new ESRI.ArcGIS.Geometry.Path() as ISegmentCollection;
+            sc.AddSegment(circularArcConstruction as ISegment);
+            IGeometryCollection gc = new Polyline() as IGeometryCollection;
+            gc.AddGeometry(sc as IGeometry);
+            this.axMapControl1.DrawShape(gc as IGeometry);
+            IConstructMultipoint constructMultipoint = new Multipoint() as IConstructMultipoint;
+            constructMultipoint.ConstructDivideEqual(circularArcConstruction as ICurve, 10);
+            IPointCollection pointCollection = constructMultipoint as IPointCollection;
+            this.axMapControl1.DrawShape(constructMultipoint as IGeometry);
+            System.Windows.Forms.MessageBox.Show("Number of points is: " + pointCollection.PointCount);
         }
 
         private void bufferSelectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -583,6 +637,47 @@ namespace MapControlAppDemo
             cmd.OnCreate(axMapControl1.Object);
             cmd.OnClick();
             axMapControl1.CurrentTool = cmd as ITool;            
+        }
+
+        private void constructMultipointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConstructDivideEqual();
+        }
+
+        private void addLineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IPolyline polyline = new PolylineClass();
+            IPointCollection pointColl = polyline as IPointCollection;
+            IPoint point = new PointClass();
+            point.PutCoords(100, 200);
+            pointColl.AddPoint(point);
+            point = new PointClass();
+            point.PutCoords(300, 100);
+            pointColl.AddPoint(point);
+            this.axMapControl1.DrawShape(polyline);
+        }
+
+        private void drawPolylineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new ToolPolyline();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
+            this.axMapControl1.CurrentTool = command as ITool;
+        }
+
+        private void drawPolygonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new ToolPolygon();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
+            this.axMapControl1.CurrentTool = command as ITool;
+        }
+
+        private void linkPointsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new CmdLinkPoints();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
         }
     }
 }

@@ -49,6 +49,21 @@ namespace MapControlAppDemo
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bufferSelectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geoDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listFeatureClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createFeatureClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.featuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawAFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFeaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteFeature1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteFeature2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateFeaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intersectCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axToolbarControl1 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
@@ -60,22 +75,13 @@ namespace MapControlAppDemo
             this.moveDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.geoDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listFeatureClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createFeatureClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addFieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.featuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.addFeaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteFeature1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteFeature2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateFeaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.intersectCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drawAFeatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geometryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.constructMultipointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawPolylineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawPolygonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axTOCControl1)).BeginInit();
@@ -92,7 +98,8 @@ namespace MapControlAppDemo
             this.menuFile,
             this.layerToolStripMenuItem,
             this.drawToolStripMenuItem,
-            this.geoDatabaseToolStripMenuItem});
+            this.geoDatabaseToolStripMenuItem,
+            this.geometryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1145, 28);
@@ -185,16 +192,135 @@ namespace MapControlAppDemo
             // drawLineToolStripMenuItem
             // 
             this.drawLineToolStripMenuItem.Name = "drawLineToolStripMenuItem";
-            this.drawLineToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.drawLineToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.drawLineToolStripMenuItem.Text = "Draw Line";
             this.drawLineToolStripMenuItem.Click += new System.EventHandler(this.drawLineToolStripMenuItem_Click);
             // 
             // bufferSelectToolStripMenuItem
             // 
             this.bufferSelectToolStripMenuItem.Name = "bufferSelectToolStripMenuItem";
-            this.bufferSelectToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.bufferSelectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bufferSelectToolStripMenuItem.Text = "Buffer Select";
             this.bufferSelectToolStripMenuItem.Click += new System.EventHandler(this.bufferSelectToolStripMenuItem_Click);
+            // 
+            // geoDatabaseToolStripMenuItem
+            // 
+            this.geoDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listFeatureClassToolStripMenuItem,
+            this.createFeatureClassToolStripMenuItem,
+            this.fieldsToolStripMenuItem,
+            this.featuresToolStripMenuItem,
+            this.intersectCheckToolStripMenuItem});
+            this.geoDatabaseToolStripMenuItem.Name = "geoDatabaseToolStripMenuItem";
+            this.geoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.geoDatabaseToolStripMenuItem.Text = "GeoDatabase";
+            // 
+            // listFeatureClassToolStripMenuItem
+            // 
+            this.listFeatureClassToolStripMenuItem.Name = "listFeatureClassToolStripMenuItem";
+            this.listFeatureClassToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.listFeatureClassToolStripMenuItem.Text = "List Feature Class";
+            this.listFeatureClassToolStripMenuItem.Click += new System.EventHandler(this.listFeatureClassToolStripMenuItem_Click);
+            // 
+            // createFeatureClassToolStripMenuItem
+            // 
+            this.createFeatureClassToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.simpleToolStripMenuItem,
+            this.customerizeToolStripMenuItem});
+            this.createFeatureClassToolStripMenuItem.Name = "createFeatureClassToolStripMenuItem";
+            this.createFeatureClassToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.createFeatureClassToolStripMenuItem.Text = "Create Feature Class";
+            // 
+            // simpleToolStripMenuItem
+            // 
+            this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.simpleToolStripMenuItem.Text = "Simple";
+            this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
+            // 
+            // customerizeToolStripMenuItem
+            // 
+            this.customerizeToolStripMenuItem.Name = "customerizeToolStripMenuItem";
+            this.customerizeToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.customerizeToolStripMenuItem.Text = "Customerize";
+            this.customerizeToolStripMenuItem.Click += new System.EventHandler(this.customerizeToolStripMenuItem_Click);
+            // 
+            // fieldsToolStripMenuItem
+            // 
+            this.fieldsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFieldToolStripMenuItem});
+            this.fieldsToolStripMenuItem.Name = "fieldsToolStripMenuItem";
+            this.fieldsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.fieldsToolStripMenuItem.Text = "Fields";
+            // 
+            // addFieldToolStripMenuItem
+            // 
+            this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.addFieldToolStripMenuItem.Text = "Add Field";
+            this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
+            // 
+            // featuresToolStripMenuItem
+            // 
+            this.featuresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addAFeatureToolStripMenuItem,
+            this.drawAFeatureToolStripMenuItem,
+            this.addFeaturesToolStripMenuItem,
+            this.deleteFeature1ToolStripMenuItem,
+            this.deleteFeature2ToolStripMenuItem,
+            this.updateFeaturesToolStripMenuItem});
+            this.featuresToolStripMenuItem.Name = "featuresToolStripMenuItem";
+            this.featuresToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.featuresToolStripMenuItem.Text = "Features";
+            // 
+            // addAFeatureToolStripMenuItem
+            // 
+            this.addAFeatureToolStripMenuItem.Name = "addAFeatureToolStripMenuItem";
+            this.addAFeatureToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.addAFeatureToolStripMenuItem.Text = "Add a Feature";
+            this.addAFeatureToolStripMenuItem.Click += new System.EventHandler(this.addAFeatureToolStripMenuItem_Click);
+            // 
+            // drawAFeatureToolStripMenuItem
+            // 
+            this.drawAFeatureToolStripMenuItem.Name = "drawAFeatureToolStripMenuItem";
+            this.drawAFeatureToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.drawAFeatureToolStripMenuItem.Text = "Draw a Feature";
+            this.drawAFeatureToolStripMenuItem.Click += new System.EventHandler(this.drawAFeatureToolStripMenuItem_Click);
+            // 
+            // addFeaturesToolStripMenuItem
+            // 
+            this.addFeaturesToolStripMenuItem.Name = "addFeaturesToolStripMenuItem";
+            this.addFeaturesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.addFeaturesToolStripMenuItem.Text = "Add Features";
+            this.addFeaturesToolStripMenuItem.Click += new System.EventHandler(this.addFeaturesToolStripMenuItem_Click);
+            // 
+            // deleteFeature1ToolStripMenuItem
+            // 
+            this.deleteFeature1ToolStripMenuItem.Name = "deleteFeature1ToolStripMenuItem";
+            this.deleteFeature1ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.deleteFeature1ToolStripMenuItem.Text = "Delete Feature1";
+            this.deleteFeature1ToolStripMenuItem.Click += new System.EventHandler(this.deleteFeature1ToolStripMenuItem_Click);
+            // 
+            // deleteFeature2ToolStripMenuItem
+            // 
+            this.deleteFeature2ToolStripMenuItem.Name = "deleteFeature2ToolStripMenuItem";
+            this.deleteFeature2ToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.deleteFeature2ToolStripMenuItem.Text = "Delete Feature2";
+            this.deleteFeature2ToolStripMenuItem.Click += new System.EventHandler(this.deleteFeature2ToolStripMenuItem_Click);
+            // 
+            // updateFeaturesToolStripMenuItem
+            // 
+            this.updateFeaturesToolStripMenuItem.Name = "updateFeaturesToolStripMenuItem";
+            this.updateFeaturesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.updateFeaturesToolStripMenuItem.Text = "Update Features";
+            this.updateFeaturesToolStripMenuItem.Click += new System.EventHandler(this.updateFeaturesToolStripMenuItem_Click);
+            // 
+            // intersectCheckToolStripMenuItem
+            // 
+            this.intersectCheckToolStripMenuItem.Name = "intersectCheckToolStripMenuItem";
+            this.intersectCheckToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.intersectCheckToolStripMenuItem.Text = "Intersect Check";
+            this.intersectCheckToolStripMenuItem.Click += new System.EventHandler(this.intersectCheckToolStripMenuItem_Click);
             // 
             // axToolbarControl1
             // 
@@ -298,83 +424,6 @@ namespace MapControlAppDemo
             this.enableSelectedToolStripMenuItem.Text = "Enable Selected";
             this.enableSelectedToolStripMenuItem.Click += new System.EventHandler(this.enableSelectedToolStripMenuItem_Click);
             // 
-            // geoDatabaseToolStripMenuItem
-            // 
-            this.geoDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listFeatureClassToolStripMenuItem,
-            this.createFeatureClassToolStripMenuItem,
-            this.fieldsToolStripMenuItem,
-            this.featuresToolStripMenuItem,
-            this.intersectCheckToolStripMenuItem});
-            this.geoDatabaseToolStripMenuItem.Name = "geoDatabaseToolStripMenuItem";
-            this.geoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
-            this.geoDatabaseToolStripMenuItem.Text = "GeoDatabase";
-            // 
-            // listFeatureClassToolStripMenuItem
-            // 
-            this.listFeatureClassToolStripMenuItem.Name = "listFeatureClassToolStripMenuItem";
-            this.listFeatureClassToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.listFeatureClassToolStripMenuItem.Text = "List Feature Class";
-            this.listFeatureClassToolStripMenuItem.Click += new System.EventHandler(this.listFeatureClassToolStripMenuItem_Click);
-            // 
-            // createFeatureClassToolStripMenuItem
-            // 
-            this.createFeatureClassToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.simpleToolStripMenuItem,
-            this.customerizeToolStripMenuItem});
-            this.createFeatureClassToolStripMenuItem.Name = "createFeatureClassToolStripMenuItem";
-            this.createFeatureClassToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.createFeatureClassToolStripMenuItem.Text = "Create Feature Class";
-            // 
-            // simpleToolStripMenuItem
-            // 
-            this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.simpleToolStripMenuItem.Text = "Simple";
-            this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
-            // 
-            // customerizeToolStripMenuItem
-            // 
-            this.customerizeToolStripMenuItem.Name = "customerizeToolStripMenuItem";
-            this.customerizeToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.customerizeToolStripMenuItem.Text = "Customerize";
-            this.customerizeToolStripMenuItem.Click += new System.EventHandler(this.customerizeToolStripMenuItem_Click);
-            // 
-            // fieldsToolStripMenuItem
-            // 
-            this.fieldsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addFieldToolStripMenuItem});
-            this.fieldsToolStripMenuItem.Name = "fieldsToolStripMenuItem";
-            this.fieldsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.fieldsToolStripMenuItem.Text = "Fields";
-            // 
-            // addFieldToolStripMenuItem
-            // 
-            this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addFieldToolStripMenuItem.Text = "Add Field";
-            this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
-            // 
-            // featuresToolStripMenuItem
-            // 
-            this.featuresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addAFeatureToolStripMenuItem,
-            this.drawAFeatureToolStripMenuItem,
-            this.addFeaturesToolStripMenuItem,
-            this.deleteFeature1ToolStripMenuItem,
-            this.deleteFeature2ToolStripMenuItem,
-            this.updateFeaturesToolStripMenuItem});
-            this.featuresToolStripMenuItem.Name = "featuresToolStripMenuItem";
-            this.featuresToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.featuresToolStripMenuItem.Text = "Features";
-            // 
-            // addAFeatureToolStripMenuItem
-            // 
-            this.addAFeatureToolStripMenuItem.Name = "addAFeatureToolStripMenuItem";
-            this.addAFeatureToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addAFeatureToolStripMenuItem.Text = "Add a Feature";
-            this.addAFeatureToolStripMenuItem.Click += new System.EventHandler(this.addAFeatureToolStripMenuItem_Click);
-            // 
             // axMapControl1
             // 
             this.axMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -388,47 +437,52 @@ namespace MapControlAppDemo
             this.axMapControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseMoveEventHandler(this.axMapControl1_OnMouseMove);
             this.axMapControl1.OnMapReplaced += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMapReplacedEventHandler(this.axMapControl1_OnMapReplaced);
             // 
-            // addFeaturesToolStripMenuItem
+            // geometryToolStripMenuItem
             // 
-            this.addFeaturesToolStripMenuItem.Name = "addFeaturesToolStripMenuItem";
-            this.addFeaturesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addFeaturesToolStripMenuItem.Text = "Add Features";
-            this.addFeaturesToolStripMenuItem.Click += new System.EventHandler(this.addFeaturesToolStripMenuItem_Click);
+            this.geometryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.constructMultipointToolStripMenuItem,
+            this.addLineToolStripMenuItem,
+            this.drawPolylineToolStripMenuItem,
+            this.drawPolygonToolStripMenuItem,
+            this.linkPointsToolStripMenuItem});
+            this.geometryToolStripMenuItem.Name = "geometryToolStripMenuItem";
+            this.geometryToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.geometryToolStripMenuItem.Text = "Geometry";
             // 
-            // deleteFeature1ToolStripMenuItem
+            // constructMultipointToolStripMenuItem
             // 
-            this.deleteFeature1ToolStripMenuItem.Name = "deleteFeature1ToolStripMenuItem";
-            this.deleteFeature1ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.deleteFeature1ToolStripMenuItem.Text = "Delete Feature1";
-            this.deleteFeature1ToolStripMenuItem.Click += new System.EventHandler(this.deleteFeature1ToolStripMenuItem_Click);
+            this.constructMultipointToolStripMenuItem.Name = "constructMultipointToolStripMenuItem";
+            this.constructMultipointToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.constructMultipointToolStripMenuItem.Text = "Construct Multipoint";
+            this.constructMultipointToolStripMenuItem.Click += new System.EventHandler(this.constructMultipointToolStripMenuItem_Click);
             // 
-            // deleteFeature2ToolStripMenuItem
+            // addLineToolStripMenuItem
             // 
-            this.deleteFeature2ToolStripMenuItem.Name = "deleteFeature2ToolStripMenuItem";
-            this.deleteFeature2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.deleteFeature2ToolStripMenuItem.Text = "Delete Feature2";
-            this.deleteFeature2ToolStripMenuItem.Click += new System.EventHandler(this.deleteFeature2ToolStripMenuItem_Click);
+            this.addLineToolStripMenuItem.Name = "addLineToolStripMenuItem";
+            this.addLineToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.addLineToolStripMenuItem.Text = "Add Line";
+            this.addLineToolStripMenuItem.Click += new System.EventHandler(this.addLineToolStripMenuItem_Click);
             // 
-            // updateFeaturesToolStripMenuItem
+            // drawPolylineToolStripMenuItem
             // 
-            this.updateFeaturesToolStripMenuItem.Name = "updateFeaturesToolStripMenuItem";
-            this.updateFeaturesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.updateFeaturesToolStripMenuItem.Text = "Update Features";
-            this.updateFeaturesToolStripMenuItem.Click += new System.EventHandler(this.updateFeaturesToolStripMenuItem_Click);
+            this.drawPolylineToolStripMenuItem.Name = "drawPolylineToolStripMenuItem";
+            this.drawPolylineToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.drawPolylineToolStripMenuItem.Text = "Draw Polyline";
+            this.drawPolylineToolStripMenuItem.Click += new System.EventHandler(this.drawPolylineToolStripMenuItem_Click);
             // 
-            // intersectCheckToolStripMenuItem
+            // drawPolygonToolStripMenuItem
             // 
-            this.intersectCheckToolStripMenuItem.Name = "intersectCheckToolStripMenuItem";
-            this.intersectCheckToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.intersectCheckToolStripMenuItem.Text = "Intersect Check";
-            this.intersectCheckToolStripMenuItem.Click += new System.EventHandler(this.intersectCheckToolStripMenuItem_Click);
+            this.drawPolygonToolStripMenuItem.Name = "drawPolygonToolStripMenuItem";
+            this.drawPolygonToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.drawPolygonToolStripMenuItem.Text = "Draw Polygon";
+            this.drawPolygonToolStripMenuItem.Click += new System.EventHandler(this.drawPolygonToolStripMenuItem_Click);
             // 
-            // drawAFeatureToolStripMenuItem
+            // linkPointsToolStripMenuItem
             // 
-            this.drawAFeatureToolStripMenuItem.Name = "drawAFeatureToolStripMenuItem";
-            this.drawAFeatureToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.drawAFeatureToolStripMenuItem.Text = "Draw a Feature";
-            this.drawAFeatureToolStripMenuItem.Click += new System.EventHandler(this.drawAFeatureToolStripMenuItem_Click);
+            this.linkPointsToolStripMenuItem.Name = "linkPointsToolStripMenuItem";
+            this.linkPointsToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.linkPointsToolStripMenuItem.Text = "Link Points";
+            this.linkPointsToolStripMenuItem.Click += new System.EventHandler(this.linkPointsToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -504,6 +558,12 @@ namespace MapControlAppDemo
         private System.Windows.Forms.ToolStripMenuItem updateFeaturesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem intersectCheckToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drawAFeatureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem geometryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem constructMultipointToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addLineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drawPolylineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drawPolygonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linkPointsToolStripMenuItem;
     }
 }
 
