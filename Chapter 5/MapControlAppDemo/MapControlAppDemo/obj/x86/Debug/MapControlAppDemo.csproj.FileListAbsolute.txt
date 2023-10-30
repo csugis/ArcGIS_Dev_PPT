@@ -10,3 +10,15 @@ D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debu
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.csproj.CopyComplete
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.exe
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.pdb
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.FormChart.resources
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.Geodatabase.dll
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.Geodatabase.xml
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.AnalysisTools.dll
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.Geoprocessor.dll
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.AnalysisTools.xml
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.AnalysisTools.dll.config
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.Geoprocessor.xml
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.TrackingAnalyst.dll
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.TrackingAnalyst.xml
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.DataSourcesRaster.dll
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.DataSourcesRaster.xml

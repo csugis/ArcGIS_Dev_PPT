@@ -8,6 +8,9 @@ using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.DataSourcesFile;
 using ESRI.ArcGIS.Display;
 using ESRI.ArcGIS.Geometry;
+using ESRI.ArcGIS.Geoprocessor;
+using ESRI.ArcGIS.Geoprocessing;
+using ESRI.ArcGIS.DataSourcesRaster;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -348,7 +351,7 @@ namespace MapControlAppDemo
                     if (fields.Field[i].Type == esriFieldType.esriFieldTypeGeometry)
                     {
                         row[i] = "Shape Object";
-                        IGeometry geo = feature.Value[i];
+                        IGeometry geo = feature.Value[i] as IGeometry;
                     }                        
                     else if (feature.get_Value(i) != null)
                     {
@@ -678,6 +681,276 @@ namespace MapControlAppDemo
             ICommand command = new CmdLinkPoints();
             command.OnCreate(m_mapControl.Object);
             command.OnClick();
+        }
+
+        private void statChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {             
+            IFeatureLayer  layer  = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass featureClass = layer.FeatureClass;
+            int catIndex = featureClass.FindField("catalog1");
+            //定义数据系列
+            List<String> cats = new List<string>(); List<int> nums = new List<int>();
+            string cat;
+            IFeatureCursor cursor = featureClass.Search(null, true); IFeature feat;
+            //当前类别在分类集合的序次
+            int seq;
+            while ((feat = cursor.NextFeature()) != null)
+            {    //获取分类
+                cat = feat.Value[catIndex].ToString();
+                //获取类别在分类集合中的序次
+                seq = cats.IndexOf(cat);
+                //如果小于0，表示未找到，则需要加入分类集
+                if (seq < 0)
+                {
+                    cats.Add(cat);
+                    // 最后一个就是当前分类的序次
+                    seq = cats.Count - 1;
+                    //数量集也要加入一行
+                    nums.Add(0);
+                }
+                nums[seq]++;   //统计数量+1
+            }
+            FormChart frm = new FormChart();
+            frm.DataBindXY(cats, nums);
+            frm.ShowDialog();
+        }
+
+        private void statChart1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFeatureLayer layer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass featureClass = layer.FeatureClass;
+            int catIndex = featureClass.FindField("catalog1");
+            //定义数据系列
+            List<String> cats = new List<string>(); List<int> nums = new List<int>();
+            string cat;
+            IFeatureCursor cursor = featureClass.Search(null, true); IFeature feat;
+            while ((feat = cursor.NextFeature()) != null)
+            {
+                cat = feat.Value[catIndex].ToString();
+                if (cats.IndexOf(cat) < 0) //不在分类集中，就加入                
+                    cats.Add(cat);
+            }
+            int n = 0;  //每类数据的计数器
+            IQueryFilter qf = new QueryFilterClass();
+            foreach (String str in cats)
+            {
+                qf.WhereClause = "catalog1 = '" + str + "'";
+                cursor = featureClass.Search(qf, false);
+                n = 0;
+                while ((feat = cursor.NextFeature()) != null)
+                    n++;
+                nums.Add(n);
+            }
+            FormChart frm = new FormChart();
+            frm.DataBindXY(cats, nums);
+            frm.ShowDialog();
+        }
+
+        private void bufferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new ToolBufPnt();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
+            this.axMapControl1.CurrentTool = command as ITool;
+        }
+
+        private void intersectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new ToolIntersect();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
+            this.axMapControl1.CurrentTool = command as ITool;
+        }
+
+        private void featureIntersectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFeatureLayer layer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass featureClass = layer.FeatureClass;
+            // 相交性检查程序：
+            IFeatureCursor cur1 = featureClass.Search(null, true), cur2;
+            IFeature feat1, feat2;
+            IRelationalOperator ro;
+            DataTable dt = new DataTable();
+            dt.Columns.Add("OID1");
+            dt.Columns.Add("OID2");
+            DataRow row;
+            while ((feat1 = cur1.NextFeature()) != null)
+            {
+                cur2 = featureClass.Search(null, true);
+                while ((feat2 = cur2.NextFeature()) != null)
+                {
+                    if (feat1.OID == feat2.OID) continue;
+                    ro = feat1.Shape as IRelationalOperator;
+                    if (ro.Touches(feat2.Shape)/*ro.Overlaps(feat2.Shape)*/)
+                    {
+                        //this.dataGridView1.Rows.Add(feat1.OID, feat2.OID);
+                        row = dt.NewRow();
+                        row[0] = feat1.OID;
+                        row[1] = feat2.OID;
+                        dt.Rows.Add(row);
+                        //MessageBox.Show(string.Format("{0}和{1}有相交", feat1.OID, feat2.OID), "Cross");
+                    }
+                }
+            }
+            Form1 frm = new Form1();
+            frm.setDataTable(dt);
+            frm.setHookHelper(m_mapControl.Object);
+            frm.ShowDialog();
+            //MessageBox.Show("检查完毕", "Cross");
+        }
+
+        private void geoprocessorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // GP工具调用方式1 示例：
+            //初始化GP 
+            Geoprocessor GP = new Geoprocessor();
+            //初始化Buffer 
+            ESRI.ArcGIS.AnalysisTools.Buffer buffer = new ESRI.ArcGIS.AnalysisTools.Buffer();
+            // 检查要素类是否已经存在
+            IWorkspace ws = null;
+            IFeatureClass existingFClass = null;
+            IFeatureLayer layer = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            IWorkspace2 ws2 = fws as IWorkspace2;
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "road_bf30.shp"))
+            {
+                // 如果要素类已经存在，可以选择删除它
+                existingFClass = fws.OpenFeatureClass("road_bf30.shp");
+                IDataset ds = existingFClass as IDataset;
+                ds.Delete();
+            }
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "road.shp"))
+            {
+                //
+                layer = new FeatureLayerClass();
+                existingFClass = fws.OpenFeatureClass("road.shp");
+                layer.FeatureClass = existingFClass;
+                layer.Name = existingFClass.AliasName;
+                axMapControl1.Map.AddLayer(layer);
+            }
+            //输入要素 
+            buffer.in_features = @"D:\CSU\road.shp";
+            //输出要素类 
+            buffer.out_feature_class = @"D:\CSU\road_bf30.shp";
+            //缓冲距离 
+            buffer.buffer_distance_or_field = 0.00003; //默认单位 
+                                                  //执行工具 
+            GP.Execute(buffer, null);
+
+            layer = new FeatureLayerClass();
+            existingFClass = fws.OpenFeatureClass("road_bf30.shp");
+            layer.FeatureClass = existingFClass;
+            layer.Name = existingFClass.AliasName;
+            axMapControl1.Map.AddLayer(layer);
+            axMapControl1.ActiveView.Refresh();
+        }
+
+        private void geoprocessingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // GP工具调用方法2 示例：
+            // 检查要素类是否已经存在
+            IWorkspace ws = null;
+            IFeatureClass existingFClass = null;
+            IFeatureLayer layer = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            IWorkspace2 ws2 = fws as IWorkspace2;
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "road_bf30.shp"))
+            {
+                // 如果要素类已经存在，可以选择删除它
+                existingFClass = fws.OpenFeatureClass("road_bf30.shp");
+                IDataset ds = existingFClass as IDataset;
+                ds.Delete();
+            }
+            if (ws2.get_NameExists(esriDatasetType.esriDTFeatureClass, "road.shp"))
+            {
+                //
+                layer = new FeatureLayerClass();
+                existingFClass = fws.OpenFeatureClass("road.shp");
+                layer.FeatureClass = existingFClass;
+                layer.Name = existingFClass.AliasName;
+                axMapControl1.Map.AddLayer(layer);
+            }
+            //初始化GP 
+            IGeoProcessor2 gp2 = new GeoProcessor() as IGeoProcessor2;
+            gp2.OverwriteOutput = true;
+            IVariantArray parameters = new VarArrayClass();
+            parameters.Add(@"D:\CSU\road.shp");
+            parameters.Add(@"D:\CSU\road_bf30.shp");
+            parameters.Add("10 meters");
+            // Execute the tool.
+            gp2.Execute("Buffer_analysis", parameters, null);
+
+            layer = new FeatureLayerClass();
+            existingFClass = fws.OpenFeatureClass("road_bf30.shp");
+            layer.FeatureClass = existingFClass;
+            layer.Name = existingFClass.AliasName;
+            axMapControl1.Map.AddLayer(layer);
+            axMapControl1.ActiveView.Refresh();
+        }
+
+        private void listFeatureClassToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            IWorkspace ws = null;
+            IFeatureClass existingFClass = null;
+            IFeatureLayer layer = null;
+            IWorkspaceFactory wsf = new ShapefileWorkspaceFactory();
+            ws = wsf.OpenFromFile(@"d:\csu", 0);
+            IFeatureWorkspace fws = (IFeatureWorkspace)ws;
+            List<IFeatureClass> lstFeatureClass = new List<IFeatureClass>();
+            //初始化GP 
+            Geoprocessor GP = new Geoprocessor();
+            GP.SetEnvironmentValue("workspace", @"d:\csu");
+            IGpEnumList featureClasses = GP.ListFeatureClasses("*", "", "");
+            string featureClass = featureClasses.Next();
+            while (featureClass != "")
+            {
+                existingFClass = fws.OpenFeatureClass(featureClass);
+                layer = new FeatureLayerClass();
+                layer.FeatureClass = existingFClass;
+                layer.Name = existingFClass.AliasName;
+                axMapControl1.Map.AddLayer(layer);
+                          
+                lstFeatureClass.Add(existingFClass);
+                featureClass = featureClasses.Next();
+            }
+            axMapControl1.ActiveView.Refresh();
+        }
+
+        private void loadRasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // AE加载栅格数据
+            IWorkspaceFactory wsf = new RasterWorkspaceFactoryClass();
+            IRasterWorkspace rw = wsf.OpenFromFile(@"d:\CSU_TEMP", 0) as IRasterWorkspace;
+            IRasterDataset rds = rw.OpenRasterDataset("csu.tif");
+
+            //影像金字塔的判断与创建,使用IRasterPyramid3接口
+            IRasterPyramid3 pRasPyrmid;
+            pRasPyrmid = rds as IRasterPyramid3;    //接口转换
+            if (pRasPyrmid != null)
+                if (!(pRasPyrmid.Present))
+                    pRasPyrmid.Create();//创建金字塔
+
+            IRasterLayer rasterLayer = new RasterLayerClass();
+            //方法1:
+            //rasterLayer.CreateFromDataset(rds);
+            //方法2:
+            IRaster raster = rds.CreateDefaultRaster();
+            rasterLayer.CreateFromRaster(raster);
+
+            ILayer layer = rasterLayer as ILayer;
+            axMapControl1.Map.AddLayer(layer);
+        }
+
+        private void clipRasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ICommand command = new ToolClipRaster();
+            command.OnCreate(m_mapControl.Object);
+            command.OnClick();
+            this.axMapControl1.CurrentTool = command as ITool;
         }
     }
 }
