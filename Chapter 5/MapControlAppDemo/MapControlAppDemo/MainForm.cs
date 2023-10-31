@@ -20,6 +20,9 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using stdole;
+
+
 
 namespace MapControlAppDemo
 {
@@ -951,6 +954,148 @@ namespace MapControlAppDemo
             command.OnCreate(m_mapControl.Object);
             command.OnClick();
             this.axMapControl1.CurrentTool = command as ITool;
+        }
+
+        private void markerSymbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ILayer lyr = axMapControl1.Map.get_Layer(0);
+            ISimpleMarkerSymbol pMarkerSymbol = new SimpleMarkerSymbol();
+            IRgbColor pRgbColor = new RgbColor();
+            pRgbColor.Red = 255;
+            pMarkerSymbol.Color = pRgbColor;
+            pMarkerSymbol.Style = esriSimpleMarkerStyle.esriSMSSquare;
+
+            ISimpleRenderer pSimpleRenderer = new SimpleRenderer();
+            pSimpleRenderer.Symbol = (ISymbol)pMarkerSymbol;
+            IGeoFeatureLayer layer = (IGeoFeatureLayer)lyr;
+            layer.Renderer = (IFeatureRenderer)pSimpleRenderer;
+            axMapControl1.ActiveView.Refresh();
+            axTOCControl1.Update();
+        }
+
+        private void lineSymbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ILayer lyr = axMapControl1.Map.get_Layer(0);
+            ISimpleLineSymbol pMarkerSymbol = new SimpleLineSymbol(); ;
+            IRgbColor pRgbColor = new RgbColor();
+            pRgbColor.Red = 255;
+            pMarkerSymbol.Color = pRgbColor;
+            pMarkerSymbol.Style = esriSimpleLineStyle.esriSLSDashDotDot;
+            pMarkerSymbol.Width = 5;
+
+            ISimpleRenderer pSimpleRenderer = new SimpleRenderer();
+            pSimpleRenderer.Symbol = (ISymbol)pMarkerSymbol;
+            IGeoFeatureLayer oLyr = (IGeoFeatureLayer)lyr;
+            oLyr.Renderer = (IFeatureRenderer)pSimpleRenderer;
+            axMapControl1.ActiveView.Refresh();
+            axTOCControl1.Update();
+        }
+
+        private void fillSymbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ILayer lyr = axMapControl1.Map.get_Layer(0);
+            IRgbColor pRgbColor = new RgbColor(); pRgbColor.Red = 255;
+            ISimpleLineSymbol lineSym = new SimpleLineSymbol();
+            lineSym.Color = pRgbColor;
+            lineSym.Style = esriSimpleLineStyle.esriSLSDashDotDot;
+            lineSym.Width = 5;
+
+            ISimpleFillSymbol pSymbol = new SimpleFillSymbol();
+            pSymbol.Outline = lineSym;
+            pRgbColor = new RgbColor();
+            pRgbColor.Blue = 255;
+            pRgbColor.Transparency = 128;   //填充颜色透明度设置
+            pSymbol.Color = pRgbColor;
+
+            ISimpleRenderer pSimpleRenderer = new SimpleRenderer();
+            pSimpleRenderer.Symbol = (ISymbol)pSymbol;
+            IGeoFeatureLayer oLyr = (IGeoFeatureLayer)lyr;
+            oLyr.Renderer = (IFeatureRenderer)pSimpleRenderer;
+            axMapControl1.ActiveView.Refresh();
+            axTOCControl1.Update();
+        }
+
+        private void textElementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IFeatureLayer lyr = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass pFeatureClass = lyr.FeatureClass;
+            // 绘制图元的方法, 示例：
+            // 创建颜色            
+            IRgbColor pRgbColor = new RgbColor();
+            pRgbColor.Red = 255;
+            pRgbColor.Green = 0;
+            pRgbColor.Blue = 0;
+            // 创建字体            
+            IFontDisp pFontDisp = new StdFont() as IFontDisp;
+            pFontDisp.Bold = true;
+            pFontDisp.Name = "楷体";
+            pFontDisp.Size = 20;
+            // 创建符号            
+            ITextSymbol pTextSymbol = new TextSymbol();
+            pTextSymbol.Angle = 0;
+            pTextSymbol.Color = pRgbColor;
+            pTextSymbol.Font = pFontDisp;
+            // 删除已有文本元素            
+            IActiveView pActiveView = axMapControl1.ActiveView;
+            IGraphicsContainer pGraphicsContainer = pActiveView.GraphicsContainer; pGraphicsContainer.DeleteAllElements();
+            //绘制图元的方法, 示例(续)：
+            IFeatureCursor pFeatureCursor = pFeatureClass.Search(null, true);
+            IFeature pFeature = pFeatureCursor.NextFeature();
+            // 遍历要素游标            
+            int fieldIndex = pFeatureClass.Fields.FindField("Name");
+            while (pFeature != null)
+            {
+                IArea pArea = pFeature.ShapeCopy as IArea;
+                IPoint pPoint = pArea.Centroid; // 获取重心 
+                ITextElement pTextElement = new TextElement() as ITextElement;  // 创建文本
+                pTextElement.Symbol = pTextSymbol;
+                pTextElement.Text = pFeature.get_Value(fieldIndex).ToString();
+                // 添加文本元素                
+                IElement pElement = pTextElement as IElement;
+                pElement.Geometry = pPoint;
+                pGraphicsContainer.AddElement(pElement, 0);
+                pFeature = pFeatureCursor.NextFeature();
+            }
+            // 刷新地图            
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(pFeatureCursor);
+            pActiveView.PartialRefresh(esriViewDrawPhase.esriViewGraphics, null, null);
+        }
+
+        private void labelEngineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 标注引擎法
+            // 创建颜色            
+            IRgbColor pRgbColor = new RgbColor();
+            pRgbColor.Red = 255;
+            pRgbColor.Green = 0;
+            pRgbColor.Blue = 0;
+            // 创建字体            
+            IFontDisp pFontDisp = new StdFont() as IFontDisp;
+            pFontDisp.Bold = true;
+            pFontDisp.Name = "楷体";
+            pFontDisp.Size = 20;
+            // 创建符号            
+            ITextSymbol pTextSymbol = new TextSymbol();
+            pTextSymbol.Angle = 0;
+            pTextSymbol.Color = pRgbColor;
+            pTextSymbol.Font = pFontDisp;
+            // 标注引擎法（续)
+            // 开启图层标注           
+            IGeoFeatureLayer pGeoFeatureLayer = axMapControl1.get_Layer(0) as IGeoFeatureLayer;
+            pGeoFeatureLayer.DisplayAnnotation = true;
+            IBasicOverposterLayerProperties pBasicOverposterLayerProprties = new BasicOverposterLayerProperties();
+            pBasicOverposterLayerProprties.FeatureType = esriBasicOverposterFeatureType.esriOverposterPolygon;
+            // 设置标注属性            
+            ILabelEngineLayerProperties pLabelEngineLayerProperties = new LabelEngineLayerProperties() as ILabelEngineLayerProperties;
+            pLabelEngineLayerProperties.Expression = "[" + "Name" + "]";
+            pLabelEngineLayerProperties.Symbol = pTextSymbol;
+            pLabelEngineLayerProperties.BasicOverposterLayerProperties = pBasicOverposterLayerProprties;
+            // 刷新地图            
+            IAnnotateLayerProperties pAnnotateLayerProperties = pLabelEngineLayerProperties as IAnnotateLayerProperties;
+            IAnnotateLayerPropertiesCollection pAnnotateLayerPropertiesCollection = pGeoFeatureLayer.AnnotationProperties;
+            pAnnotateLayerPropertiesCollection.Clear();
+            pAnnotateLayerPropertiesCollection.Add(pAnnotateLayerProperties);
+            axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
         }
     }
 }

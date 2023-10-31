@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.CartoUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAdvancedDrawingDialog">
+      <summary>Provides access to the Advanced Drawing Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAdvancedDrawingDialog.DataFrame">
+      <summary>The data frame whose layers are to be masked.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAdvancedDrawingDialog.DoModal(System.Int32)">
+      <summary>Shows the Advanced Drawing Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAnnotationExpressionProperties">
+      <summary>Provides access to members that control the annotation (labeling) expression properties proxy.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAnnotationExpressionProperties.DisplayFeatureClass">
+      <summary>Feature class for testing the expression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAnnotationExpressionProperties.Expression">
+      <summary>The expression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAnnotationExpressionProperties.ExpressionParser">
+      <summary>The expression parser.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAnnotationExpressionProperties.IsExpressionSimple">
+      <summary>Indicates if expression is simple.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAVFSrcImporter">
+      <summary>Provides access to members that control the ArcView (3.x) FSrc importer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVFSrcImporter.CanImport(ESRI.ArcGIS.CartoUI.IAVObject,ESRI.ArcGIS.CartoUI.IAVObjectConverter)">
+      <summary>Indicates if the importer supports the given type of AV FSrc object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVFSrcImporter.Import(ESRI.ArcGIS.CartoUI.IAVObject,ESRI.ArcGIS.CartoUI.IAVObjectConverter)">
+      <summary>Imports the AV FSrc object into a FeatureClass object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAVObject">
+      <summary>Provides access to members that control the ArcView (3.x) object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObject.AddProperty(ESRI.ArcGIS.Geodatabase.IProperty)">
+      <summary>Adds a property to the object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObject.ClearProperties">
+      <summary>Clears out all of the properties of the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVObject.Property(System.Int32)">
+      <summary>The properties at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVObject.PropertyCount">
+      <summary>Number of properties for the object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObject.QueryPropertyValue(System.String)">
+      <summary>Returns the value of one of the object's properties.  Only valid if you're expecting a single property with the given name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVObject.Type">
+      <summary>Type of object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAVObjectConverter">
+      <summary>Provides access to members that control the ArcView (3.x) object converter.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConnectToView(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Returns the map associated with an AV view object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertBounds(ESRI.ArcGIS.CartoUI.IAVObject,System.Double,System.Double)">
+      <summary>Converts an AV rectangle (or MapDpy) object to an envelope.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertColor(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Converts an AV color object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertElement(ESRI.ArcGIS.CartoUI.IAVObject,System.Double,System.Double,System.Int16,ESRI.ArcGIS.Carto.IGraphicsContainer)">
+      <summary>Converts an AV graphic object into an element.  All elements except MapSurrounds are converted when 'pass' is 0.  Only MapSurrounds are converted when 'pass' is 1.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertFont(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Converts an AV font object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertGeometry(ESRI.ArcGIS.CartoUI.IAVObject,System.Double,System.Double)">
+      <summary>Converts an AV shape object to a geometry object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertLegend(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Returns a Renderer from an ArcView legend object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertProjection(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Converts an AV projection object to a spatial reference object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ConvertSymbol(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Returns a symbol from an ArcView symbol object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ImportLayout(System.String,ESRI.ArcGIS.Carto.IPageLayout)">
+      <summary>Imports a layout from an APR file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ImportView(System.String,ESRI.ArcGIS.Carto.IMap)">
+      <summary>Imports a view from an APR file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVObjectConverter.Map(System.Int32)">
+      <summary>The converted map at the given index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVObjectConverter.MapCount">
+      <summary>The number of maps converted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.NextObject">
+      <summary>Returns the next object in the project.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.QueryFeatureClass(ESRI.ArcGIS.CartoUI.IAVObject)">
+      <summary>Returns a feature class with the same properties as the input feature theme object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.QueryObjectByID(System.Int32)">
+      <summary>Returns the object specified by the given object id.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.QueryObjectProperty(ESRI.ArcGIS.CartoUI.IAVObject,System.String)">
+      <summary>Returns the named property object associated with the given object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.ReadObjects(System.String)">
+      <summary>Reads an ArcView 3.x ODL file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.Reset">
+      <summary>Resets the enumerator.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVObjectConverter.SetFeatureSymbology(ESRI.ArcGIS.CartoUI.IAVObject,ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Sets the layer symbology for a given feature layer, based on a feature theme's legend.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IAVThemeImporter">
+      <summary>Provides access to members that control the ArcView (3.x) theme importer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IAVThemeImporter.CanImport(ESRI.ArcGIS.CartoUI.IAVObject,ESRI.ArcGIS.CartoUI.IAVObjectConverter)">
+      <summary>Indicates if the importer supports the given type of AV theme object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IAVThemeImporter.Import(ESRI.ArcGIS.CartoUI.IAVObject,ESRI.ArcGIS.CartoUI.IAVObjectConverter)">
+      <summary>Imports the AV theme object into a layer object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IClassificationDialog">
+      <summary>Provides access to members that control a dialog for working with properties of a classification.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IClassificationDialog.ClassBreaks">
+      <summary>Array of class breaks (double). ClassBreaks(0) is the minimum value in the dataset, and subsequent breaks represent the upper limit of each class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IClassificationDialog.Classification">
+      <summary>Classification object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IClassificationDialog.DoModal(System.Int32)">
+      <summary>Shows the dialog modally.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IClassificationDialog.LowerThreshold">
+      <summary>Lower bound of the first class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IClassificationDialog.NumberFormat">
+      <summary>Number format options.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IClassificationDialog.SetClassLimits(System.Int32,System.Int32)">
+      <summary>Sets the minimum and maximum allowed number of classes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IClassificationDialog.SetData(System.Object)">
+      <summary>Sets data to the dialog via an array of values.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IClassificationDialog.SetHistogramData(ESRI.ArcGIS.CartoUI.IHistogram)">
+      <summary>Sets data to the dialog via a histogram.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IClassificationDialog.UpperThreshold">
+      <summary>Upper bound of the last class (commonly set to the last ClassBreak).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ICreateHyperlinkMacroDialog">
+      <summary>Provides access to members that control the Create Hyperlink Macro Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ICreateHyperlinkMacroDialog.DocumentText">
+      <summary>The text entered in the document field of the dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ICreateHyperlinkMacroDialog.DoModal(ESRI.ArcGIS.Framework.IApplication,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ICreateHyperlinkMacroDialog.MacroText">
+      <summary>The text entered in the macro field of the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ICreateHyperlinkMacroDialog.ModuleText">
+      <summary>The text entered in the module field of the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDataFrameAreaOfInterestDialog">
+      <summary>Provides access to the data frame's area of interest property.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDataFrameAreaOfInterestDialog.DoModal(ESRI.ArcGIS.Carto.IMapFrame,System.Int32)">
+      <summary>Specify data frame's area of interest.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDataFrameClippingDialog">
+      <summary>Provides access to members of the data frame clipping dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDataFrameClippingDialog.DoModal(ESRI.ArcGIS.Carto.IMapFrame,ESRI.ArcGIS.Carto.IGraphicsContainer,System.Int32)">
+      <summary>Specify clip shape to data frame.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDataFrameFixedExtentDialog">
+      <summary>Provides access to the data frame's fixed bounds property.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDataFrameFixedExtentDialog.DoModal(ESRI.ArcGIS.Carto.IMapFrame,System.Int32)">
+      <summary>Specify data frame's fixed bounds.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDataHistogram">
+      <summary>Provides access to members used to create a histogram from data values.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDataHistogram.SetData(System.Object)">
+      <summary>Sets data from a array of values (doubles).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDataHistogram.SetHistogramData(System.Object,System.Object)">
+      <summary>Sets data from a histogram; an array of values (doubles) and a paired array of frequencies (longs).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDatumChecker">
+      <summary>Provides access to members that check for datum inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker.AddLayerCheck(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.ILayer,System.Int32)">
+      <summary>Adds a layer and checks for datum inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker.AddLayerReset">
+      <summary>Resets an AddLayer loop.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker.SetSpatialReferenceCheck(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Geometry.ISpatialReference,System.Int32)">
+      <summary>Checks for a change to the data frame's spatial reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDatumChecker2">
+      <summary>Provides basic map access to members that check for datum inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.AddLayerCheckBasic(ESRI.ArcGIS.Carto.IBasicMap,ESRI.ArcGIS.Carto.ILayer,System.Int32)">
+      <summary>Adds a layer and checks for datum inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.SetAppRegKey(System.String)">
+      <summary>Sets name of application for registry key lookup.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.SetSpatialReferenceCheckBasic(ESRI.ArcGIS.Carto.IBasicMap,ESRI.ArcGIS.Geometry.ISpatialReference,System.Int32)">
+      <summary>Checks for a change to the data frame's spatial reference.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.AddLayerCheck(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Carto.ILayer,System.Int32)">
+      <summary>Adds a layer and checks for datum inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.AddLayerReset">
+      <summary>Resets an AddLayer loop.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDatumChecker2.SetSpatialReferenceCheck(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.Geometry.ISpatialReference,System.Int32)">
+      <summary>Checks for a change to the data frame's spatial reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IDotDensitySymbolUIDialog">
+      <summary>Provides access to members that control a dialog for working with some properties of a DotDensitySymbol object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IDotDensitySymbolUIDialog.DoModal(System.Int32)">
+      <summary>Displays the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IDotDensitySymbolUIDialog.Layer">
+      <summary>Dot density masking layer (i.e. the control layer).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IDotDensitySymbolUIDialog.Layers">
+      <summary>Layers available to the user for dot density masking.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IDotDensitySymbolUIDialog.Symbol">
+      <summary>Dot density fill symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IFeatureAdjustmentAssociationPage">
+      <summary>Provides access to the cadastral feature adjustment association page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IFeatureAdjustmentAssociationPage.CadastralFabric">
+      <summary>Store the Cadastral Fabric which is to be modified.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IFeatureAdjustmentAssociationPage.SaveAdjustmentSettings">
+      <summary>Save changes made to the adjustment page.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IFeatureLayerSourcePageExtension">
+      <summary>Provides access to members that control a dialog for setting a feature layer's data source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IFeatureLayerSourcePageExtension.DataSourceReadOnly">
+      <summary>Indicates if the data source can be changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IFeatureLayerSourcePageExtension.Description(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>The default description text.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IFeatureLayerSourcePageExtension.ShowDialog(ESRI.ArcGIS.Carto.IFeatureLayer,System.Int32)">
+      <summary>Shows a custom dialog to change the data source.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IHistogram">
+      <summary>Provides access to members that control histogram objects created from different data sources.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IHistogram.CustomMax">
+      <summary>Custom maximum.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IHistogram.CustomMin">
+      <summary>Custom minimum.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.ExclusionDoModal(System.Int32,System.Boolean@)">
+      <summary>Shows the exclusion dialog for the histogram.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.GetHistogram(System.Object@,System.Object@)">
+      <summary>Histogram as an array of values (doubles) and a paired array of frequencies (longs).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.HasExclusion(System.Boolean@)">
+      <summary>Indicates if the histogram uses exclusion.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.HasSampling(System.Boolean@)">
+      <summary>Indicates if the histogram uses data sampling.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.ResetCustomMinMax">
+      <summary>Resets custom minimum and maximum.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram.SamplingDoModal(System.Int32,System.Boolean@)">
+      <summary>Shows the sampling dialog for the histogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IHistogram2">
+      <summary>Provides access to members that control histogram objects created from different data sources.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IHistogram2.Invalidate">
+      <summary>Invalidates the Histogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IIdentifyDialog">
+      <summary>Provides access to members that control Identifying layers by OID or a point.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog.AddLayerIdentifyOID(ESRI.ArcGIS.Carto.ILayer,System.Int32)">
+      <summary>Add layer and show object of the given OID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog.AddLayerIdentifyPoint(ESRI.ArcGIS.Carto.ILayer,System.Int32,System.Int32)">
+      <summary>Add layer and show objects that contain the given point.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog.ClearLayers">
+      <summary>Clear shown layers.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog.Display">
+      <summary>The display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog.Map">
+      <summary>The map of identifying layers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog.Show">
+      <summary>Show dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IIdentifyDialog2">
+      <summary>Provides access to members that control Identifying tables by OID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.AddLayerIdentifyObject(ESRI.ArcGIS.Carto.ILayer,System.Object,ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Add layer and show object hit at given location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.AddLayerIdentifyPoint(ESRI.ArcGIS.Carto.ILayer,System.Int32,System.Int32,System.Int32,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Add layer and show objects that contain the given point.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.AddTableIdentifyOID(ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.ITable,System.Int32)">
+      <summary>Add table and show row of the given OID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.BasicMap">
+      <summary>The basic map of identifying layers.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.HideContextMenu">
+      <summary>Indicates if the context menu for identify results should be hidden when the user right-clicks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.HideLayersComboBox">
+      <summary>Indicates whether to hide Layers ComboBox in Identify Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.SelectLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Select a specific layer in the combobox. This only works if the dialog is visible.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialog2.Visible">
+      <summary>Indicates if the Identify Dialog is visible.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IIdentifyDialogProps">
+      <summary>Provides access to members that control Identify dialog properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialogProps.FlashEffect">
+      <summary>The flash effect.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialogProps.Layers">
+      <summary>The layers eligible for searching.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IIdentifyDialogProps.TopmostOnly">
+      <summary>Indicates if the search stops once a result has been found.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelEngineChecker">
+      <summary>Provides basic map access to members that check for label engine inconsistencies.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelEngineChecker.CheckForLabelEngine(ESRI.ArcGIS.Carto.IMap,ESRI.ArcGIS.esriSystem.IArray,System.Int32)">
+      <summary>Checks for label engine inconsistencies for a set of layers and displays the dialog if necessary.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelManagerDialog">
+      <summary>Provides access to members that control the Label Manager Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelManagerDialog.DoModal(ESRI.ArcGIS.Carto.IMap,System.Int32)">
+      <summary>Shows the Label Manager.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelPriorityRankingDialog">
+      <summary>Provides access to members that control the Label Priority Ranking Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelPriorityRankingDialog.DoModal(ESRI.ArcGIS.Carto.IMap,System.Int32)">
+      <summary>Shows the Label Priority Ranking Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog">
+      <summary>Provides access to members that control the Label Scale Range Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog.DoModal(System.Double,System.Double,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog.MaximumScale">
+      <summary>The maximum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog.MinimumScale">
+      <summary>The minimum scale entered in the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog2">
+      <summary>Provides access to members that control the Label Scale Range Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog2.DoModal(System.Double,System.Double,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog2.Map">
+      <summary>Optional map. Set this before calling DoModal.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog2.MaximumScale">
+      <summary>The maximum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILabelScaleRangeDialog2.MinimumScale">
+      <summary>The minimum scale entered in the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelStyleSelector">
+      <summary>Provides access to members that control a Label Style Selector.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelStyleSelector.Applies(ESRI.ArcGIS.Carto.ILabelStyle)">
+      <summary>Indicates if this label style selector can be used with the specified label style.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILabelWeightRankingDialog">
+      <summary>Provides access to members that control the Label Weight Ranking Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILabelWeightRankingDialog.DoModal(ESRI.ArcGIS.Carto.IMap,System.Int32)">
+      <summary>Shows the Label Weight Ranking Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ILegendWizard">
+      <summary>Provides access to members of the legend wizard.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ILegendWizard.DoModal(System.Int32)">
+      <summary>Displays the legend wizard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILegendWizard.InitialLegendFrame">
+      <summary>The initial legend frame (optional).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILegendWizard.LegendFrame">
+      <summary>The legend frame (valid after calling DoModal).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ILegendWizard.PageLayout">
+      <summary>The page layout containing the map frame.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMapGridFactory">
+      <summary>Provides access to members of the map grid factory.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMapGridFactory.Create(ESRI.ArcGIS.Carto.IMapFrame)">
+      <summary>Creates a map grid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridFactory.Name">
+      <summary>The name of the map grid class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMapGridSelector">
+      <summary>Provides access to the map grid selector.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridSelector.MapFrame">
+      <summary>The map frame whose map grids are edited.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMapGridWizard">
+      <summary>Provides access to members of the map grid wizard.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMapGridWizard.DoModal(System.Int32)">
+      <summary>Shows the map grid wizard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridWizard.GraphicElement">
+      <summary>The generated graphic element, if any (valid after calling DoModal).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridWizard.InitialGrid">
+      <summary>The initial map grid (optional).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridWizard.MapFrame">
+      <summary>The map frame the grid will be added to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridWizard.MapGrid">
+      <summary>The specified grid (valid after calling DoModal).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IMapGridWizard.PageLayout">
+      <summary>The page layout containing the map frame.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMaplexDictionaryDialog">
+      <summary>Provides access to members that control the Maplex Dictionary Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMaplexDictionaryDialog.DoModal(ESRI.ArcGIS.Carto.IMaplexDictionaries,System.Int32)">
+      <summary>Shows the Maplex Dictionary Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMaplexDictionaryDialog2">
+      <summary>Provides access to members that control the Maplex Dictionary Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMaplexDictionaryDialog2.DoModal(System.Boolean,ESRI.ArcGIS.Carto.IMaplexDictionaries,System.Int32)">
+      <summary>Shows the Maplex Dictionary Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMaplexKeyNumberGroupDialog">
+      <summary>Provides access to members that control the Maplex Key Number Group Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMaplexKeyNumberGroupDialog.DoModal(System.Boolean,ESRI.ArcGIS.Carto.IMaplexKeyNumberGroups,System.Int32)">
+      <summary>Shows the Key Number Group Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IMaplexWeightRankingDialog">
+      <summary>Provides access to members that control the Maplex Weight Ranking Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IMaplexWeightRankingDialog.DoModal(ESRI.ArcGIS.Carto.IMap,System.Int32)">
+      <summary>Shows the Maplex Weight Ranking Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage">
+      <summary>Provides access to members that control the NetworkRendererPropertyPage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.AppliesTo(ESRI.ArcGIS.Carto.esriNetworkRendererType)">
+      <summary>Indicates if the property page is applicable to the specified renderer type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.CanEdit(ESRI.ArcGIS.Carto.INetworkRenderer,System.Boolean@)">
+      <summary>Indicates if the network renderer can be edited by the property page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.Category">
+      <summary>Category for the renderer property page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.ClassID">
+      <summary>Property page class id (unique identifier object).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.Description">
+      <summary>Description of the renderer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.Name(ESRI.ArcGIS.Carto.esriNetworkRendererType)">
+      <summary>Renderer name for the specified renderer type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.PreviewImage">
+      <summary>Preview bitmap for the renderer that appears on the page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.INetworkRendererPropertyPage.RendererClassID">
+      <summary>Renderer class id (unique identifier object).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.INewGeoTransformationDialog">
+      <summary>Provides access to the members that create a new geographic transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.INewGeoTransformationDialog.DoModal(ESRI.ArcGIS.Geometry.IGeographicCoordinateSystem,ESRI.ArcGIS.Geometry.IGeographicCoordinateSystem)">
+      <summary>Shows the New GeoTransformation dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.INewGeoTransformationDialog2">
+      <summary>Provides access to instantiate the default transformation in New GeoTransformation dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.INewGeoTransformationDialog2.SetDefault(ESRI.ArcGIS.Geometry.IGeoTransformation)">
+      <summary>Sets a transformation in the New GeoTransformation dialog to work with.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IProtectNameCartoUI">
+      <summary>Provides access to dummy methods protecting name correctness.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IProtectNameCartoUI.ProtectOLE_COLOR(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IProtectNameCartoUI.ProtectOLE_HANDLE(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IQueryWizard">
+      <summary>Provides access to members of the query wizard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IQueryWizard.CombinationMethod">
+      <summary>The selected combination method (valid after calling DoModal).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IQueryWizard.DoModal(System.Int32)">
+      <summary>Shows the query wizard.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IQueryWizard.InitialLayer">
+      <summary>The initial layer (optional).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IQueryWizard.Layer">
+      <summary>The layer selected (valid after calling DoModal).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IQueryWizard.Map">
+      <summary>The map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IQueryWizard.WhereClause">
+      <summary>The generated WHERE clause (valid after calling DoModal).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IRendererPropertyPage">
+      <summary>Provides access to members that control renderer property pages.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.CanEdit(ESRI.ArcGIS.Carto.IFeatureRenderer)">
+      <summary>Indicates if the property page can modify the properties of the specified renderer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.ClassID">
+      <summary>Property page class id (unique identifier object).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.Description">
+      <summary>Renderer description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.Name">
+      <summary>Name of the renderer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.PreviewImage">
+      <summary>Preview bitmap for the renderer that appears on the page.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.RendererClassID">
+      <summary>Renderer class id (unique identifier object).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererPropertyPage.Type">
+      <summary>Renderer type. Used to group renderers into categories.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IRendererUIDialog">
+      <summary>Provides access to members that control dialogs for managing transparency and rotation related renderer properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IRendererUIDialog.DoModal(System.Int32)">
+      <summary>Displays the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererUIDialog.FeatureClass">
+      <summary>The feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererUIDialog.Renderer">
+      <summary>The renderer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.IRendererUIDialog2">
+      <summary>Provides access to members that control a dialog for working with the size properties of chart symbols.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.IRendererUIDialog2.DoModal(System.Int32)">
+      <summary>Displays the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererUIDialog2.FeatureLayer">
+      <summary>The feature layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.IRendererUIDialog2.Renderer">
+      <summary>The renderer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ISQLQueryDialog">
+      <summary>Provides access to members that control the SQL Query Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISQLQueryDialog.DoModal(System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISQLQueryDialog.SQLQuery">
+      <summary>The SQL query entered in the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ISQLQueryDialog2">
+      <summary>Provides access to members that control the SQL Query Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISQLQueryDialog2.DoModal(System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISQLQueryDialog2.DoModalEx(System.String,ESRI.ArcGIS.Carto.IFeatureLayer,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISQLQueryDialog2.SQLQuery">
+      <summary>The SQL query entered in the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ISymbolLevelDialog">
+      <summary>Provides access to the Symbol Level Dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelDialog.DataFrame">
+      <summary>The data frame whose symbol levels are edited.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISymbolLevelDialog.DoModal(System.Int32)">
+      <summary>Shows the Symbol Level Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog">
+      <summary>Provides access to members that control a dialog for setting symbol levels.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.ControlLayer">
+      <summary>Inform the dialog about a layer that controls the symbol levels at a more global scope.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.DoModal(System.Int32)">
+      <summary>Displays the dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.EnableApplyButton(System.Boolean,ESRI.ArcGIS.Carto.IMap)">
+      <summary>Enable apply button in dialog and pass map to refresh if apply is pressed. </summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.Layer">
+      <summary>The Layer for which the symbol levels should be displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.SymbolArray">
+      <summary>Provides access to the modified symbols from the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.Symbols(System.Object,System.Object,System.Object)">
+      <summary>Add data to populate the symbol level list control.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.ISymbolLevelsDialog.UseSymbolLevels">
+      <summary>Indicates if symbol levels are used.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialog">
+      <summary>Dialog to set advanced drawing options for the Map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass">
+      <summary>Dialog to set advanced drawing options for the Map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass.DataFrame">
+      <summary>The data frame whose layers are to be masked.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass.IAdvancedDrawingDialog_DataFrame">
+      <summary>The data frame whose layers are to be masked.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.CartoUI..">
+      <summary>Dialog to set advanced drawing options for the Map. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.CartoUI.._">
+      <summary>Dialog to set advanced drawing options for the Map. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass.#ctor">
+      <summary>Dialog to set advanced drawing options for the Map. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass.DoModal(System.Int32)">
+      <summary>Shows the Advanced Drawing Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AdvancedDrawingDialogClass.IAdvancedDrawingDialog_DoModal(System.Int32)">
+      <summary>Shows the Advanced Drawing Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialog">
+      <summary>Esri Annotation Feature Class Scale Range Dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass">
+      <summary>Esri Annotation Feature Class Scale Range Dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.DoModal(System.Double,System.Double,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog_DoModal(System.Double,System.Double,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.CartoUI..">
+      <summary>Esri Annotation Feature Class Scale Range Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.CartoUI.._">
+      <summary>Esri Annotation Feature Class Scale Range Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.#ctor">
+      <summary>Esri Annotation Feature Class Scale Range Dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.MaximumScale">
+      <summary>The maximum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog_MaximumScale">
+      <summary>The maximum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.MinimumScale">
+      <summary>The minimum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog_MinimumScale">
+      <summary>The minimum scale entered in the dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog2_DoModal(System.Double,System.Double,System.Int32)">
+      <summary>Shows the SQL query dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.Map">
+      <summary>Optional map. Set this before calling DoModal.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog2_Map">
+      <summary>Optional map. Set this before calling DoModal.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog2_MaximumScale">
+      <summary>The maximum scale entered in the dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.CartoUI.AnnoClassScaleRangeDialogClass.ILabelScaleRangeDialog2_MinimumScale">
+      <summary>The minimum scale entered in the dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AnnoDisplayPropertyPage">
+      <summary>Property page for managing display properties of annotation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.CartoUI.AnnoDisplayPropertyPageClass">
+      <summary>Property page for managing display properties of annotation.</summary>
+    </member>
+  </members>
+</doc>

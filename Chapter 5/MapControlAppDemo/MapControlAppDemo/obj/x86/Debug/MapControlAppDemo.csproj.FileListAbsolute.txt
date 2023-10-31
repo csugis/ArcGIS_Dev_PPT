@@ -22,3 +22,4 @@ D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ES
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.TrackingAnalyst.xml
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.DataSourcesRaster.dll
 D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\bin\Debug\ESRI.ArcGIS.DataSourcesRaster.xml
+D:\Documents\Visual Studio 2019\MapControlAppDemo\MapControlAppDemo\obj\x86\Debug\MapControlAppDemo.csproj.AssemblyReference.cache

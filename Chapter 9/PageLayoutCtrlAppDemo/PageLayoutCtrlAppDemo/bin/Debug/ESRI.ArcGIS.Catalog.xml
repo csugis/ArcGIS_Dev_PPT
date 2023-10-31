@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.Catalog</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.Catalog.IAGSObjectCreationProperties">
+      <summary>Provides access to members that define creation properties of an ArcGIS Server object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IAGSObjectCreationProperties.DoStartEnable">
+      <summary>Indicates whether the server object has been started.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IAGSObjectCreationProperties.ObjectConfiguration">
+      <summary>The associated server object configuration during object creation time.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IEnumGxObject">
+      <summary>Provides access to members that enumerate through GxObjects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IEnumGxObject.Next">
+      <summary>The next object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IEnumGxObject.Reset">
+      <summary>Starts the enumeration at the beginning.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IEnumGxObjectFactory">
+      <summary>Provides access to members that enumerate through GxObject factories.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IEnumGxObjectFactory.Next">
+      <summary>The next factory.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IEnumGxObjectFactory.Reset">
+      <summary>Starts the enumeration at the beginning.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAddGISServerCommand">
+      <summary>Provides access to members that manages Add GIS Server command.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAddGISServerCommand.GetChildren">
+      <summary>An enumeration of the child objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSCatalog">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server data sharing object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSConnection">
+      <summary>Provides access to members of GxObject that connects to an ArcGIS server (AGS).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSConnection.AGSServerConnectionName">
+      <summary>The associated AGS server connection name object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSConnection.Connect">
+      <summary>Connects to an ArcGIS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSConnection.Disconnect">
+      <summary>Disconnects from an ArcGIS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSConnection.EditServerProperties(System.Int32,System.Int16)">
+      <summary>Presents a modal dialog to allow editing the default properties of the server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSConnection.FileName">
+      <summary>Path to the AGS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSConnection.IsConnected">
+      <summary>Indicates whether the AGS connection has been made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSConnection.LoadFromFile(System.String)">
+      <summary>Loads an AGS connection file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSConnection.SaveToFile(System.String)">
+      <summary>Writes an AGS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSConnection.SelectedServerObjects">
+      <summary>The selected server objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSDraft">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server (AGS) draft object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSDraft.FilePath">
+      <summary>The cooresponding file path of a draft service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSDraft.TypeName">
+      <summary>Name of draft Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSDraftFolder">
+      <summary>Provides access to members of GxObject that represents a draft service folder object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSDraftFolder.AGSServerConnectionName">
+      <summary>The AGS server connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSDraftFolder.StagingFolder">
+      <summary>The staging folder of this connection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSFeatureServer">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server feature server object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSFolder">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSFolder.AGSServerConnection">
+      <summary>The AGS server connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSFolder.AGSServerConnectionName">
+      <summary>The AGS server connection name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSFolder.EditFolderProperties(System.Int32)">
+      <summary>Edit the folder properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSFolder.Name">
+      <summary>The AGS folder name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSFolder.SelectedServerObjects">
+      <summary>The selected server objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSGeoDataServer">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server geodataserver object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSGeometry">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server geometry object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSGeoprocessing">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server geoprocessing object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSGlobe">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server globe object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSGlobeLayer">
+      <summary>Provides access to members of GxObject that represents a layer in an ArcGIS Server globe object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSGlobeLayer.AGSServerObjectName">
+      <summary>The associated AGS server object name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSGlobeLayer.GlobeLayerInfo">
+      <summary>The information provided by the server.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSImage">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Image Server Service object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSImage2">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Image Server Service object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSImage2.Table">
+      <summary>The attribute table of the Image Service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSLocator">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server locator object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSMap">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server map object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSMobile">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server mobile object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSObject">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server (AGS) object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject.AGSServerObjectName">
+      <summary>The associated AGS server object name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSObject.EditServerObjectProperties(System.Int32)">
+      <summary>Presents a modal dialog to allow editing the properties of the server object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject.NumInstancesInUse">
+      <summary>The number of instances in use.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject.NumInstancesRunning">
+      <summary>The number of instances running.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject.Status">
+      <summary>The status of the server object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSObject2">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server (AGS) object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject2.ServerObjectType">
+      <summary>Name of Server Object Type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject2.AGSServerObjectName">
+      <summary>The associated AGS server object name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSObject2.EditServerObjectProperties(System.Int32)">
+      <summary>Presents a modal dialog to allow editing the properties of the server object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject2.NumInstancesInUse">
+      <summary>The number of instances in use.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject2.NumInstancesRunning">
+      <summary>The number of instances running.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject2.Status">
+      <summary>The status of the server object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSObject3">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server (AGS) object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.ServerObjectConfiguration">
+      <summary>Server Object Configuration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.ServerObjectType">
+      <summary>Name of Server Object Type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.AGSServerObjectName">
+      <summary>The associated AGS server object name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxAGSObject3.EditServerObjectProperties(System.Int32)">
+      <summary>Presents a modal dialog to allow editing the properties of the server object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.NumInstancesInUse">
+      <summary>The number of instances in use.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.NumInstancesRunning">
+      <summary>The number of instances running.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxAGSObject3.Status">
+      <summary>The status of the server object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxAGSWMServer">
+      <summary>Provides access to members of GxObject that represents a ArcGIS Server Workflow Manager object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxBasicObject">
+      <summary>Indicator interface that identifies an object that is considered a basic object type (for example, a folder).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCachedObjects">
+      <summary>Provides access to members that load/release objects being cached for efficiency.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCachedObjects.LoadCachedObjects">
+      <summary>Loads any objects that should be cached for efficiency.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCachedObjects.ReleaseCachedObjects">
+      <summary>Releases any objects that have been cached for efficiency.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalog">
+      <summary>Provides access to members that manages a GX catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.Close">
+      <summary>Closes the catalog object.  Clients that create a catalog object must call this method when they are finished using it.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ConnectFolder(System.String)">
+      <summary>Adds a folder connection to the catalog and returns the folder object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ConstructFullName(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Constructs the full name for an object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.DisconnectFolder(System.String)">
+      <summary>Removes a folder connection from the catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalog.FileFilter">
+      <summary>The file filter.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.GetObjectFromFullName(System.String,System.Int32@)">
+      <summary>Finds an object in the catalog tree given its full name.  Returns a Variant containing an IGxObject or IEnumGxObject (if duplicate names were encountered), along with the number of objects found.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalog.Location">
+      <summary>The location to the specified path.  If the path isn't yet part of the catalog, it is added as a folder connection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ObjectAdded(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when a new object has been added to part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ObjectChanged(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an existing object from part of the catalog has been changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ObjectDeleted(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an existing object has been deleted from part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalog.ObjectRefreshed(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an existing object has been refreshed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalog.SelectedObject">
+      <summary>The first selected object, or the location if no objects are selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalog.Selection">
+      <summary>The selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalogDefaultDatabase">
+      <summary>Provides access to members that manages a GX catalog default geodatabase.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalogDefaultDatabase.DefaultDatabaseName">
+      <summary>The default geodatabase.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalogDefaultDatabase.DefaultDatabaseNameNoValidate">
+      <summary>The default geodatabase.  Does not perform validation on the geodatabase.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalogEvents">
+      <summary>Provides access to events that the catalog can fire.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEvents.OnObjectAdded(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object has been added to some part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEvents.OnObjectChanged(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object in some part of the catalog has been changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEvents.OnObjectDeleted(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object has been deleted from some part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEvents.OnObjectRefreshed(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object in some part of the catalog has been refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEvents.OnRefreshAll">
+      <summary>Called when the whole catalog has changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp">
+      <summary>Provides access to events that the catalog can fire.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event">
+      <summary>Provides access to events that the catalog can fire.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp.OnObjectAdded(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object has been added to some part of the catalog.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event.OnObjectAdded">
+      <summary>Called when an object has been added to some part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp.OnObjectChanged(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object in some part of the catalog has been changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event.OnObjectChanged">
+      <summary>Called when an object in some part of the catalog has been changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp.OnObjectDeleted(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object has been deleted from some part of the catalog.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event.OnObjectDeleted">
+      <summary>Called when an object has been deleted from some part of the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp.OnObjectRefreshed(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Called when an object in some part of the catalog has been refreshed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event.OnObjectRefreshed">
+      <summary>Called when an object in some part of the catalog has been refreshed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp.OnRefreshAll">
+      <summary>Called when the whole catalog has changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxCatalogEventsDisp_Event.OnRefreshAll">
+      <summary>Called when the whole catalog has changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxCatalogWorkspace">
+      <summary>Provides access to members that manages a GX catalog workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxCatalogWorkspace.OpenWorkspaceFolder(System.String)">
+      <summary>Opens the document catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalogWorkspace.UseWorkspaceFolder">
+      <summary>Indicates if the catalog uses a workspace folder as a home folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxCatalogWorkspace.WorkspaceFolderPath">
+      <summary>The workspace path.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxContentViewControlCustom">
+      <summary>Provides access to members that controls GxContentViewControlCustom.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxContentViewControlCustom.ViewClassID">
+      <summary>The class ID of the custom content view control.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDatabase">
+      <summary>Provides access to members that manage the properties of a GX database object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabase.Disconnect">
+      <summary>Disconnects or releases the connection to the underlying database.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase.IsConnected">
+      <summary>Indicates if the database is connected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase.IsRemoteDatabase">
+      <summary>Indicates if the database is remote.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase.Workspace">
+      <summary>The associated workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase.WorkspaceName">
+      <summary>The workspace name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDatabase2">
+      <summary>Provides access to members that manage the properties of a GX database object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabase2.Connect">
+      <summary>Connectsto the underlying database.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabase2.Disconnect">
+      <summary>Disconnects or releases the connection to the underlying database.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase2.IsConnected">
+      <summary>Indicates if the database is connected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase2.IsEnterpriseGeodatabase">
+      <summary>Indicates if the database is an enterprise geodatabase.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase2.IsRemoteDatabase">
+      <summary>Indicates if the database is remote.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase2.Workspace">
+      <summary>The associated workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabase2.WorkspaceName">
+      <summary>The workspace name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDatabaseExtension">
+      <summary>Provides access to members that manage a GX database extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabaseExtension.Catalog">
+      <summary>Attach the catalog to the database extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabaseExtension.Compare(ESRI.ArcGIS.Catalog.IGxObject,ESRI.ArcGIS.Catalog.IGxObject,System.Boolean)">
+      <summary>Check if the objects are children and if yes compare them.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabaseExtension.GetChildren(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Get children.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabaseExtension.HasChildren(ESRI.ArcGIS.Geodatabase.IWorkspace)">
+      <summary>Verify if this extension has children.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabaseExtension.Name">
+      <summary>The name of the extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDatabaseExtensionCompare">
+      <summary>Provides access to members that defines whether something is a database extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabaseExtensionCompare.ExtensionManager">
+      <summary>The extension manager.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDatabaseExtensions">
+      <summary>Provides access to members that return GX database extensions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDatabaseExtensions.Count">
+      <summary>The number of database extensions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDatabaseExtensions.GetExtension(System.Int32)">
+      <summary>Get an extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDataElement">
+      <summary>Provides access to all GxObjects to get their associated data elements.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDataElement.GetDataElement(ESRI.ArcGIS.Geodatabase.IDEBrowseOptions)">
+      <summary>Get the GxObject's data element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDataElementHelper">
+      <summary>Provides access to interface which allows GxObject implementers to partially or completely fill the properties of the peer data element.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDataElementHelper.RetrieveDEBaseProperties(ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Retrieve the GxObject's light-weight properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDataElementHelper.RetrieveDEFullProperties(ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Retrieve the GxObject's heavy-weight properties.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDataGraph2">
+      <summary>Provides access to members that control data graph GxObject.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDataGraph2.DataGraphBase">
+      <summary>The data graph associated with GXObject.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDataset">
+      <summary>Provides access to members that manages the properties of a GX dataset object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDataset.Dataset">
+      <summary>The associated dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDataset.DatasetName">
+      <summary>The associated dataset name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDataset.Type">
+      <summary>The type of the associated dataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDefaultDatabase">
+      <summary>Provides access to members that returns default state of a database.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDefaultDatabase.IsDefault">
+      <summary>Indicates if this database is the current default database.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDiskConnection">
+      <summary>Indicator interface that identifies an object that represents a connection to disk.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDiskConnection2">
+      <summary>Provides access to members that manage properties of GX disk connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDiskConnection2.HasCachedChildren">
+      <summary>Indicates whether the disk connection has children cached.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxDiskConnection2.RefreshStatus">
+      <summary>Refresh the disk connection's status (i.e availability).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDisplayName">
+      <summary>Provides access to the display name of GxObjects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDisplayName.DisplayName">
+      <summary>The display name of the object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxDocument">
+      <summary>Provides access to members that returns the open status of a document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxDocument.IsOpen">
+      <summary>Indicates if this document is the current open document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxExcelFile">
+      <summary>Provides access to members that manage the properties of a GxExcelFile object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxExcelFile.Workspace">
+      <summary>The associated workspace.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxExcelFile.WorkspaceName">
+      <summary>The workspace name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFeatureDefinitionPackage">
+      <summary>Provides access to members that manage a GX feature definition package object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFile">
+      <summary>Provides access to members that manages a file object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFile.Close(System.Boolean)">
+      <summary>Closes the file, optionally saving changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFile.Edit">
+      <summary>Opens an editor to modify the file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFile.New">
+      <summary>Creates a new file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFile.Open">
+      <summary>Opens the file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFile.Path">
+      <summary>The full path for the file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFile.Save">
+      <summary>Saves changes without closing the file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFileFilter">
+      <summary>Provides access to members that manage a file filter for various file types.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilter.AddFileType(System.String,System.String,System.String)">
+      <summary>Add the file type to the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilter.DeleteFileType(System.Int32)">
+      <summary>Remove the file type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFileFilter.FileTypeCount">
+      <summary>The number of file types for the filter.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilter.Filter(System.String)">
+      <summary>Checks to see if the indicated file passes the filter.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilter.FindFileType(System.String)">
+      <summary>The index of the file type in the filter or -1.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilter.GetFileType(System.Int32,System.String@,System.String@,System.String@,System.Int32@,System.Int32@)">
+      <summary>Returns information on the file type at the specified index in the file filter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFileFilterEvents">
+      <summary>Provides access to events that the ArcCatalog file filter can fire.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFileFilterEvents_Event">
+      <summary>Provides access to events that the ArcCatalog file filter can fire.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileFilterEvents.OnDefinitionChanged">
+      <summary>Called when the file filter definition has changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxFileFilterEvents_Event.OnDefinitionChanged">
+      <summary>Called when the file filter definition has changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFileSetup">
+      <summary>Provides access to members that sets up the properties of a file object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFileSetup.Category">
+      <summary>The category of the object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFileSetup.SetImages(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>The images used to represent the object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFilterDataElements">
+      <summary>Provides access to GxFilter data elements.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFilterDataElements.ChooseDomain">
+      <summary>Data element domain.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFilterDataElements.Description">
+      <summary>Filter description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFilterDataElements.DisplayDomain">
+      <summary>Data element domain.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFilterDataElements.Name">
+      <summary>Filter name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFilterSearchServers">
+      <summary>Provides access to members that manage the properties of a GxFilterSearchServer object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFilterSearchServers.ConnectionType">
+      <summary>The connection type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFolder">
+      <summary>Provides access to members that return file system workspaces represented by this folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxFolder.FileSystemWorkspaceNames">
+      <summary>The Name objects for all file system workspaces represented by this folder.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFolderAdmin">
+      <summary>Provides access to members that help find child GX folder.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxFolderAdmin.FindChildFolder(System.String)">
+      <summary>Find a child folder.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxFolderConnections">
+      <summary>Indicator interface that identifies an object that contains folder connections.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGDSConnection">
+      <summary>Provides access to members of GxObject that connects to a GeoData Server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.AttachGeoDatabase(System.String,System.String)">
+      <summary>Attaches a Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Connect">
+      <summary>Connects to a GIS Data server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.CreateGeoDatabase(System.String,System.String,System.Int32)">
+      <summary>Creates a new Geodatabase.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGDSConnection.DataServerManager">
+      <summary>The Data Server Manager object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Disconnect">
+      <summary>Disconnects from a GIS Data server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGDSConnection.IsAdministrator">
+      <summary>Indicates whether the connected user is an administrator or not.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGDSConnection.IsConnected">
+      <summary>Indicates whether the GIS Data server connection has been made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Pause">
+      <summary>Pauses a Database server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.RestoreGeodatabase(System.String,System.String,System.String)">
+      <summary>Restores a backup to the specified Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Resume">
+      <summary>Resumes a Database server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGDSConnection.ServerName">
+      <summary>The server name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Start">
+      <summary>Starts a Database server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGDSConnection.Stop">
+      <summary>Stops a Database server.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGeodatabase">
+      <summary>Provides access to members of GxObject that connect to an Geodatabase object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGeodatabase.Backup(System.String,System.String,System.String,System.Boolean@)">
+      <summary>Backs up a Geodatabase from a Data server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGeodatabase.DataServerManager">
+      <summary>The Data Server Manager object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGeodatabase.DetachGeodatabase">
+      <summary>Detach a Geodatabase from a Data server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGeodatabase.GeodatabaseName(System.String@)">
+      <summary>The Geodatabase name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGeodatabase.GetProperties(System.String@,System.Object@,System.Int32@,System.String@,System.Object@)">
+      <summary>Backup information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGeodatabase.Upgrade">
+      <summary>Upgrades Geodatabase.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGeoprocessingResult">
+      <summary>Provides access to properties/methods of a catalog geoprocessing result object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGISDataServers">
+      <summary>Provides access to the list of GIS Data Servers registered on the system.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGISDataServers.GetRegisteredServers(ESRI.ArcGIS.esriSystem.IFileNames)">
+      <summary>Gets the servers registered on the computer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGISServersFolder">
+      <summary>Provides access to members that manages the properties of a GISServers root folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGISServersFolder.Path">
+      <summary>The full path for the GIS servers folder.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGPTool">
+      <summary>Provides access to properties/methods of a catalog geoprocessing tool object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGPTool.Tool">
+      <summary>The geoprocessing tool object associated with this catalog geoprocessing tool object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxGPTool.UpdateToolState">
+      <summary>Updates the icon of the geoprocessing tool displayed in ArcCatalog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGPToolbox">
+      <summary>Provides access to properties/methods of a catalog toolbox object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGPToolbox.Toolbox">
+      <summary>The toolbox object associated with this GxGPToolbox object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxGPToolbox.ToolboxName">
+      <summary>The toolbox name object associated with this GxGPToolbox object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxGPToolset">
+      <summary>Provides access to properties/methods of a catalog toolset object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxItemInfo">
+      <summary>Provides access to ItemInfo of GxObjects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxItemInfo.CanEditItemInfo">
+      <summary>Indicates whether the ItemInfo is editable.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxItemInfo.ItemInfo">
+      <summary>The ItemInfo of the service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxLayer">
+      <summary>Provides access to members that manage a GX layer object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxLayer.Layer">
+      <summary>The associated layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxLayerSource">
+      <summary>Indicator interface that identifies that the given GxObject can generate a layer for the underlying data source.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxLocator">
+      <summary>Provides access to members for retrieving the locator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxLocator.Locator">
+      <summary>Locator represented by the GxLocator.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxLocator.LocatorName">
+      <summary>Name object for the locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxMap">
+      <summary>Indicator interface that identifies a GxObject that corresponds to an ArcMap document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxMapPageLayout">
+      <summary>Provides access to members that returns the page layer for a map document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxMapPageLayout.PageLayout">
+      <summary>The page layout object in the map document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxMetadataSupport">
+      <summary>Provides access to information for metadata toolbar.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxMetadataSupport.Editor">
+      <summary>Retrive metadata editor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxMetadataSupport.StylesheetPath">
+      <summary>Retrieve stylesheet path.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxMyHostedMapsFolder">
+      <summary>Provides access to members that manages the properties of a GxMyHostedMapsFolder root folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxMyHostedMapsFolder.DisplayName">
+      <summary>Gets the fully qualified name of the My Hosted Services Catalog Item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxNewDatabase">
+      <summary>Provides access to members that defines a new database shortcut.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxNewDatabase.WorkspaceFactory">
+      <summary>The value of the workspace factory property.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObject">
+      <summary>Provides access to members that are common to all GxObjects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObject.Attach(ESRI.ArcGIS.Catalog.IGxObject,ESRI.ArcGIS.Catalog.IGxCatalog)">
+      <summary>Attaches the object to its parent and the catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.BaseName">
+      <summary>The base name of the object (i.e. no extension).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.Category">
+      <summary>The category of the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.ClassID">
+      <summary>The class ID of this object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObject.Detach">
+      <summary>Instructs the object to detach itself from its parent and the catalog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.FullName">
+      <summary>The full name of the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.InternalObjectName">
+      <summary>The Name for the internal object that this GxObject represents.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.IsValid">
+      <summary>Indicates if the object is still valid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.Name">
+      <summary>The short name of the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObject.Parent">
+      <summary>The parent of the object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObject.Refresh">
+      <summary>Updates the object and any children of the object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectArray">
+      <summary>Provides access to members that manage an array of GxObjects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectArray.Count">
+      <summary>The number of objects in the array.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectArray.Empty">
+      <summary>Removes all objects from the array.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectArray.Insert(System.Int32,ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Inserts an object into the array before the specified index.  If index is -1, the object is inserted at the end.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectArray.Item(System.Int32)">
+      <summary>The object at the given index in the array.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectArray.Remove(System.Int32)">
+      <summary>Removes the object at the specified index in the array.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectContainer">
+      <summary>Provides access to members that manage child GxObjects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectContainer.AddChild(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Adds a new child and returns a reference to it.  However, if a duplicate already exists, the function returns the existing child instead.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectContainer.AreChildrenViewable">
+      <summary>Indicates if the objects children are available for viewing in the tree-view.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectContainer.Children">
+      <summary>An enumeration of the child objects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectContainer.DeleteChild(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Deletes the specified child object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectContainer.HasChildren">
+      <summary>Indicates if the object has any children.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectContainer2">
+      <summary>Provides access to members that manage child GxObjects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectContainer2.SearchChildren(System.String,ESRI.ArcGIS.Catalog.IGxObjectArray)">
+      <summary>An search of the child objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectDeleteOptions">
+      <summary>Provides access to members that specify behavior when deleting multiple objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectDeleteOptions.DeleteOption">
+      <summary>Behavior when deleting multiple objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectEdit">
+      <summary>Provides access to members that edit/modify a GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.CanCopy">
+      <summary>Indicates if the object can be copied.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.CanDelete">
+      <summary>Indicates if the object can be deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.CanRename">
+      <summary>Indicates if the object can be renamed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.Delete">
+      <summary>Deletes the object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.EditProperties(System.Int32)">
+      <summary>Presents a modal dialog to allow editing the object's properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectEdit.Rename(System.String)">
+      <summary>Renames the object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactories">
+      <summary>Provides access to members that manage a collection of GxObject factories.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactories.Count">
+      <summary>The number of registered GxObject factories.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactories.EnabledGxObjectFactories">
+      <summary>The enabled GxObject factories (sorted by priority).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFactories.EnableGxObjectFactory(System.Int32,System.Boolean)">
+      <summary>Enables or disables a GxObject factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactories.GxObjectFactory(System.Int32)">
+      <summary>The specified GxObject factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactories.GxObjectFactoryCLSID(System.Int32)">
+      <summary>The class ID of the specified GxObject factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactories.IsEnabled(System.Int32)">
+      <summary>Indicates if a specific GxObject factory is enabled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactory">
+      <summary>Provides access to members that define a GxObject factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactory.Catalog">
+      <summary>Attach the catalog to the object factory.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFactory.GetChildren(System.String,ESRI.ArcGIS.esriSystem.IFileNames)">
+      <summary>Returns an enumeration of objects corresponding to one or more of the given file names supported by the object factory.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFactory.HasChildren(System.String,ESRI.ArcGIS.esriSystem.IFileNames)">
+      <summary>Indicates if any of the specified files are supported by the object factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactory.Name">
+      <summary>The name of the object factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactoryEdit">
+      <summary>Provides access to members that modify the object factory's properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFactoryEdit.EditProperties(System.Int32)">
+      <summary>Presents a modal dialog to allow editing the object factory's properties.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactoryFileExtensions">
+      <summary>Provides access to a set of extensions handled by the factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactoryFileExtensions.ActivationExtensions">
+      <summary>The minimal set of file extensions which should cause the factory to be activated.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactoryFileExtensions.RelevantExtensions">
+      <summary>The complete set of file extensions relevant to the factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactoryMetadata">
+      <summary>Provides access to members that returns a GxObject from some metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFactoryMetadata.GetGxObjectFromMetadata(System.String)">
+      <summary>Given a path to some metadata, constructs the corresponding GxObject.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFactoryPriority">
+      <summary>Provides access to members that manages the priority of a GxObject factory.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFactoryPriority.Priority">
+      <summary>The priority of the object factory.  The higher the priority, the sooner the object factory is used to discover GxObjects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFilter">
+      <summary>Provides access to members that defines a GxObject filter.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFilter.CanChooseObject(ESRI.ArcGIS.Catalog.IGxObject,ESRI.ArcGIS.Catalog.esriDoubleClickResult@)">
+      <summary>Indicates if the given object can be chosen.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFilter.CanDisplayObject(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Indicates if the given object can be displayed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFilter.CanSaveObject(ESRI.ArcGIS.Catalog.IGxObject,System.String,System.Boolean@)">
+      <summary>Indicates if a new object named newObjectName could be saved in the specified location.  If objectAlreadyExists is set to True, a confirmation dialog will appear asking if the existing object should be replaced.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFilter.Description">
+      <summary>A string that describes what this filter does.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFilter.Name">
+      <summary>A user-friendly name identifying this filter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFilterCollection">
+      <summary>Provides access to members that manages a collection of GxObject filters.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFilterCollection.AddFilter(ESRI.ArcGIS.Catalog.IGxObjectFilter,System.Boolean)">
+      <summary>Add a filter to the filter collection, and specify if it is to selected by default.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectFilterCollection.RemoveAllFilters">
+      <summary>Remove all filters from the filter collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectFilterCollectionAdmin">
+      <summary>Provides access to members that returns the first passed GxObject filter in a collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectFilterCollectionAdmin.FirstPassedFilter">
+      <summary>The first passed object filter in filter collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectInternalName">
+      <summary>Provides access to members that manage the name object that the GxObject represents.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectInternalName.InternalObjectName">
+      <summary>The Name for the internal object that this GxObject represents.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectProperties">
+      <summary>Provides access to members that return properties of the GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectProperties.GetPropByIndex(System.Int32,System.String@,System.Object@)">
+      <summary>The name and value of the indexed property in the GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectProperties.GetProperty(System.String)">
+      <summary>The value of the named property in the GxObject.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectProperties.PropertyCount">
+      <summary>The number of properties in the GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectProperties.SetProperty(System.String,System.Object)">
+      <summary>Set the value of the named property in the GxObject.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectSort">
+      <summary>Provides access to members that manages the properties determining whether an object should be sorted or not.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectSort.SortEnabled">
+      <summary>Indicates if sorting is enabled for this GxObject.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectSortAlwaysOnBottom">
+      <summary>Provides access to the interface which makes the GxObject ALWAYS stay at the botton of sort list (regardless of sorting order). eg. GxAGSDatabaseFolder.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectSortAlwaysOnTop">
+      <summary>Provides access to the interface which makes the GxObject ALWAYS stay at the top of sort list (regardless of sorting order). eg. GxAddAGSConnection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectUI">
+      <summary>Provides access to members that represent the icons and menus for a GxObject.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.ContextMenu">
+      <summary>The class ID of the context menu for this object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.LargeImage">
+      <summary>The large image that represents the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.LargeSelectedImage">
+      <summary>The large image that represents the object when it is selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.NewMenu">
+      <summary>The class ID of the New menu for this object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.SmallImage">
+      <summary>The small image that represents the object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxObjectUI.SmallSelectedImage">
+      <summary>The small image that represents the object when it is selected.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxObjectWizard">
+      <summary>Provides access to members that invokes a wizard associated with the GxObject.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxObjectWizard.Invoke(System.Int32)">
+      <summary>Called when the object is double-clicked.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPackage">
+      <summary>Provides access to members that manage a GxPackage object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxPackage.PackageType">
+      <summary>GxPackage type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPasteTarget">
+      <summary>Provides access to members for pasting objects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxPasteTarget.CanPaste(ESRI.ArcGIS.esriSystem.IEnumName,System.Boolean@)">
+      <summary>Indicates if the specified names may be pasted into this object.  On output, moveOperation indicates if a subsequent paste operation would represent a move, or merely a copy, operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxPasteTarget.Paste(ESRI.ArcGIS.esriSystem.IEnumName,System.Boolean@)">
+      <summary>Pastes the specified names into this object.  On input, moveOperation indicates if this is a move operation.  On output, it indicates if the objects have been moved, or merely copied.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPasteTargetHelper">
+      <summary>Provides access to members that help pasting GxObjects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxPasteTargetHelper.CanPaste(ESRI.ArcGIS.esriSystem.IName,ESRI.ArcGIS.Catalog.IGxObject,System.Boolean@)">
+      <summary>Indicates if the specified name object may be pasted into the given target.  On output, moveOperation indicates if a subsequent paste operation would represent a move, or merely a copy, operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxPasteTargetHelper.Paste(ESRI.ArcGIS.esriSystem.IName,ESRI.ArcGIS.Catalog.IGxObject,System.Boolean@)">
+      <summary>Pastes the specified name object into the given target.  On input, moveOperation indicates if this is a move operation.  On output, it indicates if the objects have been moved, or merely copied.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPre70Coverage">
+      <summary>Provides access to members that control the Gx Pre-7.0 Coverage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxPre70Coverage.Path">
+      <summary>The full path of the Coverage.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPrjFile">
+      <summary>Provides access to members that returns the properties of a PRJ file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxPrjFile.SpatialReference">
+      <summary>The geographic or projected coordinate system contained in the PRJ file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxPrjFile2">
+      <summary>Provides access to members that returns the properties of a PRJ file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxPrjFile2.SpatialReferenceInfo">
+      <summary>The vertical or horizontal coordinate system contained in the PRJ file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxPrjFile2.SpatialReference">
+      <summary>The geographic or projected coordinate system contained in the PRJ file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRasterDataset">
+      <summary>Provides access to members that provide information about Gx raster dataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRemoteConnection">
+      <summary>Provides access to members pertaining to remote connections.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxRemoteConnection.Connect">
+      <summary>Connects to a remote data source.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxRemoteConnection.Disconnect">
+      <summary>Disconnects to a remote data source.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRemoteContainer">
+      <summary>Indicator interface that identifies an object that contains objects from a remote source.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRemoteDatabaseFolder">
+      <summary>Provides access to members that defines the remote databases folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxRemoteDatabaseFolder.Path">
+      <summary>The value of the Path property.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRootObjectSortPriority">
+      <summary>Provides access to the sort priority for Gx Root Objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxRootObjectSortPriority.SortPriority">
+      <summary>Returns the sort priority for the Root level Object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxRootObjectStartupProperties">
+      <summary>Provides access to the startup properties for Gx Root Objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxRootObjectStartupProperties.Enabled">
+      <summary>Indicates whether the Root level Object will be visible during startup.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxSelection">
+      <summary>Provides access to members that manages the selection within the catalog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelection.Clear(System.Object)">
+      <summary>Unselects all objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSelection.Count">
+      <summary>The number of selected objects.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSelection.DelayEvents">
+      <summary>Delays or resumes selection event firing.  If the selection changed while events were being delayed, a single event is fired when events are resumed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSelection.FirstObject">
+      <summary>The first object in the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelection.IsSelected(ESRI.ArcGIS.Catalog.IGxObject)">
+      <summary>Checks if an object is selected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSelection.Location">
+      <summary>The location of the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelection.Select(ESRI.ArcGIS.Catalog.IGxObject,System.Boolean,System.Object)">
+      <summary>Selects an object, optionally appending it to the existing selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSelection.SelectedObjects">
+      <summary>The objects in the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelection.SetLocation(ESRI.ArcGIS.Catalog.IGxObject,System.Object)">
+      <summary>Clears the selection and sets a new location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelection.Unselect(ESRI.ArcGIS.Catalog.IGxObject,System.Object)">
+      <summary>Unselects an object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxSelectionEvents">
+      <summary>Provides access to events that the ArcCatalog selection can fire.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxSelectionEvents_Event">
+      <summary>Provides access to events that the ArcCatalog selection can fire.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxSelectionEvents.OnSelectionChanged(ESRI.ArcGIS.Catalog.IGxSelection,System.Object@)">
+      <summary>Called when the selection contents have changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.Catalog.IGxSelectionEvents_Event.OnSelectionChanged">
+      <summary>Called when the selection contents have changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxServiceDefinition">
+      <summary>Provides access to members that manage a GxServiceDefinition object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxServiceDefinition.FilePath">
+      <summary>The cooresponding file path of a draft service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxServiceDefinition.TypeName">
+      <summary>Name of draft Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxShortcut">
+      <summary>Provides access to members that manages the target of a shortcut object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxShortcut.Target">
+      <summary>The value of the Target property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxShortcut.TargetLocation">
+      <summary>The location of the target.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxSpatialReferencesFolder">
+      <summary>Provides access to members that manages the properties of a spatial reference folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxSpatialReferencesFolder.Path">
+      <summary>The full path for the spatial references folder.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxTaskServicesConnection">
+      <summary>Provides access to members that manages the properties of a GxTaskServicesConnection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxTaskServicesFolder">
+      <summary>Provides access to members that manages the properties of a GxTaskServicesFolder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxTaskServicesFolder.Name">
+      <summary>The folder name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxTaskServicesRootFolder">
+      <summary>Provides access to members that manages the properties of a GxTaskServices root folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxTaskServicesRootFolder.DisplayName">
+      <summary>The fully qualified name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxTextFile">
+      <summary>Indicator interface that identifies a GxObject that corresponds to a text file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxThumbnail">
+      <summary>Provides access to members that manages the thumbnail of a GxObject.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxThumbnail.Thumbnail">
+      <summary>The Thumbnail.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxToolbox">
+      <summary>Provides access to members that manage tools for the current selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxToolbox.Execute(System.String,ESRI.ArcGIS.Catalog.IEnumGxObject)">
+      <summary>Executes a named tool with the specified selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxToolbox.GetApplicableTools(ESRI.ArcGIS.Catalog.IEnumGxObject)">
+      <summary>Returns an array of names of tools that apply to the selection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxToolboxesFolder">
+      <summary>Provides access to properties/methods of a catalog toolboxes folder object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxToolboxesFolder.Path">
+      <summary>The value of the Path property.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxToolboxesRoot">
+      <summary>Provides access to properties/methods of the root-level catalog Toolboxes object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWCSConnection">
+      <summary>Provides access to members to connect to an WCS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWCSConnection.Connect">
+      <summary>Connects to the WCS service.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWCSConnection.Disconnect">
+      <summary>Disconnects from the WCS service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWCSConnection.IsConnected">
+      <summary>Indicates whether the server is connected to or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWCSConnection.LoadFromFile(System.String)">
+      <summary>Loads a WCS connection file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWCSConnection.SaveToFile(System.String)">
+      <summary>Writes a WCS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWCSConnection.WCSConnectionName">
+      <summary>Assosicated name object used to connect to a WCS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWCSCoverage">
+      <summary>Provides access to members GxWCSCoverage object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWCSCoverage.WCSCoverageDescription">
+      <summary>The description of WCS coverage.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWMSConnection">
+      <summary>Provides access to members to connect to an WMS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMSConnection.Connect">
+      <summary>Connects to the WMS service.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMSConnection.Disconnect">
+      <summary>Disconnects from the WMS service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMSConnection.IsConnected">
+      <summary>Indicates whether the server is connected to or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMSConnection.LoadFromFile(System.String)">
+      <summary>Loads a WMS connection file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMSConnection.SaveToFile(System.String)">
+      <summary>Writes a WMS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMSConnection.WMSConnectionName">
+      <summary>Assosicated name object used to connect to a WMS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWMSLayer">
+      <summary>Provides access to members GxWMSLayer object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMSLayer.WMSLayerDescription">
+      <summary>The description of WMS layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMSLayer.WMSServiceDescription">
+      <summary>The description of WMS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWMSMap">
+      <summary>Provides access to members GxWMSMap object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMSMap.WMSServiceDescription">
+      <summary>The description of WMS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWMTSConnection">
+      <summary>Provides access to members to connect to an WMTS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMTSConnection.Connect">
+      <summary>Connects to the WMTS service.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMTSConnection.Disconnect">
+      <summary>Disconnects from the WMTS service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMTSConnection.IsConnected">
+      <summary>Indicates whether the server is connected to or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMTSConnection.LoadFromFile(System.String)">
+      <summary>Loads a WMTS connection file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IGxWMTSConnection.SaveToFile(System.String)">
+      <summary>Writes a WMTS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMTSConnection.WMTSConnectionName">
+      <summary>Assosicated name object used to connect to a WMTS service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMTSConnection.WMTSServiceDescription">
+      <summary>The description of WMTS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWMTSLayer">
+      <summary>Provides access to members GxWMTSLayer object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMTSLayer.WMTSLayerDescription">
+      <summary>The description of WMTS layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IGxWMTSLayer.WMTSServiceDescription">
+      <summary>The description of WMTS service.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWorkspaceDatabase">
+      <summary>Indicator interface for GxWorkspaceDatabase objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IGxWorkspaceFolder">
+      <summary>Indicator interface for GxWorkspaceFolder objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IIMSConnection">
+      <summary>Provides access to members to connect to an ArcIMS server (IMS).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IIMSConnection.Connect">
+      <summary>Connects to an ArcIMS server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IIMSConnection.Disconnect">
+      <summary>Disconnects from an ArcIMS server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.FileName">
+      <summary>Path to the IMS connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.FilterServices">
+      <summary>Filters out only the specified services. Array of strings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.IsConnected">
+      <summary>Indicates whether the IMS connection has been made.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IIMSConnection.LoadFromFile(System.String)">
+      <summary>Loads an IMS connection file containing the URL.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.Password">
+      <summary>Password.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.SavePassword">
+      <summary>Indicates if the password should be saved.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IIMSConnection.SaveToFile(System.String)">
+      <summary>Writes an IMS connection file containing the URL.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.URL">
+      <summary>URL to ArcIMS server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection.UserName">
+      <summary>User name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IIMSConnection2">
+      <summary>Provides access to members to connect to an ArcIMS server (IMS).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IIMSConnection2.Version">
+      <summary>ArcIMS server version.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IMetadataExport">
+      <summary>Provides access to members that define a metadata exporter.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IMetadataExport.DefaultFilename">
+      <summary>Default filename (including the file extension) to create on export.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IMetadataExport.Export(ESRI.ArcGIS.Geodatabase.IMetadata,System.String)">
+      <summary>Exports metadata to the specified location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IMetadataExport.Name">
+      <summary>Name of the metadata exporter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IMetadataImport">
+      <summary>Provides access to members that define a metadata importer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IMetadataImport.DefaultFilename">
+      <summary>Default filename (including the file extension) from which to import.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IMetadataImport.Import(System.String,ESRI.ArcGIS.Geodatabase.IMetadata)">
+      <summary>Imports metadata from the specified location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IMetadataImport.Name">
+      <summary>Name of the metadata importer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IMetadataValidator">
+      <summary>Provides access to methods to validate metadata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IMetadataValidator.Validate(ESRI.ArcGIS.esriSystem.IPropertySet,System.Boolean,System.String@)">
+      <summary>Validates metadata.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IQuery">
+      <summary>Provides access to members that let you modify a query.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IQuery.AddFieldQuery(ESRI.ArcGIS.Catalog.esriFindFieldType,ESRI.ArcGIS.Catalog.esriFindFieldOperator,System.String,System.String)">
+      <summary>Adds a field query.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.ClassID">
+      <summary>Class ID indicating the type of query object that has been defined.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.DatasetName">
+      <summary>Name of the dataset for which to search.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.DatasetType">
+      <summary>Type of object for which to search.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.Date1">
+      <summary>Start date, or first date.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.Date2">
+      <summary>End date, or second date.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.DateOperator">
+      <summary>Operator for comparing dates.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.DateType">
+      <summary>Date that will be tested.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.EngineProperties">
+      <summary>Property set containing properties of the search engine that will be used to execute the query.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.Envelope">
+      <summary>Search extent in decimal degrees.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.EnvelopeOperator">
+      <summary>Operator for comparing the dataset's extent to the search extent.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IQuery.GetFieldQuery(System.Int32,ESRI.ArcGIS.Catalog.esriFindFieldType@,ESRI.ArcGIS.Catalog.esriFindFieldOperator@,System.String@,System.String@)">
+      <summary>Returns the nth field query.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.IsCaseSensitive">
+      <summary>Indicates if field query comparisons will be case sensitive.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IQuery.Load(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Loads the query's parameters from the given XML property set.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.NameOfQuery">
+      <summary>Name of the query.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.NativeEnvelope">
+      <summary>Search extent in the dataset's coordinate system.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IQuery.NumFieldQueries">
+      <summary>Number of field queries.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IQuery.Save(ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Saves the query's parameters to the given XML property set.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IRasterFormatFilter">
+      <summary>Provides access to members that provide information about raster formats.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRasterFormatFilter.Extension">
+      <summary>The extension string for a raster format.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IRemoteMetadata">
+      <summary>Provides access to members to manipulate information specific to metadata stored in an ArcIMS Metadata Server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IRemoteMetadata.CreateChild(System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>Creates a new folder as a child of this folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.Dataset">
+      <summary>Name of metadata document on server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.Extent">
+      <summary>The extent of the dataset represented by this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.HasChildren">
+      <summary>Indicates whether this folder has children.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.IndexStatus">
+      <summary>Indicates whether this document is indexed on the server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.isFolder">
+      <summary>Indicates whether this metadata document is a folder.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.IsPrivateDocument">
+      <summary>Indicates whether this metadata document is private.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.IsRoot">
+      <summary>Indicates whether this metadata document is the root document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.MetadataURL">
+      <summary>URL of metadata document on server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.Onlink">
+      <summary>The online linkage contained within this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.Owner">
+      <summary>ArcIMS authenticated user owning metadata document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.IRemoteMetadata.PublishDatasets(ESRI.ArcGIS.esriSystem.IEnumName)">
+      <summary>Publish the metadata of a set of datasets to an ArcIMS Metadata Server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.RefCount">
+      <summary>The number of references to this document on the server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.server">
+      <summary>The URL of the ArcIMS server running the service represented by this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.Service">
+      <summary>The name of the ArcIMS service represented by this document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.ThumbnailURL">
+      <summary>URL of thumbnail image on server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata.UserID">
+      <summary>Unique id (UUID) of metadata document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.IRemoteMetadata2">
+      <summary>Provides access to allow user to decide whether to show dialog and to manipulate specific information on ArcIMS Server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata2.ContentType">
+      <summary>The content type of the metadata document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata2.ModifiedTime">
+      <summary>The modified date and time of the metadata document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.IRemoteMetadata2.ShowDialogs">
+      <summary>Indicates whether publishing status dialogs are shown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.ISearchResults">
+      <summary>Provides access to members that manage the search result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.ISearchResults.Query">
+      <summary>Query defining the search parameters.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.ISearchResultsIdentifyObject">
+      <summary>Provides access to members that identify an object in the search results layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.ISearchResultsIdentifyObject.Extent">
+      <summary>Extent of a shortcut.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.Catalog.ISearchResultsIdentifyObject.Select">
+      <summary>Selects a shortcut in the Catalog tree.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.ISearchResultsIdentifyObject.Shortcut">
+      <summary>Shortcut to identify.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.ISearchResultsLayer">
+      <summary>Provides access to members that control the search results layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.Catalog.ISearchResultsLayer.Path">
+      <summary>Full path to the search results layer file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.ComplexNativeType">
+      <summary>Native type for built up of other native types.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.ComplexNativeTypeClass">
+      <summary>Native type for built up of other native types.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriContentType">
+      <summary>ArcIMS Metadata Server content type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeNone">
+      <summary>No content type criteria.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeData">
+      <summary>Data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeLiveData">
+      <summary>Live Data and Maps.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeDownloadableData">
+      <summary>Downloadable Data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeOfflineData">
+      <summary>Offline Data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeDocuments">
+      <summary>Documents.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeStaticMapImages">
+      <summary>Static Map Images.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeOtherDocuments">
+      <summary>Other Documents.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeResources">
+      <summary>Resources.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeApplications">
+      <summary>Applications.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeGeographicServices">
+      <summary>Geographic Services.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeClearinghouses">
+      <summary>Clearinghouses.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeMapFiles">
+      <summary>Map Files.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriContentType.esriContentTypeGeographicActivities">
+      <summary>Geographic Activities.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriDoubleClickResult">
+      <summary>Object Filter Double-Click Result.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriDoubleClickResult.esriDCRDefault">
+      <summary>Let the dialog handle the double-click in a default manner.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriDoubleClickResult.esriDCRChooseAndDismiss">
+      <summary>Choose the object that was double-clicked, and dismiss the dialog.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriDoubleClickResult.esriDCRShowChildren">
+      <summary>Open the object that was double-clicked, and display its children.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriDoubleClickResult.esriDCRNothing">
+      <summary>Do nothing in response to the double-click.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriFindDateOperator">
+      <summary>Operators for comparing dates.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateOperator.esriFindDateOperatorPrevious">
+      <summary>Finds dates within the given number of days before today's date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateOperator.esriFindDateOperatorBefore">
+      <summary>Finds dates before the first date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateOperator.esriFindDateOperatorDuring">
+      <summary>Finds dates between the first and second date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateOperator.esriFindDateOperatorEqual">
+      <summary>Finds dates equal to the first date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateOperator.esriFindDateOperatorAfter">
+      <summary>Finds dates after the first date.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriFindDateType">
+      <summary>Date that will be tested.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateType.esriFindDateTypeNone">
+      <summary>No date criteria.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateType.esriFindDateTypeContent">
+      <summary>Date criteria tests how current the data is.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateType.esriFindDateTypePublication">
+      <summary>Date criteria tests the publication date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindDateType.esriFindDateTypeMetadata">
+      <summary>Date criteria tests how current the metadata is.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriFindEnvelopeOperator">
+      <summary>Operators for comparing the dataset's extent to the search extent.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindEnvelopeOperator.esriFindEnvelopeOperatorWithin">
+      <summary>Dataset's extent is within the search extent.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindEnvelopeOperator.esriFindEnvelopeOperatorOverlaps">
+      <summary>Dataset's extent overlaps the search extent.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriFindFieldOperator">
+      <summary>Operators for testing the contents of a metadata element.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorIncludes">
+      <summary>Element includes the given text.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorEquals">
+      <summary>Element equals the given text.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorExists">
+      <summary>Element exists in the metadata document.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorEqualTo">
+      <summary>Element is equal to the given value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorGreaterThan">
+      <summary>Element is greater than the given value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorGreaterThanOrEqualTo">
+      <summary>Element is greater than or equal to the given value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorLessThan">
+      <summary>Element is less than the given value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorLessThanOrEqualTo">
+      <summary>Element is less than or equal to the given value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldOperator.esriFindFieldOperatorNotEqualTo">
+      <summary>Element is not equal to the given value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriFindFieldType">
+      <summary>Metadata elements whose values can be tested.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeFullText">
+      <summary>Full text.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeTitle">
+      <summary>Title.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeEdition">
+      <summary>Edition.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeOriginator">
+      <summary>Originator (author, editor, or compiler of the dataset).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeSourceAgency">
+      <summary>Source agency (producers of the source datasets).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeAbstract">
+      <summary>Abstract.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypePurpose">
+      <summary>Purpose.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeGeoForm">
+      <summary>Geospatial data presentation form.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeTheme">
+      <summary>Theme keyword.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypePlace">
+      <summary>Place keyword.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeStratum">
+      <summary>Stratum keyword.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeTemporal">
+      <summary>Temporal keyword.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeEntity">
+      <summary>Entity type label.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeAttribute">
+      <summary>Attribute label.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeLineage">
+      <summary>Lineage.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeSourceScale">
+      <summary>Source scale.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeCloudCover">
+      <summary>Cloud cover.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeProgress">
+      <summary>Progress.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeUserDefined">
+      <summary>User defined.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriFindFieldType.esriFindFieldTypeDataTheme">
+      <summary>Data Theme.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriGxDeleteOption">
+      <summary>GxObject deleting options enum.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxDeleteOption.esriGxDeleteSingle">
+      <summary>Delete objects one by one.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxDeleteOption.esriGxDeleteYesToAll">
+      <summary>Delete all objects without confirmation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxDeleteOption.esriGxDeleteCancel">
+      <summary>Cease deleting objects.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriGxPackageType">
+      <summary>GxPackage type enum.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxPackageType.esriGxPackageTypeMap">
+      <summary>GxPackage type map.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxPackageType.esriGxPackageTypeLayer">
+      <summary>GxPackage type layer.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxPackageType.esriGxPackageTypeGeoprocessing">
+      <summary>GxPackage type geoprocessing.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxPackageType.esriGxPackageTypeLocator">
+      <summary>GxPackage type locator.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriGxPackageType.esriGxPackageTypeTile">
+      <summary>GxPackage type tile.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.Catalog.esriSynchronizationOption">
+      <summary>Options for setting when the Catalog creates and updates metadata automatically.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriSynchronizationOption.esriSyncNever">
+      <summary>Never creates or updates metadata automatically.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriSynchronizationOption.esriSyncCreated">
+      <summary>Always creates but never updates metadata automatically.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriSynchronizationOption.esriSyncAccessed">
+      <summary>Always creates and updates metadata automatically.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.Catalog.esriSynchronizationOption.esriSyncNotCreated">
+      <summary>Never creates but always updates metadata automatically.</summary>
+    </member>
+  </members>
+</doc>
