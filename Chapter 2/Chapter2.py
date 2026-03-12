@@ -18,16 +18,16 @@ print("总和为:", total_sum)
 # ArcPy函数：对要素类进行裁切
 import arcpy
 import os
-arcpy.env.workspace = "D:/CSU"
+arcpy.env.workspace = "D:/CSU_TEMP"
 out_workspace = "D:/CSU_CLIP"
-clip_features = "D:/CSU_CLIP/boundary.shp"
+clip_features = "D:/CSU/boundary.shp"
 
 # Loop through a list of feature classes in the workspace
 for fc in arcpy.ListFeatureClasses():
-    output = os.path.join(out_workspace, fc)
+    # 在输出文件名前加前缀Clip
+    output = os.path.join(out_workspace, "Clip_" + fc)
     result = arcpy.Clip_analysis(fc, clip_features, output, 0.1)
     print result
-
 
 # ArcPy类：显示地图投影信息
 import arcpy
